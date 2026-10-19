@@ -1,0 +1,27 @@
+/* Supplied Rayadah blue identity: var(--accent-color). */
+.cloud-platform .cloud-node {
+  border-color: var(--accent-color);
+  background: linear-gradient(180deg, var(--accent-color), #167ba9);
+  box-shadow: inset 0 1px 0 #ffffff40, 0 0 18px rgba(var(--accent-rgb), 0.439), 0 0 42px rgba(var(--accent-rgb), 0.251);
+}
+.cloud-platform .cloud-node:hover {
+  border-color: #bcefff;
+  background: linear-gradient(180deg, #8be2ff, #249bc9);
+}
+.brand-logo, .footer-brand img {
+  filter: brightness(0) saturate(100%) invert(76%) sepia(64%) saturate(1314%) hue-rotate(166deg) brightness(102%) contrast(101%);
+}
+.stat-card img, .service-icon img {
+  filter: hue-rotate(100deg) saturate(1.5);
+}
+.header-cta, .button-primary {
+  background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.149), rgba(var(--accent-rgb), 0.039));
+  border-color: rgba(var(--accent-rgb), 0.400);
+}
+.header-cta:hover, .button-primary:hover {
+  background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.251), rgba(var(--accent-rgb), 0.094));
+}
+.stat-green { background: linear-gradient(135deg, #152536, #22516a99); }
+.performance .stat-card.stat-green { background-color: #132b3b; }
+.cloud-node img { filter: brightness(0) invert(1); }
+#cloud-line-glow stop { stop-color: var(--accent-color); }

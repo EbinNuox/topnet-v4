@@ -1,0 +1,162 @@
+{
+  "desktop": [
+    {
+      "page": "index.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "about.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "careers.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "contact.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "data-connectivity.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "internet-connectivity.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "public-clouds.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "rayadah-cloud.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "resources.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "saudi-domain-registration.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "secured-cage.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "services.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "web-hosting.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    }
+  ],
+  "browserPanel": [
+    {
+      "page": "index.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "about.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "careers.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "contact.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "data-connectivity.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "internet-connectivity.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "public-clouds.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "rayadah-cloud.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "resources.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "saudi-domain-registration.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "secured-cage.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "services.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    },
+    {
+      "page": "web-hosting.html",
+      "stalled": false,
+      "reachedEnd": true,
+      "up": true
+    }
+  ]
+}

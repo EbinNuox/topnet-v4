@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="TOPNET — one connected ecosystem for resilient enterprise technology." />
     <title>TOPNET</title>
+    <link rel="icon" type="image/png" href="assets/topnet-mark-cropped.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?rev=home-footer-bg-v1" />
+    <link rel="stylesheet" href="styles.css?rev=services-navigation-v9" />
+    <link rel="stylesheet" href="home-blue.css?rev=1" />
+    <link rel="stylesheet" href="scroll-flow.css?rev=5" />
+    <link rel="stylesheet" href="assets/vendor/aos/aos.css" />
+    <link rel="stylesheet" href="scroll-reveal.css?rev=4" />
+    <link rel="stylesheet" href="responsive.css?rev=2" />
+    <link rel="stylesheet" href="brand-colors.css?rev=1" />
   </head>
   <body>
     <div class="site-cursor" aria-hidden="true"><span></span><i></i></div>
     <main class="hero" id="home">
       <header class="site-header">
-        <a class="brand" href="#home" aria-label="TOPNET home">
+        <a class="brand" href="index.html" aria-label="TOPNET home">
           <img class="brand-logo" src="assets/topnet-logo.png" alt="TOPNET" />
         </a>
 
@@ -24,11 +31,11 @@
         </button>
 
         <nav class="nav" id="primary-navigation" aria-label="Primary navigation">
-          <a class="active" href="#home">Home</a>
+          <a class="active" href="index.html">Home</a>
           <a href="about.html">About us</a>
-          <button class="services-link" type="button" aria-expanded="false" aria-controls="services-menu">Services <span aria-hidden="true">⌄</span></button>
-          <a href="#resources">Resources</a>
-          <a href="#contact">Contact us</a>
+          <div class="services-nav"><a class="services-link" href="services.html">Services</a><button class="services-menu-toggle" type="button" aria-label="Open services menu" aria-expanded="false" aria-controls="services-menu"><span aria-hidden="true">⌄</span></button></div>
+          <a href="resources.html">Resources</a>
+          <a href="contact.html">Contact us</a>
         </nav>
 
         <div class="header-tools">
@@ -40,8 +47,8 @@
               <button class="language-option" type="button" data-lang="ar">Arabic</button>
             </div>
           </div>
-          <a class="rayadah-nav-link" href="#rayadah-cloud">Rayadah Cloud</a>
-          <a class="header-cta" href="#contact">Request consultation <span aria-hidden="true"></span></a>
+          <a class="rayadah-nav-link" href="rayadah-cloud.html">Rayadah Cloud</a>
+          <a class="header-cta" href="contact.html#enquiry">Request consultation <span aria-hidden="true"></span></a>
         </div>
 
         <div class="services-menu" id="services-menu" aria-hidden="true">
@@ -63,35 +70,33 @@
           <div class="service-detail" aria-live="polite">
             <h2>Connectivity Services</h2>
             <div class="service-capabilities">
-              <a href="services.html#service-catalog">Internet Connectivity <span>→</span></a>
-              <a href="services.html#service-catalog">Data Connectivity <span>→</span></a>
-              <a href="services.html#service-catalog">SD-WAN Connectivity <span>→</span></a>
-              <a href="services.html#service-catalog">VPN Connectivity <span>→</span></a>
+              <a href="internet-connectivity.html">Internet Connectivity <span>→</span></a>
+              <a href="data-connectivity.html">Data Connectivity <span>→</span></a>
+              <a href="#">SD-WAN Connectivity <span>→</span></a>
+              <a href="#">VPN Connectivity <span>→</span></a>
             </div>
-            <a class="category-overview" href="services.html#service-catalog">Category overview <span>→</span></a>
           </div>
         </div>
       </header>
 
       <section class="hero-copy" aria-labelledby="hero-title">
         <p class="eyebrow">Saudi digital infrastructure</p>
-        <h1 id="hero-title">One connected ecosystem<br />for resilient enterprise technology.</h1>
+        <h1 id="hero-title">One connected ecosystem<br />for resilient enterprise technology</h1>
         <p class="intro">Connectivity, cloud, hosting, co-location, cybersecurity, professional<br class="desktop-only" /> services, and managed operations under one accountable structure.</p>
         <div class="actions">
-          <a class="button button-primary" href="#contact">Request consultation <span class="arrow" aria-hidden="true"></span></a>
-          <a class="button button-secondary" href="#services">Explore services</a>
+          <a class="button button-primary" href="contact.html#enquiry">Request consultation <span class="arrow" aria-hidden="true"></span></a>
+          <a class="button button-secondary" href="services.html">Explore services</a>
         </div>
       </section>
 
       <section class="infrastructure" id="services" aria-label="Connected cloud infrastructure">
-        <div class="connector connector-left top"><svg class="connector-graphic" viewBox="0 0 535 93" preserveAspectRatio="none" aria-hidden="true"><g transform="translate(0 93) scale(1 -1)"><image href="assets/Vector.svg" width="535" height="93" preserveAspectRatio="none" /><path class="connector-flow" pathLength="1000" d="M535 .5H291C233 .5 233 65.5 199 83.5C177 95.5 131 91.5 0 91.5" /></g></svg><span class="service-icon"><img src="assets/banner-storage-glyph.png" alt="Storage service" /></span></div>
-        <div class="connector connector-left middle"><svg class="connector-graphic" viewBox="0 0 535 93" preserveAspectRatio="none" aria-hidden="true"><path class="connector-trace" d="M2 47H533" /><path class="connector-flow" pathLength="1000" d="M2 47H533" /></svg><span class="service-icon"><img src="assets/banner-shield-glyph.png" alt="Security service" /></span></div>
-        <div class="connector connector-left bottom"><svg class="connector-graphic" viewBox="0 0 535 93" preserveAspectRatio="none" aria-hidden="true"><image href="assets/Vector.svg" width="535" height="93" preserveAspectRatio="none" /><path class="connector-flow" pathLength="1000" d="M535 .5H291C233 .5 233 65.5 199 83.5C177 95.5 131 91.5 0 91.5" /></svg><span class="service-icon"><img src="assets/banner-cloud-glyph.png" alt="Cloud service" /></span></div>
-        <img class="cloud-art" src="assets/cloud-infrastructure.png" alt="Cloud connected to a resilient server stack" />
-        <div class="cloud-data-lines" aria-hidden="true"><span></span><span></span><span></span></div>
-        <div class="connector connector-right top"><svg class="connector-graphic" viewBox="0 0 535 93" preserveAspectRatio="none" aria-hidden="true"><g transform="translate(535 93) scale(-1 -1)"><image href="assets/Vector.svg" width="535" height="93" preserveAspectRatio="none" /><path class="connector-flow" pathLength="1000" d="M535 .5H291C233 .5 233 65.5 199 83.5C177 95.5 131 91.5 0 91.5" /></g></svg><span class="service-icon"><img src="assets/banner-servers-glyph.png" alt="Server service" /></span></div>
-        <div class="connector connector-right middle"><svg class="connector-graphic" viewBox="0 0 535 93" preserveAspectRatio="none" aria-hidden="true"><path class="connector-trace" d="M2 47H533" /><path class="connector-flow" pathLength="1000" d="M2 47H533" /></svg><span class="service-icon"><img src="assets/banner-database-glyph.png" alt="Database service" /></span></div>
-        <div class="connector connector-right bottom"><svg class="connector-graphic" viewBox="0 0 535 93" preserveAspectRatio="none" aria-hidden="true"><g transform="translate(535 0) scale(-1 1)"><image href="assets/Vector.svg" width="535" height="93" preserveAspectRatio="none" /><path class="connector-flow" pathLength="1000" d="M535 .5H291C233 .5 233 65.5 199 83.5C177 95.5 131 91.5 0 91.5" /></g></svg><span class="service-icon"><img src="assets/banner-restore-glyph.png" alt="Recovery service" /></span></div>
+        <div class="connector connector-left top"><svg class="connector-graphic" viewBox="0 0 535 93" preserveAspectRatio="none" aria-hidden="true"><g transform="translate(0 93) scale(1 -1)"><image href="assets/Vector.svg" width="535" height="93" preserveAspectRatio="none" /><path class="connector-flow" pathLength="1000" d="M535 .5H291C233 .5 233 65.5 199 83.5C177 95.5 131 91.5 0 91.5" /></g></svg><span class="service-icon"><img src="assets/icons/storage.svg" alt="Storage service" /></span></div>
+        <div class="connector connector-left middle"><svg class="connector-graphic" viewBox="0 0 535 93" preserveAspectRatio="none" aria-hidden="true"><path class="connector-trace" d="M2 47H533" /><path class="connector-flow" pathLength="1000" d="M2 47H533" /></svg><span class="service-icon"><img src="assets/icons/security.svg" alt="Security service" /></span></div>
+        <div class="connector connector-left bottom"><svg class="connector-graphic" viewBox="0 0 535 93" preserveAspectRatio="none" aria-hidden="true"><image href="assets/Vector.svg" width="535" height="93" preserveAspectRatio="none" /><path class="connector-flow" pathLength="1000" d="M535 .5H291C233 .5 233 65.5 199 83.5C177 95.5 131 91.5 0 91.5" /></svg><span class="service-icon"><img src="assets/icons/cloud-operations.svg" alt="Cloud service" /></span></div>
+        <img class="cloud-art" src="assets/group-65.png?v=group-65-v1" alt="Cloud connected to a resilient server stack" />
+        <div class="connector connector-right top"><svg class="connector-graphic" viewBox="0 0 535 93" preserveAspectRatio="none" aria-hidden="true"><g transform="translate(535 93) scale(-1 -1)"><image href="assets/Vector.svg" width="535" height="93" preserveAspectRatio="none" /><path class="connector-flow" pathLength="1000" d="M535 .5H291C233 .5 233 65.5 199 83.5C177 95.5 131 91.5 0 91.5" /></g></svg><span class="service-icon"><img src="assets/icons/servers.svg" alt="Server service" /></span></div>
+        <div class="connector connector-right middle"><svg class="connector-graphic" viewBox="0 0 535 93" preserveAspectRatio="none" aria-hidden="true"><path class="connector-trace" d="M2 47H533" /><path class="connector-flow" pathLength="1000" d="M2 47H533" /></svg><span class="service-icon"><img src="assets/icons/database-sync.svg" alt="Database service" /></span></div>
+        <div class="connector connector-right bottom"><svg class="connector-graphic" viewBox="0 0 535 93" preserveAspectRatio="none" aria-hidden="true"><g transform="translate(535 0) scale(-1 1)"><image href="assets/Vector.svg" width="535" height="93" preserveAspectRatio="none" /><path class="connector-flow" pathLength="1000" d="M535 .5H291C233 .5 233 65.5 199 83.5C177 95.5 131 91.5 0 91.5" /></g></svg><span class="service-icon"><img src="assets/icons/operations.svg" alt="Recovery service" /></span></div>
       </section>
 
       <div class="orbit orbit-one" aria-hidden="true"></div>
@@ -106,22 +111,22 @@
       </div>
       <div class="stats-grid">
         <article class="stat-card">
-          <img src="assets/stat-clients.png" alt="" />
+          <img src="assets/icons/enterprise-clients.svg" alt="" />
           <p>Enterprise clients</p>
           <strong>250<span>+</span></strong>
         </article>
         <article class="stat-card stat-purple">
-          <img src="assets/stat-connections.png" alt="" />
+          <img src="assets/icons/managed-connections.svg" alt="" />
           <p>Managed connections</p>
           <strong>1,200<span>+</span></strong>
         </article>
         <article class="stat-card stat-green">
-          <img src="assets/stat-availability.png" alt="" />
+          <img src="assets/icons/availability-target.svg" alt="" />
           <p>Availability target</p>
           <strong>99.95<span>%</span></strong>
         </article>
         <article class="stat-card stat-purple stat-since">
-          <img src="assets/stat-since.png" alt="" />
+          <img src="assets/icons/supporting-clients-since.svg" alt="" />
           <p>Supporting clients since</p>
           <strong>2006</strong>
         </article>
@@ -134,7 +139,7 @@
         <h2 id="about-title">About TopNet</h2>
         <p>TopNet is a Saudi digital infrastructure provider supporting enterprise connectivity, cloud, hosting, co-location, cybersecurity, professional services, and managed operations.</p>
         <p>Since 2006, our teams have helped organizations build resilient technology foundations with dependable service delivery, local accountability, and secure operational support.</p>
-        <a class="mini-cta" href="#why">Our story <span aria-hidden="true"></span></a>
+        <a class="mini-cta" href="about.html">Our story <span aria-hidden="true"></span></a>
       </div>
       <div class="about-orbits" aria-hidden="true">
         <i></i><i></i><i></i>
@@ -148,7 +153,7 @@
         <span class="pill">Choose TopNet</span>
         <h2 id="why-title">Why TopNet?</h2>
         <p>Enterprise teams choose TopNet for dependable infrastructure, secure operations, and local accountability across every layer of digital delivery.</p>
-        <a class="mini-cta section-cta" href="#about">Learn about TopNet <span aria-hidden="true"></span></a>
+        <a class="mini-cta section-cta" href="about.html">Learn about TopNet <span aria-hidden="true"></span></a>
       </div>
       <div class="feature-grid">
         <article class="feature-card"><div class="feature-copy"><h3>Infrastructure</h3><p>Connected network, cloud, and data-center delivery designed for critical Saudi enterprise workloads.</p></div><img src="assets/card-infrastructure.png" alt="Cloud infrastructure servers" /></article>
@@ -164,7 +169,7 @@
       <div class="cloud-grid-streams" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
       <div class="cloud-heading">
         <span class="pill">Rayadah Cloud by TopNet</span>
-        <h2 id="cloud-title">A Saudi cloud platform built for<br />confident enterprise growth.</h2>
+        <h2 id="cloud-title">A Saudi cloud platform built for<br />confident enterprise growth</h2>
         <p>Run, protect, and evolve critical workloads through a dedicated<br />cloud experience backed by TopNet infrastructure expertise.</p>
       </div>
       <div class="cloud-network" aria-label="Connected Saudi cloud service model">
@@ -184,11 +189,11 @@
           <g transform="translate(0 286)"><image href="assets/Vector.svg" width="535" height="93" preserveAspectRatio="none" /><path class="cloud-connector-flow flow-e" pathLength="1000" d="M535 .5H291C233 .5 233 65.5 199 83.5C177 95.5 131 91.5 0 91.5" /></g>
           <g transform="translate(1286 286) scale(-1 1)"><image href="assets/Vector.svg" width="535" height="93" preserveAspectRatio="none" /><path class="cloud-connector-flow flow-f" pathLength="1000" d="M535 .5H291C233 .5 233 65.5 199 83.5C177 95.5 131 91.5 0 91.5" /></g>
         </svg>
-        <span class="cloud-node node-a"><img src="assets/banner-storage-glyph.png" alt="Storage" /></span><span class="cloud-node node-b"><img src="assets/banner-servers-glyph.png" alt="Servers" /></span><span class="cloud-node node-c"><img src="assets/banner-shield-glyph.png" alt="Security" /></span>
+        <span class="cloud-node node-a"><img src="assets/icons/storage.svg" alt="Storage" /></span><span class="cloud-node node-b"><img src="assets/icons/servers.svg" alt="Servers" /></span><span class="cloud-node node-c"><img src="assets/icons/security.svg" alt="Security" /></span>
         <div class="cloud-visual"><img src="assets/saudi-cloud.png" alt="Saudi Cloud platform" /></div>
-        <span class="cloud-node node-d"><img src="assets/banner-database-glyph.png" alt="Database" /></span><span class="cloud-node node-e"><img src="assets/banner-cloud-glyph.png" alt="Cloud" /></span><span class="cloud-node node-f"><img src="assets/banner-restore-glyph.png" alt="Recovery" /></span>
+        <span class="cloud-node node-d"><img src="assets/icons/database-sync.svg" alt="Database" /></span><span class="cloud-node node-e"><img src="assets/icons/cloud-operations.svg" alt="Cloud" /></span><span class="cloud-node node-f"><img src="assets/icons/operations.svg" alt="Recovery" /></span>
       </div>
-      <a class="button button-primary cloud-button" href="#contact">Discover Rayadah Cloud <span class="arrow" aria-hidden="true"></span></a>
+      <a class="button button-primary cloud-button" href="rayadah-cloud.html">Discover Rayadah Cloud <span class="arrow" aria-hidden="true"></span></a>
     </section>
 
     <section class="clients section-shell" aria-labelledby="clients-title">
@@ -208,8 +213,8 @@
       <div class="partner-orbits" aria-hidden="true"></div>
       <div class="partner-copy">
         <span class="pill">Our partners</span>
-        <h2 id="partners-title">Enterprise platforms.<br />One accountable<br />network.</h2>
-        <p>TopNet brings trusted cloud, security, and infrastructure<br />platforms into one connected delivery model.</p>
+        <h2 id="partners-title">Enterprise platforms<br /> One accountable<br /> network</h2>
+        <p>TopNet brings trusted cloud, security, and infrastructure<br /> platforms into one connected delivery model.</p>
       </div>
       <span class="partner-orbit orbit-a"><span class="partner-badge"><img src="assets/partner-enom.png" alt="Microsoft" /></span></span>
       <span class="partner-orbit orbit-b"><span class="partner-badge"><img src="assets/partner-digicert.png" alt="DigiCert" /></span></span>
@@ -224,7 +229,7 @@
         <span class="pill">Latest insights and news</span>
         <h2 id="insights-title">Stay connected with<br />our latest insights</h2>
         <p>Technical perspectives on enterprise connectivity, cloud continuity, and managed infrastructure.</p>
-        <a class="mini-cta section-cta" href="#resources">Browse all resources <span aria-hidden="true"></span></a>
+        <a class="mini-cta section-cta" href="resources.html">Browse all resources <span aria-hidden="true"></span></a>
       </div>
       <div class="insight-grid">
         <article class="insight-card"><img src="assets/insight-security.png" alt="Digital security shield" /><div><small>6 min read</small><h3>Building resilient connectivity for regulated enterprise teams</h3><p><span class="insight-type">Case Study</span><span class="insight-separator"> · </span><span class="insight-topic">Connectivity</span></p></div></article>
@@ -249,7 +254,7 @@
 
     <footer class="site-footer">
       <div class="footer-brand">
-        <img class="footer-logo" src="assets/topnet-logo.png" alt="TOPNET" />
+        <a href="index.html" aria-label="TOPNET home"><img class="footer-logo" src="assets/topnet-logo.png" alt="TOPNET" /></a>
         <p>One accountable digital infrastructure ecosystem<br />for Saudi enterprises and government<br />organizations. TopNet Digital Infrastructure<br />Services · Riyadh, Saudi Arabia</p>
       </div>
       <nav class="footer-column footer-services" aria-label="Footer services">
@@ -258,12 +263,12 @@
       </nav>
       <nav class="footer-column footer-explore" aria-label="Footer navigation">
         <h3>Explore</h3>
-        <a href="#rayadah-cloud">Rayadah Cloud</a><a href="#resources">Resources</a><a href="about.html">About TopNet</a><span aria-disabled="true" title="Careers page not available yet">Careers</span><a href="#contact">Contact Us</a>
+        <a href="rayadah-cloud.html">Rayadah Cloud</a><a href="resources.html">Resources</a><a href="about.html">About TopNet</a><a href="careers.html">Careers</a><a href="contact.html">Contact Us</a>
       </nav>
       <div class="footer-connect">
         <h3>Connect</h3>
         <div class="social-links" aria-label="Social media">
-          <a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="X">𝕏</a><a class="youtube-link" href="#" aria-label="YouTube"><span></span></a>
+          <span aria-label="LinkedIn profile not provided" title="LinkedIn profile not provided">in</span><span aria-label="X profile not provided" title="X profile not provided">𝕏</span><span class="youtube-link" aria-label="YouTube channel not provided" title="YouTube channel not provided"><span></span></span>
         </div>
         <strong>Stay informed</strong>
         <form class="newsletter-form">
@@ -274,10 +279,12 @@
       </div>
       <div class="footer-bottom">
         <p class="copyright">© 2026 TopNet All rights reserved</p>
-        <nav class="footer-legal" aria-label="Legal"><a href="#">Privacy policy</a><a href="#">Terms</a><a href="#">Accessibility</a><a href="#">Sitemap</a></nav>
+        <nav class="footer-legal" aria-label="Legal"><span title="Privacy policy page not provided">Privacy policy</span><span title="Terms page not provided">Terms</span><span title="Accessibility page not provided">Accessibility</span><span title="Sitemap page not provided">Sitemap</span></nav>
       </div>
     </footer>
     <div class="footer-backdrop" aria-hidden="true"></div>
-    <script src="script.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="script.js?rev=responsive-icons-v17"></script>
+    <script src="wheel-scroll.js?rev=3"></script>
   </body>
 </html>

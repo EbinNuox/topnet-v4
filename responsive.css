@@ -1,0 +1,336 @@
+/* Shared responsive overrides. Keep this stylesheet after page-specific styles. */
+@media (max-width: 1600px) {
+  :root { --page-gutter: 64px; --section-spacing: 100px; --responsive-title: 68px; --responsive-h2: 58px; --responsive-h3: 28px; --responsive-space: 96px; }
+  body :is(.section-shell, .internet-section-shell, .hosting-packages) { padding-inline: var(--page-gutter); }
+  body section:not(.hero):not(.about-page-hero):not(.about-history-section):not(.about-values-section):is(.section-shell, .internet-section-shell) { padding-block: var(--responsive-space); }
+  body :is(h1, .hero-copy h1) { font-size: var(--responsive-title); }
+  body section h2 { font-size: var(--responsive-h2); line-height: 1.08; }
+  body section h3 { font-size: min(var(--responsive-h3), 28px); line-height: 1.2; }
+  body :is(.section-heading, .internet-section-intro, .about-section-heading) > p { font-size: 16px; line-height: 1.6; }
+  body :is(.contact-wrap, .internet-delivery-grid, .rayadah-journey-editorial, .contact-enquiry-grid) { gap: 48px; }
+  body :is(.contact-wrap, .internet-delivery-grid, .rayadah-journey-editorial, .contact-enquiry-grid, .services-card-grid, .hosting-plan-grid, .rayadah-model-grid, .internet-related-grid) > * { min-width: 0; }
+  body .site-footer { height: auto; min-height: 0; grid-template-columns: minmax(0,1.3fr) repeat(2,minmax(0,.8fr)) minmax(0,1fr); gap: 36px; grid-template-rows: auto auto; padding: 48px 32px 24px; }
+  body .footer-bottom { grid-column: 1 / -1; }
+  body .hosting-plan-card { padding: 28px 22px; }
+  body .hosting-plan-price strong { font-size: 28px; }
+  body .internet-section-intro { max-width: 760px; }
+}
+@media (max-width: 1300px) {
+  :root { --page-gutter: 40px; --section-spacing: 80px; --responsive-title: 60px; --responsive-h2: 50px; --responsive-h3: 26px; --responsive-space: 80px; }
+  body .site-header { gap: 20px; }
+  body .primary-navigation { gap: 20px; }
+  body :is(.contact-wrap, .internet-delivery-grid, .contact-enquiry-grid) { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 32px; }
+  body .services-card { column-gap: 32px; padding: 40px 32px; }
+  body .services-card h2 { font-size: 42px; }
+  body .about-certification-grid { gap: 16px; }
+  body .about-certification-card { padding: 24px; }
+  body .about-certification-card h3 span { font-size: 34px; }
+  body .about-certification-card h3 strong { font-size: 18px; }
+}
+@media (max-width: 1024px) {
+  :root { --page-gutter: 32px; --section-spacing: 72px; --responsive-title: 52px; --responsive-h2: 44px; --responsive-h3: 24px; --responsive-space: 72px; }
+  body :is(.about-who-grid, .about-direction-grid, .internet-connectivity-hero-grid, .contact-enquiry-grid, .internet-delivery-grid, .rayadah-journey-editorial) { grid-template-columns: minmax(0,1fr); gap: 40px; }
+  body :is(.resources-grid, .careers-values-grid, .hosting-plan-grid, .rayadah-capability-grid, .about-certification-grid) { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  body .contact-wrap { display: grid; grid-template-columns: minmax(0,1fr); grid-template-areas: 'eyebrow' 'title' 'copy' 'form'; gap: 0; text-align: left; }
+  body .contact-wrap > h2 { margin: 24px 0 0; text-align: left; }
+  body .contact-wrap > p { margin: 20px 0 0; }
+  body .contact-wrap .contact-form { margin: 36px 0 0; min-width: 0; }
+  body .site-footer { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 36px; }
+  body .services-card { position: relative; top: auto; min-height: 0; grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); }
+  body .services-card-art { min-width: 0; }
+  body .services-card-art img { max-width: 100%; }
+  body .services-card-subservices { grid-template-columns: minmax(0,1fr); }
+  body .hosting-control-panels { display: block; }
+  body .hosting-package-tabs { gap: 6px; padding: 6px; }
+}
+@media (max-width: 768px) {
+  :root { --page-gutter: 24px; --section-spacing: 56px; --responsive-title: 44px; --responsive-h2: 36px; --responsive-h3: 22px; --responsive-space: 56px; }
+  body :is(.feature-grid, .insight-grid, .rayadah-model-grid, .internet-related-grid, .hosting-plan-grid, .services-card, .contact-presence-grid) { grid-template-columns: minmax(0,1fr); }
+  body .services-card { padding: 28px 24px; gap: 24px; }
+  body .services-card h2 { font-size: 34px; }
+  body .services-card-art { max-width: 340px; width: 100%; margin-inline: auto; }
+  body .hosting-package-tabs { grid-template-columns: repeat(2,minmax(0,1fr)); margin-top: 32px; }
+  body .hosting-package-tab { min-width: 0; padding: 12px 8px; }
+  body :is(.hosting-addons-grid, .careers-values-grid, .resources-grid) { grid-template-columns: minmax(0,1fr); }
+  body .hosting-addons-panel + .hosting-addons-panel { padding: 24px 0 0; border-left: 0; border-top: 1px solid #ffffff20; }
+  body :is(.section-heading, .internet-section-intro, .about-section-heading) { margin-bottom: 28px; }
+  body .about-certification-card h3 span { font-size: 32px; }
+  body .about-certification-card { min-height: 200px; }
+  body .button { min-width: 0; max-width: 100%; }
+  body :is(input, textarea, select) { max-width: 100%; min-width: 0; }
+  body .internet-delivery-copy h2 { max-width: 100%; }
+  body .hosting-vps-table-wrap, body .hosting-control-table-wrap { max-width: 100%; overflow-x: auto; }
+}
+@media (max-width: 500px) {
+  :root { --page-gutter: 20px; --section-spacing: 48px; --responsive-title: 38px; --responsive-h2: 32px; --responsive-h3: 21px; --responsive-space: 48px; }
+  body :is(.about-certification-grid, .rayadah-capability-grid, .stats-grid, .site-footer) { grid-template-columns: minmax(0,1fr); }
+  body .site-footer { width: calc(100% - 24px); padding: 32px 24px; gap: 28px; margin-top: 40px; }
+  body .footer-bottom { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+  body .footer-legal { flex-wrap: wrap; gap: 16px; }
+  body .services-card h2 { font-size: 30px; }
+  body .hosting-plan-price strong { font-size: 26px; }
+  body .hosting-plan-card { padding: 24px 20px; }
+  body .hosting-package-tabs { grid-template-columns: minmax(0,1fr); }
+  body .hosting-plan-grid { gap: 20px; }
+  body .hosting-addon-list > div { flex-direction: column; gap: 6px; align-items: flex-start; }
+  body .hosting-addon-list dd { text-align: left; white-space: normal; }
+  body .contact-wrap .contact-form { margin-top: 28px; }
+  body :is(.internet-connectivity-actions, .hero-actions) { flex-wrap: wrap; gap: 12px; }
+  body .about-certification-card h3 span { font-size: 30px; }
+  body .about-certification-card h3 strong { font-size: 18px; }
+}
+@media (max-width: 400px) {
+  :root { --page-gutter: 16px; --section-spacing: 40px; --responsive-title: 34px; --responsive-h2: 29px; --responsive-h3: 20px; --responsive-space: 40px; }
+  body .services-card { padding: 24px 18px; }
+  body .services-card h2 { font-size: 28px; }
+  body .hosting-plan-card { padding: 22px 18px; }
+  body .hosting-plan-price strong { font-size: 24px; }
+  body .hosting-addons summary { padding-inline: 16px; }
+  body .site-footer { padding: 28px 20px; }
+  body .button { padding-inline: 14px; gap: 8px; }
+  body .services-card-subservices > * { padding: 14px; }
+}
+@media (max-width: 1600px) {
+  /* Decorative glows must not enlarge the document's scrolling area. */
+  body { overflow-x: clip; }
+  body .stats-grid { margin-inline: calc(-1 * var(--page-gutter)); }
+  body .client-marquee { margin-inline: calc(-1 * var(--page-gutter)); }
+  body .about-team-track { min-width: 0; max-width: 100%; overflow-x: auto; }
+  body .footer-backdrop { max-width: 100%; left: 0; right: 0; }
+}
+@media (max-width: 1024px) {
+  body .rayadah-hero-inner { grid-template-columns: minmax(0,1fr); }
+  body .about-who-copy h2 { max-width: 100%; }
+  body .about-who-copy h2 .about-who-title-line { white-space: normal; }
+  body .about-direction-card { min-width: 0; width: 100%; }
+}
+@media (max-width: 768px) {
+  body .internet-service-facts { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  body .internet-connectivity-page-body .secured-cage-related-grid { grid-template-columns: minmax(0,1fr); overflow: visible; }
+}
+@media (max-width: 500px) {
+  body .internet-service-facts { grid-template-columns: minmax(0,1fr); }
+  body .hosting-plan-card h3 { font-size: 21px; }
+  body .internet-section-intro h2 { overflow-wrap: break-word; }
+}
+@media (max-width: 1600px) {
+  html { overflow-x: clip; }
+  /* Override page-specific fixed heading sizes at the shared breakpoints. */
+  body section h1 { font-size: var(--responsive-title) !important; }
+  body section h2 { font-size: var(--responsive-h2) !important; }
+}
+@media (max-width: 1024px) {
+  body .about-page-copy > p,
+  body .rayadah-hero-copy > p,
+  body .internet-connectivity-hero-copy > p { font-size: 16px; }
+}
+/* Keep diagram icons readable independently of the scaled illustration. */
+@media (max-width: 1024px) {
+  body:is(.rayadah-page-body, .internet-connectivity-page-body) .rayadah-journey-preview {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 1286 / 470;
+    margin: 28px 0 0;
+    overflow: clip;
+  }
+  body:is(.rayadah-page-body, .internet-connectivity-page-body) .rayadah-journey-preview > .cloud-network {
+    left: 50%;
+    top: 0;
+    width: 1286px;
+    height: 470px;
+    margin: 0;
+    transform: translateX(-50%) scale(var(--journey-preview-scale, .4)) !important;
+    transform-origin: top center;
+  }
+  body:is(.rayadah-page-body, .internet-connectivity-page-body) .rayadah-journey-preview .cloud-node {
+    width: calc(36px / var(--journey-preview-scale, .4));
+    height: calc(36px / var(--journey-preview-scale, .4));
+    margin: calc((64px - 36px / var(--journey-preview-scale, .4)) / 2);
+    border-radius: calc(7px / var(--journey-preview-scale, .4));
+  }
+  body:is(.rayadah-page-body, .internet-connectivity-page-body) .rayadah-journey-preview .cloud-node > img {
+    width: calc(22px / var(--journey-preview-scale, .4));
+    height: calc(22px / var(--journey-preview-scale, .4));
+    max-width: none;
+  }
+  body .internet-service-facts > div > img { width: 48px; height: 48px; }
+  body .rayadah-trust-item > img { width: 56px; height: auto; }
+  body .about-value-icon { width: 56px; height: 56px; }
+  body .careers-value-icon { min-width: 52px; min-height: 52px; }
+  body .careers-value-icon > img { width: 30px; height: 30px; }
+}
+/* Place the homepage About artwork in normal flow below the copy on tablets/phones. */
+@media (max-width: 1024px) {
+  body .about.section-shell {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0;
+    gap: 32px;
+  }
+  body .about.section-shell .about-copy {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+  body .about.section-shell .about-molecule-single {
+    position: relative;
+    inset: auto;
+    display: block;
+    width: min(440px, 100%);
+    height: auto;
+    aspect-ratio: 1;
+    margin: 0 auto;
+    transform: none;
+    animation: none;
+    opacity: 1;
+  }
+  body .about.section-shell .about-orbits {
+    top: auto;
+    bottom: -240px;
+    right: 50%;
+    width: 900px;
+    height: 900px;
+    margin-right: -450px;
+    opacity: .2;
+  }
+}
+/* Compact feature cards: illustration first, copy below, no overlapping layers. */
+@media (max-width: 768px) {
+  body .why .feature-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: none;
+    grid-auto-rows: auto;
+    gap: 20px;
+  }
+  body .why .feature-grid .feature-card {
+    display: flex;
+    flex-direction: column;
+    grid-area: auto;
+    height: auto;
+    min-height: 0;
+    padding: 20px;
+    gap: 16px;
+  }
+  body .why .feature-grid .feature-card > img {
+    position: relative;
+    inset: auto;
+    order: 0;
+    width: 100%;
+    height: 200px;
+    max-width: 100%;
+    margin: 0;
+    object-fit: contain;
+    object-position: center;
+    transform: none;
+  }
+  body .why .feature-grid .feature-card .feature-copy {
+    position: relative;
+    inset: auto;
+    order: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+  }
+  body .why .feature-grid .feature-card .feature-copy p {
+    width: 100%;
+    max-width: none;
+    margin: 12px 0 0;
+  }
+  body .cloud-platform .cloud-network > .cloud-visual {
+    width: min(58vw, 240px);
+    height: min(58vw, 240px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    animation: none;
+  }
+  body .cloud-platform .cloud-network > .cloud-visual > img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 400px) {
+  body .why .feature-grid .feature-card > img { height: 170px; }
+  body .why .feature-grid .feature-card { padding: 18px; }
+}
+/* On small screens, keep partner logos in a readable grid below the heading. */
+@media (max-width: 768px) {
+  body .partners.section-shell {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    min-height: 0;
+    margin-top: 32px;
+    overflow: clip;
+    padding-block: 56px;
+  }
+  body .partners .partner-copy[data-aos="fade-in"] {
+    position: relative;
+    inset: auto;
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 20px;
+    transform: none !important;
+  }
+  body .partners .partner-copy h2 {
+    margin-top: 20px;
+    line-height: 1.15;
+    letter-spacing: 0;
+    transform: none;
+  }
+  body .partners .partner-copy h2 br { display: block; }
+  body .partners .partner-copy p {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  body .partners .partner-copy p br { display: none; }
+  body .partners .partner-orbit {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    border-radius: 0;
+    transform: none !important;
+    animation: none;
+  }
+  body .partners .partner-badge {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 60px;
+    padding: 12px 16px;
+    transform: none;
+  }
+  body .partners .partner-badge img { max-height: 30px; }
+  body .partners .partner-orbits {
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    opacity: .3;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+}
+
+
+/* Consistent spacing from a section's title group to its content below. */
+:root { --heading-content-gap: 50px; }
+@media (max-width: 1300px) { :root { --heading-content-gap: 40px; } }
+@media (max-width: 768px) { :root { --heading-content-gap: 30px; } }
+body section:not(.internet-outcomes):not(.internet-faq) > :is(.section-heading, .about-section-heading, .internet-section-intro, .careers-section-heading, .resources-section-heading) {
+  margin-bottom: 0;
+}
+body section:not(.internet-outcomes):not(.internet-faq) > :is(.section-heading, .about-section-heading, .internet-section-intro, .careers-section-heading, .resources-section-heading) + :is([class*="-grid"], .client-marquee, .hosting-package-tabs, .services-card-grid) {
+  margin-top: var(--heading-content-gap) !important;
+}
+body section:has(> .section-heading),
+body section:has(> .about-section-heading) { row-gap: 0; }

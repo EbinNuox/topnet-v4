@@ -1,0 +1,113 @@
+/* Rayadah Cloud only: supplied brand blue replaces the green accents. */
+@media (min-width: 1001px) {
+  .rayadah-page-body .rayadah-journey {
+    padding-inline: clamp(48px, 4.6vw, 100px);
+  }
+  .rayadah-page-body .rayadah-journey-editorial {
+    grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+    gap: clamp(60px, 7vw, 132px);
+  }
+}
+.rayadah-page-body .rayadah-journey-editorial-heading { min-width: 0; }
+.rayadah-page-body .rayadah-journey-preview {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1286 / 470;
+  margin: 32px 0 0;
+  overflow: clip;
+}
+.rayadah-page-body .rayadah-journey-preview .rayadah-journey-network {
+  left: 50%;
+  top: 0;
+  width: 1286px;
+  height: 470px;
+  margin: 0;
+  transform: translateX(-50%) scale(var(--journey-preview-scale, .4)) !important;
+  transform-origin: top center;
+}
+.rayadah-page-body .rayadah-journey-editorial-content {
+  min-width: 0;
+  transform: none;
+}
+.rayadah-page-body .rayadah-capability-card .rayadah-capability-tags {
+  margin-bottom: 20px;
+}
+.rayadah-page-body .rayadah-calculator-form select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%2355d3ff' stroke-width='1.5'/%3E%3C/svg%3E");
+}
+.rayadah-page-body { --lime: #55d3ff; }
+.rayadah-page-body .rayadah-page {
+  background: radial-gradient(86% 52% at 0 78%, #55d3ff08, transparent 78%), linear-gradient(#111626, #121827 58%, transparent);
+}
+.rayadah-page-body .rayadah-capability-card > .rayadah-capability-icon,
+.rayadah-page-body .rayadah-journey-network .cloud-node,
+.rayadah-page-body .rayadah-capability-card > .rayadah-capability-icon:hover,
+.rayadah-page-body .rayadah-journey-network .cloud-node:hover {
+  background: #55d3ff;
+  border-color: #55d3ff;
+  box-shadow: inset 0 1px 0 #ffffff40, 0 0 18px #55d3ff70, 0 0 42px #55d3ff30;
+}
+.rayadah-page-body .rayadah-capability-card:nth-child(3n) {
+  background: radial-gradient(88% 68% at 100% 0, #55d3ff2e, transparent 72%), linear-gradient(145deg, #1f272fb8, #0c121ce0);
+}
+.rayadah-page-body .header-cta,
+.rayadah-page-body .button-primary,
+.rayadah-page-body .language-option.active {
+  background: linear-gradient(90deg, #55d3ff30, #55d3ff0a);
+  border-color: #55d3ff66;
+}
+.rayadah-page-body .header-cta:hover,
+.rayadah-page-body .button-primary:hover { background: linear-gradient(90deg, #55d3ff50, #55d3ff18); }
+.rayadah-page-body .arrow,
+.rayadah-page-body .header-cta span,
+.rayadah-page-body .mini-cta span,
+.rayadah-page-body .footer-submit { color: #10283a; }
+.rayadah-page-body .brand-logo,
+.rayadah-page-body .footer-brand .footer-logo {
+  width: 150px;
+  height: 47px;
+  filter: none;
+}
+.rayadah-page-body .rayadah-capability-icon img,
+.rayadah-page-body .cloud-node img { filter: brightness(0) saturate(100%); opacity: .8; }
+.rayadah-page-body .cloud-connector-flow { filter: drop-shadow(0 0 1.5px #55d3ff9e); }
+.rayadah-page-body .site-cursor span { background: #55d3ff9e; box-shadow: 0 0 7px #55d3ff70; }
+.rayadah-page-body .language-menu { box-shadow: 0 18px 44px #00000057, 0 0 22px #55d3ff0f; }
+body.rayadah-page-body footer.site-footer {
+  background: linear-gradient(#05081429, #0508147a), radial-gradient(52% 112% at 108% 46%, #6f609f94, #413b6f47 40%, transparent 72%), radial-gradient(54% 108% at 90% 122%, #55d3ff70, #15577666 34%, transparent 74%), linear-gradient(112deg, #070c19, #050914 54%, #101329 80%, #211e3d);
+}
+.rayadah-page-body .rayadah-trust-item > img {
+  width: 64px;
+  height: 56px;
+  object-fit: contain;
+  filter: none;
+}
+.rayadah-page-body .rayadah-trust-item:nth-child(3) {
+  background: linear-gradient(135deg, #152536, #22516a99);
+}
+
+/* Equal artwork widths; SVG viewBoxes exclude the original uneven padding. */
+.rayadah-page-body .rayadah-trust-item > img {
+  width: 56px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Equal media height keeps all three model-card headings aligned. */
+.rayadah-page-body .rayadah-model-card .rayadah-model-visual {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 1.28 / 1;
+  flex: none;
+}
+.rayadah-page-body .rayadah-model-card .rayadah-model-visual > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

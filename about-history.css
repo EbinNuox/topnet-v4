@@ -1,0 +1,82 @@
+/* The rail owns its markers so each circle is centered on the line. */
+body.about-page-body .about-history-rail {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  height: 24px;
+  flex: 0 0 24px;
+  margin: 40px 0 36px;
+}
+.about-history-rail::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 50%;
+  height: 1px;
+  transform: translateY(-50%);
+  background: linear-gradient(90deg, #b189ffb8, #b189ff2e);
+}
+.about-history-rail > span {
+  position: relative;
+  align-self: center;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #b189ff66;
+  border-radius: 50%;
+  background: #171b2b;
+  transition: background .25s ease, box-shadow .25s ease;
+}
+.about-history-rail > span.is-active {
+  background: radial-gradient(circle at 35% 30%, #eadcff, #b189ff 42%, #7048c0 82%);
+  box-shadow: 0 0 0 3px #b189ff1a, 0 0 16px #9660ff94;
+}
+body.about-page-body .about-history-grid::before,
+body.about-page-body .about-history-grid::after,
+body.about-page-body .about-history-item::before { display: none !important; }
+body.about-page-body .about-history-section.has-scroll-history .about-history-grid {
+  margin-top: 0 !important;
+  padding-top: 0;
+}
+body.about-page-body .about-history-section.has-scroll-history .about-history-item {
+  opacity: .35 !important;
+  transform: translateY(12px) !important;
+  transition: opacity .3s ease, transform .3s ease, border-color .3s ease;
+}
+body.about-page-body .about-history-section.has-scroll-history .about-history-item.is-before-active {
+  opacity: .65 !important;
+  transform: none !important;
+}
+body.about-page-body .about-history-section.has-scroll-history .about-history-item.is-active {
+  opacity: 1 !important;
+  transform: none !important;
+}
+@media (min-width: 1001px) and (min-height: 700px) and (prefers-reduced-motion: no-preference) {
+  body.about-page-body .about-history-section.has-scroll-history {
+    min-height: calc(100svh + 4 * max(240px, 35svh));
+    padding-block: 0;
+  }
+  body.about-page-body .about-history-section.has-scroll-history > .about-history-sticky {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: 32px;
+  }
+}
+@media (max-width: 1000px), (max-height: 699px), (prefers-reduced-motion: reduce) {
+  body.about-page-body .about-history-section.has-scroll-history > .about-history-sticky {
+    position: relative;
+    top: auto;
+    height: auto;
+    min-height: 0;
+  }
+  body.about-page-body .about-history-section.has-scroll-history .about-history-item {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  body.about-page-body .about-history-rail { display: none; }
+}

@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Learn about TopNet, a Saudi digital infrastructure provider supporting enterprise connectivity, cloud, hosting, cybersecurity, and managed operations." />
     <title>About TopNet | TOPNET</title>
+    <link rel="icon" type="image/png" href="assets/topnet-mark-cropped.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?v=about-history-wheel-only-v1" />
+    <link rel="stylesheet" href="styles.css?rev=services-navigation-v9" />
+    <link rel="stylesheet" href="scroll-flow.css?rev=6" />
+    <link rel="stylesheet" href="about-history.css?rev=1" />
+    <link rel="stylesheet" href="assets/vendor/aos/aos.css" />
+    <link rel="stylesheet" href="scroll-reveal.css?rev=4" />
+    <link rel="stylesheet" href="responsive.css?rev=2" />
+    <link rel="stylesheet" href="brand-colors.css?rev=1" />
   </head>
   <body class="about-page-body">
     <div class="site-cursor" aria-hidden="true"><span></span><i></i></div>
@@ -29,9 +36,9 @@
           <nav class="nav" id="primary-navigation" aria-label="Primary navigation">
             <a href="index.html">Home</a>
             <a class="active" href="about.html" aria-current="page">About us</a>
-            <button class="services-link" type="button" aria-expanded="false" aria-controls="services-menu">Services <span aria-hidden="true">⌄</span></button>
-            <a href="index.html#resources">Resources</a>
-            <a href="index.html#contact">Contact us</a>
+            <div class="services-nav"><a class="services-link" href="services.html">Services</a><button class="services-menu-toggle" type="button" aria-label="Open services menu" aria-expanded="false" aria-controls="services-menu"><span aria-hidden="true">⌄</span></button></div>
+            <a href="resources.html">Resources</a>
+            <a href="contact.html">Contact us</a>
           </nav>
 
           <div class="header-tools">
@@ -43,8 +50,8 @@
                 <button class="language-option" type="button" data-lang="ar">Arabic</button>
               </div>
             </div>
-            <a class="rayadah-nav-link" href="index.html#rayadah-cloud">Rayadah Cloud</a>
-            <a class="header-cta" href="index.html#contact">Request consultation <span aria-hidden="true"></span></a>
+            <a class="rayadah-nav-link" href="rayadah-cloud.html">Rayadah Cloud</a>
+            <a class="header-cta" href="contact.html#enquiry">Request consultation <span aria-hidden="true"></span></a>
           </div>
 
           <div class="services-menu" id="services-menu" aria-hidden="true">
@@ -66,12 +73,11 @@
             <div class="service-detail" aria-live="polite">
               <h2>Connectivity Services</h2>
               <div class="service-capabilities">
-                <a href="services.html#service-catalog">Internet Connectivity <span>→</span></a>
-                <a href="services.html#service-catalog">Data Connectivity <span>→</span></a>
-                <a href="services.html#service-catalog">SD-WAN Connectivity <span>→</span></a>
-                <a href="services.html#service-catalog">VPN Connectivity <span>→</span></a>
+                <a href="internet-connectivity.html">Internet Connectivity <span>→</span></a>
+                <a href="data-connectivity.html">Data Connectivity <span>→</span></a>
+                <a href="#">SD-WAN Connectivity <span>→</span></a>
+                <a href="#">VPN Connectivity <span>→</span></a>
               </div>
-              <a class="category-overview" href="services.html#service-catalog">Category overview <span>→</span></a>
             </div>
           </div>
         </header>
@@ -79,7 +85,7 @@
         <div class="about-page-intro section-shell">
           <div class="about-page-copy">
             <span class="pill">About TopNet</span>
-            <h1 id="about-page-title"><span class="about-title-line">Saudi-born infrastructure expertise,</span> <span class="about-title-line">built for accountable delivery.</span></h1>
+            <h1 id="about-page-title"><span class="about-title-line">Saudi-born infrastructure expertise,</span> <span class="about-title-line">built for accountable delivery</span></h1>
             <p class="about-page-lead">Since 2006, our teams have helped organizations build resilient technology foundations with dependable service delivery, local accountability, and secure operational support.</p>
           </div>
         </div>
@@ -89,12 +95,12 @@
         <div class="about-who-inner section-shell">
           <div class="about-who-copy">
             <span class="pill">Who we are</span>
-            <h2 id="about-who-title"><span class="about-who-title-line">One accountable</span><span class="about-who-title-line">partner across</span><span class="about-who-title-line">connected infrastructure.</span></h2>
+            <h2 id="about-who-title"><span class="about-who-title-line">One accountable</span><span class="about-who-title-line">partner across</span><span class="about-who-title-line">connected infrastructure</span></h2>
             <p>TopNet is a Saudi digital infrastructure provider supporting enterprise connectivity, cloud, hosting, co-location, cybersecurity, professional services, and managed operations.</p>
             <p>These capabilities come together under one accountable structure, backed by secure operational support.</p>
           </div>
           <div class="about-who-visual">
-            <img src="assets/cloud-infrastructure.png" alt="Connected cloud and server infrastructure" loading="lazy" />
+            <img src="assets/cloud-infrastructure.png?v=who-cloud-art-v2" alt="Connected cloud and server infrastructure" loading="lazy" />
           </div>
         </div>
       </section>
@@ -103,24 +109,24 @@
         <div class="about-team-inner section-shell">
           <div class="about-section-heading about-team-heading">
             <span class="pill">Our team</span>
-            <h2 id="about-team-title">Leadership and expertise.</h2>
+            <h2 id="about-team-title">Leadership and expertise</h2>
           </div>
           <div class="about-team-content">
             <div class="about-team-track" role="region" aria-label="TopNet leadership team profiles" tabindex="0">
               <article class="about-team-card">
-                <div class="about-team-card-portrait" aria-hidden="true"><img class="team-photo" src="assets/team/team-1.png" alt="" /></div>
+                <div class="about-team-card-portrait" aria-hidden="true"><img class="team-photo" src="assets/team/clarity/team-1.png" alt="" /></div>
                 <div class="about-team-card-meta"><span class="about-team-card-name">Ahmed Al-Harbi</span><span class="about-team-card-role">Chief Executive Officer</span></div>
               </article>
               <article class="about-team-card">
-                <div class="about-team-card-portrait" aria-hidden="true"><img class="team-photo" src="assets/team/team-2.png" alt="" /></div>
+                <div class="about-team-card-portrait" aria-hidden="true"><img class="team-photo" src="assets/team/clarity/team-2.png" alt="" /></div>
                 <div class="about-team-card-meta"><span class="about-team-card-name">Noura Al-Qahtani</span><span class="about-team-card-role">Chief Strategy Officer</span></div>
               </article>
               <article class="about-team-card">
-                <div class="about-team-card-portrait" aria-hidden="true"><img class="team-photo" src="assets/team/team-3.png" alt="" /></div>
+                <div class="about-team-card-portrait" aria-hidden="true"><img class="team-photo" src="assets/team/clarity/team-3.png" alt="" /></div>
                 <div class="about-team-card-meta"><span class="about-team-card-name">Khalid Al-Salem</span><span class="about-team-card-role">Chief Technology Officer</span></div>
               </article>
               <article class="about-team-card">
-                <div class="about-team-card-portrait" aria-hidden="true"><img class="team-photo" src="assets/team/team-4.png" alt="" /></div>
+                <div class="about-team-card-portrait" aria-hidden="true"><img class="team-photo" src="assets/team/clarity/team-4.png" alt="" /></div>
                 <div class="about-team-card-meta"><span class="about-team-card-name">Maha Al-Otaibi</span><span class="about-team-card-role">Director of Customer Operations</span></div>
               </article>
             </div>
@@ -138,6 +144,11 @@
             <p class="about-direction-statement">Enable Saudi organizations to grow through resilient, secure, and connected digital infrastructure.</p>
             <p class="about-direction-support">A clear direction for connected digital infrastructure.</p>
           </article>
+          <div class="about-direction-center" aria-hidden="true">
+            <span class="about-direction-orbit-dot about-direction-orbit-dot--one"></span>
+            <span class="about-direction-orbit-dot about-direction-orbit-dot--two"></span>
+            <img src="assets/direction-center.png?v=direction-center-v2" alt="" loading="lazy" />
+          </div>
           <article class="about-direction-card about-direction-card--mission">
             <span>Mission</span>
             <p class="about-direction-statement">Bring networks, cloud, security, and managed operations together through accountable local delivery.</p>
@@ -150,30 +161,30 @@
         <div class="about-values-inner section-shell">
           <div class="about-values-copy">
             <span class="pill">Our values</span>
-            <h2 id="about-values-title">How TopNet works.</h2>
+            <h2 id="about-values-title">How TopNet works</h2>
             <p>These capabilities come together under one accountable structure, backed by secure operational support.</p>
-            <a class="button button-secondary" href="#about-contact">Request consultation</a>
-            <span class="about-values-rail-mark" aria-hidden="true"><img src="assets/topnet-mark-cropped.png" alt="" /></span>
+            <a class="button button-secondary" href="contact.html#enquiry">Request consultation</a>
+            <span class="about-values-rail-mark" aria-hidden="true"><img src="assets/about-molecule.png" alt="" /></span>
           </div>
           <div class="about-values-grid" aria-label="TopNet values">
             <article class="about-value-card is-active">
-              <span class="about-value-icon value-icon--technical" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><rect class="value-icon-outline" x="14" y="14" width="20" height="20" rx="4"/><path class="value-icon-detail" d="M19 10v4m5-4v4m5-4v4M19 34v4m5-4v4m5-4v4M10 19h4m-4 5h4m-4 5h4m20-10h4m-4 5h4m-4 5h4"/><path class="value-icon-detail" d="M20 24h8m-4-4v8"/></svg></span>
+              <span class="about-value-icon value-icon--technical" aria-hidden="true"><img src="assets/icons/technically-competent.svg" alt="" /></span>
               <div class="about-value-content"><h3>Technically competent</h3><p>Apply deep expertise with practical judgment.</p></div>
             </article>
             <article class="about-value-card">
-              <span class="about-value-icon value-icon--authoritative" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><circle class="value-icon-outline" cx="24" cy="24" r="15"/><path class="value-icon-detail" d="m16 24 5 5 11-11"/></svg></span>
+              <span class="about-value-icon value-icon--authoritative" aria-hidden="true"><img src="assets/icons/authoritative.svg" alt="" /></span>
               <div class="about-value-content"><h3>Authoritative</h3><p>Communicate clearly and take informed decisions.</p></div>
             </article>
             <article class="about-value-card">
-              <span class="about-value-icon value-icon--reliable" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><circle class="value-icon-outline" cx="24" cy="24" r="16"/><path class="value-icon-detail" d="M24 14v11l7 4"/><path class="value-icon-detail" d="M10 35c4 4 9 6 14 6s10-2 14-6"/></svg></span>
+              <span class="about-value-icon value-icon--reliable" aria-hidden="true"><img src="assets/icons/reliable.svg" alt="" /></span>
               <div class="about-value-content"><h3>Reliable</h3><p>Deliver consistently and respond when customers need us.</p></div>
             </article>
             <article class="about-value-card">
-              <span class="about-value-icon value-icon--strategic" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><circle class="value-icon-outline" cx="24" cy="24" r="16"/><path class="value-icon-detail" d="m31 17-5 10-10 5 5-10 10-5Z"/><circle class="value-icon-fill" cx="24" cy="24" r="2"/></svg></span>
+              <span class="about-value-icon value-icon--strategic" aria-hidden="true"><img src="assets/icons/strategic.svg" alt="" /></span>
               <div class="about-value-content"><h3>Strategic</h3><p>Connect immediate requirements to long-term outcomes.</p></div>
             </article>
             <article class="about-value-card">
-              <span class="about-value-icon value-icon--secure" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><path class="value-icon-outline" d="M24 4 9 10v11c0 9 5.8 15.5 15 20 9.2-4.5 15-11 15-20V10L24 4Z"/><rect class="value-icon-outline" x="17" y="22" width="14" height="11" rx="2"/><path class="value-icon-detail" d="M20 22v-3a4 4 0 0 1 8 0v3"/><path class="value-icon-detail" d="M24 26v4"/></svg></span>
+              <span class="about-value-icon value-icon--secure" aria-hidden="true"><img src="assets/icons/secure.svg" alt="" /></span>
               <div class="about-value-content"><h3>Secure</h3><p>Build protection and responsible operations into every layer.</p></div>
             </article>
           </div>
@@ -184,9 +195,10 @@
         <div class="about-history-sticky">
           <div class="about-section-heading">
             <span class="pill">Company history</span>
-            <h2 id="about-history-title">Built alongside Saudi Arabia’s digital growth.</h2>
+            <h2 id="about-history-title">Built alongside Saudi Arabia’s digital growth</h2>
             <p>TopNet has supported clients since 2006 and brings digital infrastructure services together under one accountable structure.</p>
           </div>
+          <div class="about-history-rail" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
           <div class="about-history-grid">
           <article class="about-history-item" style="--history-index: 0">
             <span class="about-history-icon history-icon--people" aria-hidden="true"><img src="assets/history-people.png?v=history-icon-crops-v2" alt="" /></span>
@@ -234,7 +246,7 @@
             <div class="partner-orbits" aria-hidden="true"></div>
             <div class="partner-copy">
               <span class="pill">Our partners</span>
-              <h2 id="about-partners-title">Enterprise platforms.<br />One accountable<br />network.</h2>
+              <h2 id="about-partners-title">Enterprise platforms<br />One accountable<br />network</h2>
               <p>TopNet brings trusted cloud, security, and infrastructure<br />platforms into one connected delivery model.</p>
             </div>
             <span class="partner-orbit orbit-a"><span class="partner-badge"><img src="assets/partner-enom.png" alt="Microsoft" loading="lazy" /></span></span>
@@ -250,7 +262,7 @@
       <section class="about-certifications-section section-shell" aria-labelledby="about-certifications-title">
         <div class="about-section-heading">
           <span class="pill">TopNet certifications</span>
-          <h2 id="about-certifications-title">Standards, controls, and assurance.</h2>
+          <h2 id="about-certifications-title">Standards, controls, and assurance</h2>
         </div>
         <div class="about-certification-grid" aria-label="TopNet certifications">
           <article class="about-certification-card">
@@ -301,11 +313,11 @@
       </nav>
       <nav class="footer-column footer-explore" aria-label="Footer navigation">
         <h3>Explore</h3>
-        <a href="index.html#rayadah-cloud">Rayadah Cloud</a>
-        <a href="index.html#resources">Resources</a>
+        <a href="rayadah-cloud.html">Rayadah Cloud</a>
+        <a href="resources.html">Resources</a>
         <a href="about.html" aria-current="page">About TopNet</a>
-        <span aria-disabled="true" title="Careers page not available yet">Careers</span>
-        <a href="index.html#contact">Contact Us</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact Us</a>
       </nav>
       <div class="footer-connect">
         <h3>Connect</h3>
@@ -333,6 +345,8 @@
     </footer>
     <div class="footer-backdrop" aria-hidden="true"></div>
 
-    <script src="script.js?v=about-history-wheel-only-v1"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="script.js?rev=responsive-icons-v17"></script>
+    <script src="wheel-scroll.js?rev=3"></script>
   </body>
 </html>

@@ -1,0 +1,354 @@
+/* Hosting packages from the approved TopNet package sheet. */
+.hosting-packages {
+  padding-top: clamp(96px, 10vw, 150px);
+  padding-right: 100px;
+  padding-bottom: clamp(96px, 10vw, 150px);
+  padding-left: 100px;
+  background:
+    radial-gradient(ellipse 68% 48% at 82% 34%, rgba(104, 67, 189, .16), transparent 74%),
+    #111626;
+}
+
+.hosting-packages > .internet-section-intro {
+  max-width: 860px;
+}
+
+.hosting-packages > .internet-section-intro > p {
+  max-width: 700px;
+}
+
+.hosting-package-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 56px;
+  padding: 8px;
+  border: 1px solid rgba(226, 231, 240, .18);
+  border-radius: 16px;
+  background:
+    radial-gradient(ellipse 110% 120% at 100% 0%, rgba(117, 84, 190, .16), transparent 72%),
+    linear-gradient(145deg, rgba(31, 35, 57, .92), rgba(12, 17, 29, .97));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .035), 0 18px 42px rgba(5, 8, 18, .12);
+}
+
+.hosting-package-tab {
+  min-height: 58px;
+  padding: 0 18px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #9ea2b1;
+  background: transparent;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 800;
+  text-align: center;
+  cursor: pointer;
+  transition: color .22s ease, background .22s ease, border-color .22s ease, transform .22s ease;
+}
+
+.hosting-package-tab:hover,
+.hosting-package-tab:focus-visible {
+  color: #f1f2f4;
+  background: rgba(126, 83, 218, .16);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.hosting-package-tab.is-active {
+  border-color: rgba(190, 158, 245, .5);
+  color: #ffffff;
+  background: linear-gradient(135deg, #4c2d7d 0%, #65419a 56%, #7651b1 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .12), 0 8px 18px rgba(103, 64, 159, .2);
+}
+
+.hosting-package-panels { margin-top: 34px; }
+.hosting-package-panel[hidden] { display: none; }
+
+.hosting-plan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.hosting-plan-card {
+  position: relative;
+  min-width: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 28px 28px;
+  border: 1px solid rgba(226, 231, 240, .16);
+  border-radius: 18px;
+  color: #eef0f2;
+  background:
+    radial-gradient(ellipse 110% 70% at 100% 0%, rgba(117, 84, 190, .16), transparent 72%),
+    linear-gradient(145deg, rgba(31, 35, 57, .78), rgba(12, 17, 29, .92));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .025), 0 18px 42px rgba(5, 8, 18, .12);
+}
+
+.hosting-plan-card.is-featured {
+  border-color: rgba(201, 237, 174, .5);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .04), 0 20px 48px rgba(5, 8, 18, .2);
+}
+
+.hosting-plan-badge {
+  align-self: flex-start;
+  min-height: 26px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 999px;
+  color: #111626;
+  background: var(--lime);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+}
+
+.hosting-plan-card-head { margin-top: 0; }
+.hosting-plan-card.is-featured .hosting-plan-card-head { margin-top: 24px; }
+
+.hosting-plan-eyebrow {
+  color: #b4a2d8;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.hosting-plan-card h3 {
+  margin: 14px 0 0;
+  color: #f1f1f3;
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.hosting-plan-summary {
+  min-height: 48px;
+  margin: 18px 0 0;
+  color: #b5b8c3;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.hosting-plan-price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(226, 231, 240, .13);
+}
+
+.hosting-plan-price strong {
+  color: #f3f4f5;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+}
+
+.hosting-plan-price span,
+.hosting-table-note {
+  color: #8f94a3;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.hosting-plan-features {
+  display: grid;
+  flex: 1;
+  gap: 0;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hosting-plan-action {
+  width: max-content;
+  min-width: 0;
+  min-height: 42px;
+  margin-top: 28px;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 0 8px 0 16px;
+  background: linear-gradient(90deg, rgba(47, 61, 53, .56), rgba(45, 55, 49, .18));
+  font-size: 15px;
+}
+
+.hosting-plan-action:hover,
+.hosting-plan-action:focus-visible {
+  background: linear-gradient(90deg, rgba(62, 79, 69, .66), rgba(47, 57, 51, .26));
+}
+
+.hosting-plan-features li {
+  position: relative;
+  padding: 12px 0 12px 22px;
+  border-top: 1px solid rgba(226, 231, 240, .11);
+  color: #c8cad2;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.hosting-plan-features li::before {
+  position: absolute;
+  top: 11px;
+  left: 0;
+  content: "+";
+  color: var(--lime);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.hosting-package-note {
+  margin: 0 0 20px;
+  color: #c9edae;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.hosting-vps-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(226, 231, 240, .16);
+  border-radius: 18px;
+  background: rgba(9, 14, 27, .56);
+}
+
+.hosting-vps-table,
+.hosting-control-table,
+.hosting-bandwidth-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.hosting-vps-table { min-width: 760px; }
+.hosting-vps-table caption { padding: 24px 24px 18px; color: #f0f1f3; font-size: 20px; font-weight: 600; text-align: left; }
+.hosting-vps-table th,
+.hosting-vps-table td,
+.hosting-control-table th,
+.hosting-control-table td,
+.hosting-bandwidth-table th,
+.hosting-bandwidth-table td { padding: 16px 18px; border-top: 1px solid rgba(226, 231, 240, .12); color: #bfc2cd; font-size: 15px; line-height: 1.45; vertical-align: top; }
+.hosting-vps-table thead th,
+.hosting-control-table thead th,
+.hosting-bandwidth-table thead th { border-top: 0; color: #f0f1f3; background: linear-gradient(90deg, rgba(76, 45, 125, .24), rgba(104, 66, 158, .14)); font-size: 12px; font-weight: 800; letter-spacing: 1.1px; text-transform: uppercase; }
+.hosting-vps-table tbody th,
+.hosting-control-table tbody th,
+.hosting-bandwidth-table tbody th { color: #f0f1f3; font-weight: 700; }
+.hosting-vps-table tbody td:last-child,
+.hosting-control-table tbody td:last-child,
+.hosting-bandwidth-table tbody td { color: #c9edae; font-weight: 700; white-space: nowrap; }
+.hosting-table-note { margin: 14px 24px 22px; }
+
+.hosting-control-panels {
+  display: grid;
+  grid-template-columns: minmax(260px, .72fr) minmax(0, 1.28fr);
+  column-gap: 36px;
+  margin-top: 36px;
+  padding: 30px;
+  border: 1px solid rgba(226, 231, 240, .16);
+  border-radius: 18px;
+  background: rgba(9, 14, 27, .4);
+}
+
+.hosting-control-panel-intro h3,
+.hosting-addons-panel h3 { margin: 14px 0 0; color: #f0f1f3; font-size: 25px; font-weight: 500; letter-spacing: -1px; }
+.hosting-control-panel-intro p,
+.hosting-addons-panel > p { max-width: 720px; margin: 16px 0 0; color: #aeb1bd; font-size: 15px; line-height: 1.7; }
+.hosting-control-options { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.hosting-control-option { min-height: 36px; display: inline-flex; align-items: center; padding: 0 14px; border: 1px solid rgba(226, 231, 240, .16); border-radius: 999px; color: #d7d9df; background: rgba(255, 255, 255, .035); font: inherit; font-size: 15px; font-weight: 700; cursor: pointer; transition: border-color .22s ease, color .22s ease, background .22s ease; }
+.hosting-control-option:hover,
+.hosting-control-option:focus-visible { border-color: rgba(201, 237, 174, .5); color: #f0f1f3; outline: none; }
+.hosting-control-option.is-active { border-color: rgba(201, 237, 174, .48); color: #111626; background: var(--lime); }
+.hosting-control-table-wrap[hidden] { display: none; }
+.hosting-control-tables { grid-column: 2; grid-row: 1; display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; margin-top: 0; }
+.hosting-control-table-wrap { overflow-x: auto; border: 1px solid rgba(226, 231, 240, .13); border-radius: 14px; }
+.hosting-control-table-wrap h4 { margin: 0; padding: 18px; color: #d5d7df; font-size: 15px; font-weight: 700; }
+.hosting-control-table { min-width: 680px; }
+.hosting-control-table th,
+.hosting-control-table td { padding: 13px 14px; }
+.hosting-control-panels > .hosting-table-note { grid-column: 2; grid-row: 2; margin: 14px 0 0; }
+.hosting-vps-action { grid-column: 1; grid-row: 2; align-self: start; margin-top: 28px; }
+.hosting-addons {
+  margin-top: 36px;
+  border: 1px solid rgba(226, 231, 240, .16);
+  border-radius: 18px;
+  background: rgba(9, 14, 27, .42);
+}
+
+.hosting-addons summary { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 0 26px; color: #f0f1f3; font-size: 17px; font-weight: 700; cursor: pointer; list-style: none; }
+.hosting-addons summary::-webkit-details-marker { display: none; }
+.hosting-addons summary:focus-visible { outline: 2px solid rgba(201, 237, 174, .55); outline-offset: -3px; }
+.hosting-addons-toggle { color: var(--lime); font-size: 24px; font-weight: 300; transition: transform .22s ease; }
+.hosting-addons[open] .hosting-addons-toggle { transform: rotate(45deg); }
+.hosting-addons-index { margin-right: 12px; color: var(--lime); font-size: 13px; letter-spacing: 1.4px; }
+.hosting-addons-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 36px; padding: 28px 26px 34px; border-top: 1px solid rgba(226, 231, 240, .13); }
+.hosting-addons-panel + .hosting-addons-panel { padding-left: 36px; border-left: 1px solid rgba(226, 231, 240, .13); }
+.hosting-addon-list { margin: 24px 0 0; }
+.hosting-addon-list > div { display: flex; justify-content: space-between; gap: 20px; padding: 14px 0; border-top: 1px solid rgba(226, 231, 240, .11); }
+.hosting-addon-list dt { color: #c8cad2; font-size: 15px; }
+.hosting-addon-list dd { margin: 0; color: #c9edae; font-size: 15px; font-weight: 700; text-align: right; white-space: nowrap; }
+.hosting-bandwidth-table { margin-top: 24px; }
+
+@media (max-width: 1000px) {
+  .hosting-packages { padding-right: 48px; padding-left: 48px; }
+  .hosting-plan-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hosting-control-panels { display: block; }
+  .hosting-control-tables { grid-template-columns: 1fr; }
+  .hosting-control-panel-intro p { max-width: none; }
+}
+
+@media (max-width: 700px) {
+  .hosting-packages { padding-right: 24px; padding-left: 24px; }
+  .hosting-package-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 38px; }
+  .hosting-package-tab { min-height: 52px; padding: 0 12px; font-size: 15px; }
+  .hosting-plan-grid { grid-template-columns: 1fr; }
+  .hosting-plan-card { padding: 26px 22px 24px; }
+  .hosting-control-panels { padding: 24px 18px; }
+  .hosting-addons-grid { grid-template-columns: 1fr; padding: 24px 18px 28px; }
+  .hosting-addons-panel + .hosting-addons-panel { padding-top: 28px; padding-left: 0; border-top: 1px solid rgba(226, 231, 240, .13); border-left: 0; }
+}
+
+@media (max-width: 480px) {
+  .hosting-package-tabs { grid-template-columns: 1fr; }
+  .hosting-addons summary { min-height: 72px; padding: 0 18px; font-size: 15px; }
+  .hosting-addon-list > div { align-items: flex-start; flex-direction: column; gap: 5px; }
+  .hosting-addon-list dd { text-align: left; }
+}
+
+
+/* Match the supplied package identity without changing the page theme. */
+.hosting-packages { --lime: #bdf2a1; width: 100%; max-width: none; }
+.hosting-packages .hosting-plan-action .arrow { background-color: #bdf2a1; }
+.hosting-packages .hosting-plan-action:focus-visible { outline: 2px solid #bdf2a1; outline-offset: 4px; }
+
+
+.hosting-plan-disclaimer {
+  margin: 24px 0 0;
+  color: #b5b8c3;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.hosting-vps-intro {
+  max-width: 760px;
+  margin: 0 0 24px;
+  color: #b5b8c3;
+  font-size: 15px;
+  line-height: 1.6;
+}
+#hosting-plans { scroll-margin-top: 32px; }
+
+
+/* Web Hosting now focuses on packages and the enquiry form. */
+.web-hosting-page-body .internet-service-facts,
+.web-hosting-page-body #outcomes,
+.web-hosting-page-body #capabilities,
+.web-hosting-page-body #delivery,
+.web-hosting-page-body #faq,
+.web-hosting-page-body .internet-related {
+  display: none !important;
+}

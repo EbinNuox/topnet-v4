@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Explore TopNet services for connected, resilient enterprise technology in Saudi Arabia." />
     <title>Services | TOPNET</title>
+    <link rel="icon" type="image/png" href="assets/topnet-mark-cropped.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?v=services-page-v1" />
+    <link rel="stylesheet" href="styles.css?rev=services-navigation-v9" />
+    <link rel="stylesheet" href="scroll-flow.css?rev=5" />
+    <link rel="stylesheet" href="assets/vendor/aos/aos.css" />
+    <link rel="stylesheet" href="scroll-reveal.css?rev=4" />
+    <link rel="stylesheet" href="responsive.css?rev=2" />
+    <link rel="stylesheet" href="brand-colors.css?rev=1" />
   </head>
   <body class="services-page-body">
     <div class="site-cursor" aria-hidden="true"><span></span><i></i></div>
@@ -17,7 +23,6 @@
     <main class="services-page">
       <section class="about-page-hero services-page-hero" aria-labelledby="services-page-title">
         <img class="about-banner-background" src="assets/about-banner-mark.png" alt="" aria-hidden="true" />
-        <div class="services-support-line" aria-label="Enterprise support">Enterprise support: +966 11 555 0100 <span>Saudi Arabia</span></div>
         <header class="site-header">
           <a class="brand" href="index.html" aria-label="TOPNET home">
             <img class="brand-logo" src="assets/topnet-logo.png" alt="TOPNET" />
@@ -30,9 +35,9 @@
           <nav class="nav" id="primary-navigation" aria-label="Primary navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About us</a>
-            <button class="services-link active" type="button" aria-expanded="false" aria-controls="services-menu">Services <span aria-hidden="true">⌄</span></button>
-            <a href="index.html#resources">Resources</a>
-            <a href="index.html#contact">Contact us</a>
+            <div class="services-nav"><a class="services-link active" href="services.html" aria-current="page">Services</a><button class="services-menu-toggle" type="button" aria-label="Open services menu" aria-expanded="false" aria-controls="services-menu"><span aria-hidden="true">⌄</span></button></div>
+            <a href="resources.html">Resources</a>
+            <a href="contact.html">Contact us</a>
           </nav>
 
           <div class="header-tools">
@@ -44,8 +49,8 @@
                 <button class="language-option" type="button" data-lang="ar">Arabic</button>
               </div>
             </div>
-            <a class="rayadah-nav-link" href="index.html#rayadah-cloud">Rayadah Cloud</a>
-            <a class="header-cta" href="index.html#contact">Request consultation <span aria-hidden="true"></span></a>
+            <a class="rayadah-nav-link" href="rayadah-cloud.html">Rayadah Cloud</a>
+            <a class="header-cta" href="contact.html#enquiry">Request consultation <span aria-hidden="true"></span></a>
           </div>
 
           <div class="services-menu" id="services-menu" aria-hidden="true">
@@ -67,12 +72,11 @@
             <div class="service-detail" aria-live="polite">
               <h2>Connectivity Services</h2>
               <div class="service-capabilities">
-                <a href="services.html#service-catalog">Internet Connectivity <span>→</span></a>
-                <a href="services.html#service-catalog">Data Connectivity <span>→</span></a>
-                <a href="services.html#service-catalog">SD-WAN Connectivity <span>→</span></a>
-                <a href="services.html#service-catalog">VPN Connectivity <span>→</span></a>
+                <a href="internet-connectivity.html">Internet Connectivity <span>→</span></a>
+                <a href="data-connectivity.html">Data Connectivity <span>→</span></a>
+                <a href="#">SD-WAN Connectivity <span>→</span></a>
+                <a href="#">VPN Connectivity <span>→</span></a>
               </div>
-              <a class="category-overview" href="services.html#service-catalog">Category overview <span>→</span></a>
             </div>
           </div>
         </header>
@@ -80,7 +84,7 @@
         <div class="about-page-intro section-shell">
           <div class="about-page-copy">
             <span class="pill">OUR SERVICES</span>
-            <h1 id="services-page-title"><span class="about-title-line">One ecosystem. Eight connected</span> <span class="about-title-line">capability areas.</span></h1>
+          <h1 id="services-page-title"><span class="about-title-line">One ecosystem Eight connected</span> <span class="about-title-line">capability areas</span></h1>
             <p class="about-page-lead">A concise orientation to TopNet’s revised service structure for visitors who need to compare options before choosing a specialist capability.</p>
           </div>
         </div>
@@ -92,43 +96,86 @@
           <h2 id="service-catalog-title">Choose a capability area</h2>
           <p>The mega menu supports direct access; this page helps decision-makers understand and compare the complete ecosystem.</p>
         </div>
-        <div class="service-directory" role="list" aria-label="TopNet service directory">
-          <article class="service-directory-item is-open" id="connectivity-services" role="listitem">
-            <button class="service-directory-toggle" type="button" aria-expanded="true" aria-controls="connectivity-services-panel">
-              <span class="service-directory-number">01</span><strong>Connectivity Services</strong><span class="service-directory-summary">Secure, dependable connections across sites, teams, platforms, and workloads.</span><span class="service-directory-state" aria-hidden="true">−</span>
-            </button>
-            <div class="service-directory-panel" id="connectivity-services-panel">
-              <div class="service-directory-links"><span title="Internet Connectivity detail page not available yet">Internet Connectivity <i>→</i></span><span title="Data Connectivity detail page not available yet">Data Connectivity <i>→</i></span><span title="SD-WAN Connectivity detail page not available yet">SD-WAN Connectivity <i>→</i></span><span title="VPN Connectivity detail page not available yet">VPN Connectivity <i>→</i></span></div>
-              <a class="category-overview" href="services.html#connectivity-services">View Connectivity Services category <span>→</span></a>
+        <div class="services-card-grid" role="list" aria-label="TopNet service categories">
+          <article class="services-card services-card-connectivity" id="connectivity-services" role="listitem">
+              <div class="services-card-art" aria-hidden="true"><img src="assets/frame-cloud-stack.png" alt="" /></div>
+            <div class="services-card-body">
+              <span class="services-card-index">01 / 08</span>
+              <h3>Connectivity Services</h3>
+              <p>Secure, dependable connections across sites, teams, platforms, and workloads.</p>
+              <div class="services-card-subservices" aria-label="Connectivity Services capabilities"><a href="internet-connectivity.html">Internet Connectivity</a><a href="data-connectivity.html">Data Connectivity</a><span>SD-WAN Connectivity</span><span>VPN Connectivity</span></div>
+              <a class="button button-primary services-card-link" href="services.html#connectivity-services">View Connectivity Services category <span class="arrow" aria-hidden="true"></span></a>
             </div>
           </article>
-          <article class="service-directory-item" id="clouding-services" role="listitem">
-            <button class="service-directory-toggle" type="button" aria-expanded="false" aria-controls="clouding-services-panel"><span class="service-directory-number">02</span><strong>Clouding Services</strong><span class="service-directory-summary">Rayadah Cloud and public-cloud platforms supported through design, migration, security, backup and management.</span><span class="service-directory-state" aria-hidden="true">+</span></button>
-            <div class="service-directory-panel" id="clouding-services-panel" hidden><div class="service-directory-links"><a href="index.html#rayadah-cloud">Rayadah Cloud <i>→</i></a><span title="Public Clouds detail page not available yet">Public Clouds <i>→</i></span></div><a class="category-overview" href="services.html#clouding-services">View Clouding Services category <span>→</span></a></div>
+          <article class="services-card services-card-clouding" id="clouding-services" role="listitem">
+              <div class="services-card-art" aria-hidden="true"><img src="assets/service-clouding-approved.png" alt="" /></div>
+            <div class="services-card-body">
+              <span class="services-card-index">02 / 08</span>
+              <h3>Clouding Services</h3>
+              <p>Rayadah Cloud and public-cloud platforms supported through design, migration, security, backup and management.</p>
+              <div class="services-card-subservices" aria-label="Clouding Services capabilities"><a href="rayadah-cloud.html">Rayadah Cloud</a><a href="public-clouds.html">Public Clouds</a></div>
+              <a class="button button-primary services-card-link" href="services.html#clouding-services">View Clouding Services category <span class="arrow" aria-hidden="true"></span></a>
+            </div>
           </article>
-          <article class="service-directory-item" id="hosting-services" role="listitem">
-            <button class="service-directory-toggle" type="button" aria-expanded="false" aria-controls="hosting-services-panel"><span class="service-directory-number">03</span><strong>Hosting Services</strong><span class="service-directory-summary">Reliable Saudi-based hosting foundations for websites, email, DNS, and Saudi domains.</span><span class="service-directory-state" aria-hidden="true">+</span></button>
-            <div class="service-directory-panel" id="hosting-services-panel" hidden><div class="service-directory-links"><span title="Web Hosting detail page not available yet">Web Hosting <i>→</i></span><span title="Email Hosting detail page not available yet">Email Hosting <i>→</i></span><span title="DNS Hosting detail page not available yet">DNS Hosting <i>→</i></span><span title="Saudi Domain Registration detail page not available yet">Saudi Domain Registration <i>→</i></span></div><a class="category-overview" href="services.html#hosting-services">View Hosting Services category <span>→</span></a></div>
+          <article class="services-card services-card-hosting" id="hosting-services" role="listitem">
+              <div class="services-card-art" aria-hidden="true"><img src="assets/frame-cloud-stack.png" alt="" /></div>
+            <div class="services-card-body">
+              <span class="services-card-index">03 / 08</span>
+              <h3>Hosting Services</h3>
+              <p>Reliable Saudi-based hosting foundations for websites, email, DNS, and Saudi domains.</p>
+              <div class="services-card-subservices" aria-label="Hosting Services capabilities"><a href="web-hosting.html">Web Hosting</a><a href="saudi-domain-registration.html">Saudi Domain Registration</a></div>
+              <a class="button button-primary services-card-link" href="services.html#hosting-services">View Hosting Services category <span class="arrow" aria-hidden="true"></span></a>
+            </div>
           </article>
-          <article class="service-directory-item" id="colocation-services" role="listitem">
-            <button class="service-directory-toggle" type="button" aria-expanded="false" aria-controls="colocation-services-panel"><span class="service-directory-number">04</span><strong>Co-Location Services</strong><span class="service-directory-summary">Secure data-center space, interconnection and managed operational support for critical infrastructure.</span><span class="service-directory-state" aria-hidden="true">+</span></button>
-            <div class="service-directory-panel" id="colocation-services-panel" hidden><div class="service-directory-links"><span title="Secured Cage detail page not available yet">Secured Cage <i>→</i></span><span title="Dedicated Rack detail page not available yet">Dedicated Rack <i>→</i></span><span title="Shared Rack detail page not available yet">Shared Rack <i>→</i></span><span title="Bare Metal Servers detail page not available yet">Bare Metal Servers <i>→</i></span><span title="Cross Connect detail page not available yet">Cross Connect <i>→</i></span><span title="Managed Colocation detail page not available yet">Managed Colocation <i>→</i></span></div><a class="category-overview" href="services.html#colocation-services">View Co-Location Services category <span>→</span></a></div>
+          <article class="services-card services-card-colocation" id="colocation-services" role="listitem">
+              <div class="services-card-art" aria-hidden="true"><img src="assets/service-colocation-approved.png" alt="" /></div>
+            <div class="services-card-body">
+              <span class="services-card-index">04 / 08</span>
+              <h3>Co-Location Services</h3>
+              <p>Secure data-center space, interconnection and managed operational support for critical infrastructure.</p>
+              <div class="services-card-subservices" aria-label="Co-Location Services capabilities"><a href="secured-cage.html">Secured Cage</a><span>Dedicated Rack</span><span>Cross Connect</span><span>Managed Colocation</span></div>
+              <a class="button button-primary services-card-link" href="services.html#colocation-services">View Co-Location Services category <span class="arrow" aria-hidden="true"></span></a>
+            </div>
           </article>
-          <article class="service-directory-item" id="cybersecurity-services" role="listitem">
-            <button class="service-directory-toggle" type="button" aria-expanded="false" aria-controls="cybersecurity-services-panel"><span class="service-directory-number">05</span><strong>Cybersecurity Services</strong><span class="service-directory-summary">Managed detection, monitoring, assessment, governance and security-awareness capabilities.</span><span class="service-directory-state" aria-hidden="true">+</span></button>
-            <div class="service-directory-panel" id="cybersecurity-services-panel" hidden><div class="service-directory-links"><span title="Managed Security detail page not available yet">Managed Security <i>→</i></span><span title="Security Consulting detail page not available yet">Security Consulting <i>→</i></span></div><a class="category-overview" href="services.html#cybersecurity-services">View Cybersecurity Services category <span>→</span></a></div>
+          <article class="services-card services-card-cybersecurity" id="cybersecurity-services" role="listitem">
+              <div class="services-card-art" aria-hidden="true"><img src="assets/service-cybersecurity-approved.png" alt="" /></div>
+            <div class="services-card-body">
+              <span class="services-card-index">05 / 08</span>
+              <h3>Cybersecurity Services</h3>
+              <p>Managed detection, monitoring, assessment, governance and security-awareness capabilities.</p>
+              <div class="services-card-subservices" aria-label="Cybersecurity Services capabilities"><span>Managed Security</span><span>Security Consulting</span></div>
+              <a class="button button-primary services-card-link" href="services.html#cybersecurity-services">View Cybersecurity Services category <span class="arrow" aria-hidden="true"></span></a>
+            </div>
           </article>
-          <article class="service-directory-item" id="security-services" role="listitem">
-            <button class="service-directory-toggle" type="button" aria-expanded="false" aria-controls="security-services-panel"><span class="service-directory-number">06</span><strong>Security Services</strong><span class="service-directory-summary">Technology controls across networks, endpoints, identity, data, email and cloud environments.</span><span class="service-directory-state" aria-hidden="true">+</span></button>
-            <div class="service-directory-panel" id="security-services-panel" hidden><div class="service-directory-links"><span title="Network Security detail page not available yet">Network Security <i>→</i></span><span title="Endpoint Security detail page not available yet">Endpoint Security <i>→</i></span><span title="Identity Security detail page not available yet">Identity Security <i>→</i></span><span title="Data Security detail page not available yet">Data Security <i>→</i></span><span title="Email Security detail page not available yet">Email Security <i>→</i></span><span title="Cloud Security detail page not available yet">Cloud Security <i>→</i></span></div><a class="category-overview" href="services.html#security-services">View Security Services category <span>→</span></a></div>
+          <article class="services-card services-card-security" id="security-services" role="listitem">
+              <div class="services-card-art" aria-hidden="true"><img src="assets/service-security-approved-v2.png" alt="" /></div>
+            <div class="services-card-body">
+              <span class="services-card-index">06 / 08</span>
+              <h3>Security Services</h3>
+              <p>Technology controls across networks, endpoints, identity, data, email and cloud environments.</p>
+              <div class="services-card-subservices" aria-label="Security Services capabilities"><span>Network Security</span><span>Endpoint Security</span><span>Identity Security</span><span>Cloud Security</span></div>
+              <a class="button button-primary services-card-link" href="services.html#security-services">View Security Services category <span class="arrow" aria-hidden="true"></span></a>
+            </div>
           </article>
-          <article class="service-directory-item" id="professional-services" role="listitem">
-            <button class="service-directory-toggle" type="button" aria-expanded="false" aria-controls="professional-services-panel"><span class="service-directory-number">07</span><strong>Professional Services</strong><span class="service-directory-summary">Specialist expertise for planning, implementing and transforming enterprise technology environments.</span><span class="service-directory-state" aria-hidden="true">+</span></button>
-            <div class="service-directory-panel" id="professional-services-panel" hidden><div class="service-directory-links"><span title="Collaboration detail page not available yet">Collaboration <i>→</i></span><span title="Low Current detail page not available yet">Low Current <i>→</i></span><span title="IT Consulting detail page not available yet">IT Consulting <i>→</i></span><span title="Infrastructure Projects detail page not available yet">Infrastructure Projects <i>→</i></span><span title="Cloud Projects detail page not available yet">Cloud Projects <i>→</i></span><span title="Security Projects detail page not available yet">Security Projects <i>→</i></span><span title="Business Continuity detail page not available yet">Business Continuity <i>→</i></span><span title="Datacenter Services detail page not available yet">Datacenter Services <i>→</i></span></div><a class="category-overview" href="services.html#professional-services">View Professional Services category <span>→</span></a></div>
+          <article class="services-card services-card-professional" id="professional-services" role="listitem">
+              <div class="services-card-art" aria-hidden="true"><img src="assets/service-professional-approved.png" alt="" /></div>
+            <div class="services-card-body">
+              <span class="services-card-index">07 / 08</span>
+              <h3>Professional Services</h3>
+              <p>Specialist expertise for planning, implementing and transforming enterprise technology environments.</p>
+              <div class="services-card-subservices" aria-label="Professional Services capabilities"><span>Collaboration</span><span>IT Consulting</span><span>Cloud Projects</span><span>Security Projects</span></div>
+              <a class="button button-primary services-card-link" href="services.html#professional-services">View Professional Services category <span class="arrow" aria-hidden="true"></span></a>
+            </div>
           </article>
-          <article class="service-directory-item" id="managed-services" role="listitem">
-            <button class="service-directory-toggle" type="button" aria-expanded="false" aria-controls="managed-services-panel"><span class="service-directory-number">08</span><strong>Managed Services</strong><span class="service-directory-summary">Ongoing management and support across infrastructure, cybersecurity and the service desk.</span><span class="service-directory-state" aria-hidden="true">+</span></button>
-            <div class="service-directory-panel" id="managed-services-panel" hidden><div class="service-directory-links"><span title="Infrastructure detail page not available yet">Infrastructure <i>→</i></span><span title="Cybersecurity detail page not available yet">Cybersecurity <i>→</i></span><span title="Service Desk detail page not available yet">Service Desk <i>→</i></span></div><a class="category-overview" href="services.html#managed-services">View Managed Services category <span>→</span></a></div>
+          <article class="services-card services-card-managed" id="managed-services" role="listitem">
+              <div class="services-card-art" aria-hidden="true"><img src="assets/service-managed-cutout-v1.png" alt="" /></div>
+            <div class="services-card-body">
+              <span class="services-card-index">08 / 08</span>
+              <h3>Managed Services</h3>
+              <p>Ongoing management and support across infrastructure, cybersecurity and the service desk.</p>
+              <div class="services-card-subservices" aria-label="Managed Services capabilities"><span>Infrastructure</span><span>Cybersecurity</span><span>Service Desk</span></div>
+              <a class="button button-primary services-card-link" href="services.html#managed-services">View Managed Services category <span class="arrow" aria-hidden="true"></span></a>
+            </div>
           </article>
         </div>
       </section>
@@ -163,11 +210,11 @@
       </nav>
       <nav class="footer-column footer-explore" aria-label="Footer navigation">
         <h3>Explore</h3>
-        <a href="index.html#rayadah-cloud">Rayadah Cloud</a>
-        <a href="index.html#resources">Resources</a>
+        <a href="rayadah-cloud.html">Rayadah Cloud</a>
+        <a href="resources.html">Resources</a>
         <a href="about.html">About TopNet</a>
-        <span aria-disabled="true" title="Careers page not available yet">Careers</span>
-        <a href="index.html#contact">Contact Us</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact Us</a>
       </nav>
       <div class="footer-connect">
         <h3>Connect</h3>
@@ -195,6 +242,8 @@
     </footer>
     <div class="footer-backdrop" aria-hidden="true"></div>
 
-    <script src="script.js?v=services-page-v1"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="script.js?rev=responsive-icons-v17"></script>
+    <script src="wheel-scroll.js?rev=3"></script>
   </body>
 </html>

@@ -1,0 +1,33 @@
+/* Green TopNet identity; blue is reserved for Rayadah and the homepage cloud feature. */
+:root {
+  --accent-color: #c9edae;
+  --accent-rgb: 201, 237, 174;
+  --lime: #c9edae;
+}
+body.rayadah-page-body {
+  --accent-color: #55d3ff;
+  --accent-rgb: 85, 211, 255;
+  --lime: #55d3ff;
+}
+body:not(.rayadah-page-body) .cloud-platform {
+  --accent-color: #55d3ff;
+  --accent-rgb: 85, 211, 255;
+  --lime: #55d3ff;
+}
+body:not(.rayadah-page-body) .brand-logo,
+body:not(.rayadah-page-body) .footer-brand .footer-logo,
+body:not(.rayadah-page-body) .footer-brand > a > img,
+body:not(.rayadah-page-body) .performance .stat-card > img[src^="assets/icons/"],
+body:not(.rayadah-page-body) .about-value-icon > img[src^="assets/icons/"] {
+  filter: brightness(0) saturate(100%) invert(91%) sepia(15%) saturate(620%) hue-rotate(45deg) brightness(103%) contrast(92%);
+}
+body:not(.rayadah-page-body) .site-cursor span { background: #c9edae; }
+body:not(.rayadah-page-body) .site-cursor { border-color: #c9edae80; }
+body:not(.rayadah-page-body) .service-icon { border-color: #c9edae; }
+/* Preserve white artwork in diagram tiles. */
+body .cloud-node > img[src^="assets/icons/"],
+body .service-icon > img[src^="assets/icons/"] { filter: brightness(0) invert(1) !important; }
+body:not(.rayadah-page-body) .performance .stat-card.stat-green {
+  background: linear-gradient(135deg, #243026, #394736);
+}
+body:not(.rayadah-page-body) .cloud-network-lines stop { stop-color: var(--accent-color); }
