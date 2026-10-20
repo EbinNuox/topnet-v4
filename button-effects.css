@@ -22,6 +22,11 @@ body :is(button, .button, .mini-cta, .header-cta, .rayadah-nav-link, .careers-ro
 body :is(.button, .mini-cta, .header-cta):focus-visible > :is(.arrow, span:only-child) {
   box-shadow: 0 0 18px rgba(var(--accent-rgb), .35);
 }
+/* FAQ rows remain transparent; keyboard focus retains its outline. */
+body button:is(.rayadah-faq-question, .internet-faq-question):not(:disabled):not([aria-disabled="true"]):is(:hover, :focus-visible) {
+  background: transparent !important;
+  box-shadow: none !important;
+}
 @media (prefers-reduced-motion: reduce) {
   body :is(button, .button, .mini-cta, .header-cta, .rayadah-nav-link, .careers-role-button) { transition: none; }
 }
