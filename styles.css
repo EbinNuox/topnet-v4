@@ -163,7 +163,7 @@ img { max-width: 100%; }
   #home .hero-copy h1 br,
   #home .hero-copy .intro br { display: none; }
 }
-.hero-copy { width: min(1320px, calc(100% - 80px)); margin: 0 auto; padding-top: 184px; text-align: center; }
+.hero-copy { position: relative; z-index: 5; width: min(1320px, calc(100% - 80px)); margin: 0 auto; padding-top: 184px; text-align: center; }
 .eyebrow { margin: 0 0 25px; color: var(--lime); text-transform: uppercase; font-size: 15px; font-weight: 800; letter-spacing: 3.2px; }
 .hero-copy h1 { margin: 0; color: #fff; font-size: clamp(58px, 3.78vw, 73px); line-height: .98; font-weight: 300; letter-spacing: -2.5px; white-space: nowrap; transform: scaleX(1.2); }
 .intro { margin: var(--title-copy-gap) auto 0; color: var(--muted); font-size: 15px; line-height: 1.65; font-weight: 400; transform:scaleX(1.08); }
@@ -178,7 +178,7 @@ img { max-width: 100%; }
 .button:hover .arrow,.button:focus-visible .arrow { transform:translateX(2px); box-shadow:0 0 22px rgba(206,232,182,.28); }
 
 .infrastructure { --connector-art-gap:clamp(16px,1.5vw,20px); position: relative; width: min(1230px, calc(100% - 80px)); height: 680px; margin: 40px auto 0; }
-.cloud-art { position:absolute; z-index:3; left:50%; top:-188px; width:735px; height:auto; transform:translateX(-50%); }
+.cloud-art { position:absolute; z-index:3; left:50%; top:-188px; width:735px; height:auto; transform:translateX(-50%); pointer-events:none; }
 .connector { position:absolute; z-index:2; width:42%; height:94px; }
 .connector::before,.connector::after { display:none; }
 .connector-graphic { position:absolute; z-index:0; top:0; bottom:0; left:0; right:auto; display:block; width:calc(100% - var(--connector-art-gap)); height:100%; overflow:visible; pointer-events:none; }
