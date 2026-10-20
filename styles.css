@@ -235,7 +235,6 @@ img { max-width: 100%; }
 .bottom-rule { display: none; }
 
 .performance { padding-top: 120px; background: radial-gradient(circle at 75% 25%, rgba(123,89,246,.12), transparent 31%), linear-gradient(115deg,#101522,#171b27); }
-.performance .section-heading { min-height: 298px; }
 .stats-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); margin: 0 calc(-1 * var(--page-gutter)); }
 .stat-card { position:relative; min-width:0; min-height: 376px; padding: 46px clamp(28px,4vw,72px); border: 1px solid rgba(231,233,240,.14); background: rgba(12,17,29,.25); overflow: clip; }
 .stat-card::before { content:""; position:absolute; inset:-24% -34%; background:radial-gradient(circle at 50% 50%,rgba(var(--accent-rgb),.12) 0%,rgba(122,91,219,.12) 28%,rgba(12,17,29,0) 62%); opacity:0; transform:translate3d(-8%,16%,0) scale(.82); transition:opacity .9s ease,transform 1.2s cubic-bezier(.22,1,.36,1); pointer-events:none; }
@@ -15446,3 +15445,47 @@ body .about-value-icon > img[src^="assets/icons/"] {
 .about-page-body .about-who-copy h2 { margin-bottom: 20px; }
 .about-page-body .about-who-copy p,
 .about-page-body .about-who-copy p + p { margin: 0 0 20px; }
+
+/* Keep LinkedIn, X and YouTube centered on the same footer row. */
+.site-footer .social-links { align-items: center; }
+.site-footer .social-links > :is(a, span) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  line-height: 1;
+}
+.site-footer .social-links > .youtube-link > span { margin: 0; flex-shrink: 0; }
+
+/* Shared circular social buttons on every page, including placeholder icons. */
+.site-footer .social-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  margin-bottom: 24px;
+}
+.site-footer .social-links > :is(a, span) {
+  width: 45px;
+  height: 45px;
+  flex: 0 0 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border: 1px solid rgba(231, 232, 238, .25);
+  border-radius: 50%;
+  color: #f1f1f3;
+  background: rgba(19, 24, 39, .16);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+.site-footer .social-links > .youtube-link > span {
+  width: 17px;
+  height: 12px;
+  margin: 0;
+  border-radius: 4px;
+  background: #f1f1f3;
+}

@@ -31,3 +31,11 @@ body:not(.rayadah-page-body) .performance .stat-card.stat-green {
   background: linear-gradient(135deg, #243026, #394736);
 }
 body:not(.rayadah-page-body) .cloud-network-lines stop { stop-color: var(--accent-color); }
+
+/* Journey steps retain the page accent when active, hovered or focused. */
+body .rayadah-journey-list button,
+body .rayadah-journey-list button > span,
+body .rayadah-journey-list button:is(.is-active, :hover, :focus, :focus-visible),
+body .rayadah-journey-list button:is(.is-active, :hover, :focus, :focus-visible) > span {
+  color: var(--accent-color) !important;
+}

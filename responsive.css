@@ -1,6 +1,6 @@
 /* Shared responsive overrides. Keep this stylesheet after page-specific styles. */
 @media (max-width: 1600px) {
-  :root { --page-gutter: 64px; --section-spacing: 100px; --responsive-title: 68px; --responsive-h2: 58px; --responsive-h3: 28px; --responsive-space: 96px; }
+  :root { --page-gutter: 64px; --section-spacing: 100px; --responsive-title: 68px; --responsive-h2: 58px; --responsive-h3: 28px; --responsive-space: 72px; }
   body :is(.section-shell, .internet-section-shell, .hosting-packages) { padding-inline: var(--page-gutter); }
   body section:not(.hero):not(.about-page-hero):not(.about-history-section):not(.about-values-section):is(.section-shell, .internet-section-shell) { padding-block: var(--responsive-space); }
   body :is(h1, .hero-copy h1) { font-size: var(--responsive-title); }
@@ -16,7 +16,7 @@
   body .internet-section-intro { max-width: 760px; }
 }
 @media (max-width: 1300px) {
-  :root { --page-gutter: 40px; --section-spacing: 80px; --responsive-title: 60px; --responsive-h2: 50px; --responsive-h3: 26px; --responsive-space: 80px; }
+  :root { --page-gutter: 40px; --section-spacing: 80px; --responsive-title: 60px; --responsive-h2: 50px; --responsive-h3: 26px; --responsive-space: 64px; }
   body .site-header { gap: 20px; }
   body .primary-navigation { gap: 20px; }
   body :is(.contact-wrap, .internet-delivery-grid, .contact-enquiry-grid) { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 32px; }
@@ -28,7 +28,7 @@
   body .about-certification-card h3 strong { font-size: 18px; }
 }
 @media (max-width: 1024px) {
-  :root { --page-gutter: 32px; --section-spacing: 72px; --responsive-title: 52px; --responsive-h2: 44px; --responsive-h3: 24px; --responsive-space: 72px; }
+  :root { --page-gutter: 32px; --section-spacing: 72px; --responsive-title: 52px; --responsive-h2: 44px; --responsive-h3: 24px; --responsive-space: 56px; }
   body :is(.about-who-grid, .about-direction-grid, .internet-connectivity-hero-grid, .contact-enquiry-grid, .internet-delivery-grid, .rayadah-journey-editorial) { grid-template-columns: minmax(0,1fr); gap: 40px; }
   body :is(.resources-grid, .careers-values-grid, .hosting-plan-grid, .rayadah-capability-grid, .about-certification-grid) { grid-template-columns: repeat(2,minmax(0,1fr)); }
   body .contact-wrap { display: grid; grid-template-columns: minmax(0,1fr); grid-template-areas: 'eyebrow' 'title' 'copy' 'form'; gap: 0; text-align: left; }
@@ -44,7 +44,7 @@
   body .hosting-package-tabs { gap: 6px; padding: 6px; }
 }
 @media (max-width: 768px) {
-  :root { --page-gutter: 24px; --section-spacing: 56px; --responsive-title: 44px; --responsive-h2: 36px; --responsive-h3: 22px; --responsive-space: 56px; }
+  :root { --page-gutter: 24px; --section-spacing: 56px; --responsive-title: 44px; --responsive-h2: 36px; --responsive-h3: 22px; --responsive-space: 48px; }
   body :is(.feature-grid, .insight-grid, .rayadah-model-grid, .internet-related-grid, .hosting-plan-grid, .services-card, .contact-presence-grid) { grid-template-columns: minmax(0,1fr); }
   body .services-card { padding: 28px 24px; gap: 24px; }
   body .services-card h2 { font-size: 34px; }
@@ -62,7 +62,7 @@
   body .hosting-vps-table-wrap, body .hosting-control-table-wrap { max-width: 100%; overflow-x: auto; }
 }
 @media (max-width: 500px) {
-  :root { --page-gutter: 20px; --section-spacing: 48px; --responsive-title: 38px; --responsive-h2: 32px; --responsive-h3: 21px; --responsive-space: 48px; }
+  :root { --page-gutter: 20px; --section-spacing: 48px; --responsive-title: 38px; --responsive-h2: 32px; --responsive-h3: 21px; --responsive-space: 40px; }
   body :is(.about-certification-grid, .rayadah-capability-grid, .stats-grid, .site-footer) { grid-template-columns: minmax(0,1fr); }
   body .site-footer { width: calc(100% - 24px); padding: 32px 24px; gap: 28px; margin-top: 40px; }
   body .footer-bottom { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
@@ -80,7 +80,7 @@
   body .about-certification-card h3 strong { font-size: 18px; }
 }
 @media (max-width: 400px) {
-  :root { --page-gutter: 16px; --section-spacing: 40px; --responsive-title: 34px; --responsive-h2: 29px; --responsive-h3: 20px; --responsive-space: 40px; }
+  :root { --page-gutter: 16px; --section-spacing: 40px; --responsive-title: 34px; --responsive-h2: 29px; --responsive-h3: 20px; --responsive-space: 32px; }
   body .services-card { padding: 24px 18px; }
   body .services-card h2 { font-size: 28px; }
   body .hosting-plan-card { padding: 22px 18px; }
@@ -334,3 +334,70 @@ body section:not(.internet-outcomes):not(.internet-faq) > :is(.section-heading, 
 }
 body section:has(> .section-heading),
 body section:has(> .about-section-heading) { row-gap: 0; }
+/* Content sections should follow their content, not a desktop-sized minimum. */
+@media (max-width: 1600px) {
+  body .hero,
+  body section:not(.partners):not(.about):not(.about-values-section):not(.about-history-section) {
+    min-height: 0 !important;
+  }
+  body .hero { padding-bottom: 48px; }
+  body :is(.about-page-intro, .rayadah-hero-inner, .internet-connectivity-hero-grid) { min-height: 0; }
+}
+@media (max-width: 768px) {
+  body .hero { padding-bottom: 32px; }
+}
+/* Compact section spacing across every page, including page-specific layouts. */
+@media (max-width: 1600px) {
+  :root { --responsive-space: 70px; --section-spacing: 70px; }
+  body section:not(.hero):not(.about-page-hero):not(.contact-page-hero):not(.careers-page-hero):not(.resources-page-hero):not(.about-values-section):not(.about-history-section) {
+    padding-top: var(--responsive-space) !important;
+    padding-bottom: var(--responsive-space) !important;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 1300px) {
+  :root { --responsive-space: 60px; --section-spacing: 60px; }
+}
+@media (max-width: 1024px) {
+  :root { --responsive-space: 50px; --section-spacing: 50px; }
+}
+@media (max-width: 768px) {
+  :root { --responsive-space: 40px; --section-spacing: 40px; }
+}
+@media (max-width: 500px) {
+  :root { --responsive-space: 30px; --section-spacing: 30px; }
+}
+@media (max-width: 400px) {
+  :root { --responsive-space: 30px; --section-spacing: 30px; }
+}
+/* Remove inherited minimums from content wrappers, not just section elements. */
+@media (max-width: 1600px) {
+  body :is(
+    .section-heading,
+    .compact-heading,
+    .about-section-heading,
+    .internet-section-intro,
+    .internet-faq-intro,
+    .cloud-heading,
+    .careers-section-heading,
+    .resources-section-heading,
+    .contact-section-heading,
+    .about-page-intro,
+    .careers-page-intro,
+    .contact-page-intro,
+    .resources-page-intro,
+    .rayadah-hero-inner,
+    .internet-connectivity-hero-inner,
+    .internet-connectivity-hero-grid,
+    .internet-delivery-layout,
+    .rayadah-journey-editorial,
+    .rayadah-journey-editorial-heading,
+    .rayadah-journey-editorial-content,
+    .contact-wrap,
+    .contact-enquiry-grid
+  ) {
+    min-height: 0 !important;
+    height: auto;
+  }
+}
