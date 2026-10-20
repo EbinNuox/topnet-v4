@@ -1,6 +1,6 @@
 /* Shared responsive overrides. Keep this stylesheet after page-specific styles. */
 @media (max-width: 1600px) {
-  :root { --page-gutter: 64px; --section-spacing: 100px; --responsive-title: 68px; --responsive-h2: 58px; --responsive-h3: 28px; --responsive-space: 72px; }
+  :root { --page-gutter: 50px; --section-spacing: 80px; --responsive-title: 60px; --responsive-h2: 50px; --responsive-h3: 26px; --responsive-space: 72px; }
   body :is(.section-shell, .internet-section-shell, .hosting-packages) { padding-inline: var(--page-gutter); }
   body section:not(.hero):not(.about-page-hero):not(.about-history-section):not(.about-values-section):is(.section-shell, .internet-section-shell) { padding-block: var(--responsive-space); }
   body :is(h1, .hero-copy h1) { font-size: var(--responsive-title); }
@@ -348,8 +348,8 @@ body section:has(> .about-section-heading) { row-gap: 0; }
 }
 /* Compact section spacing across every page, including page-specific layouts. */
 @media (max-width: 1600px) {
-  :root { --responsive-space: 70px; --section-spacing: 70px; }
-  body section:not(.hero):not(.about-page-hero):not(.contact-page-hero):not(.careers-page-hero):not(.resources-page-hero):not(.about-values-section):not(.about-history-section) {
+  :root { --responsive-space: 72px; --section-spacing: 80px; }
+  body section:not(.hero):not(.about-page-hero):not(.contact-page-hero):not(.careers-page-hero):not(.resources-page-hero):not(.about-values-section):not(.about-history-section):not(:has(> .site-header)) {
     padding-top: var(--responsive-space) !important;
     padding-bottom: var(--responsive-space) !important;
     margin-top: 0;
@@ -400,4 +400,72 @@ body section:has(> .about-section-heading) { row-gap: 0; }
     min-height: 0 !important;
     height: auto;
   }
+}
+
+/* Tighter navigation spacing on compact desktop headers. */
+@media (min-width: 1025px) and (max-width: 1600px) {
+  body .site-header .nav { gap: 24px; }
+}
+/* Fit the mega menu to short laptop viewports instead of cropping its last row. */
+body .site-header .services-menu {
+  height: auto;
+  max-height: calc(100dvh - var(--services-menu-top, 144px) - 16px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  align-items: start;
+  padding-bottom: 24px;
+}
+body .site-header .services-menu::after { display: none; }
+/* Header-bearing hero sections start at the top, without content-section padding. */
+body section:has(> .site-header),
+body main.hero:has(> .site-header) {
+  padding-top: 0 !important;
+  margin-top: 0;
+}
+/* One shared page gutter for content sections on every page and breakpoint. */
+body section:is(.section-shell, .internet-section-shell, .rayadah-section):not(:has(> .site-header)) {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-left: var(--page-gutter) !important;
+  padding-right: var(--page-gutter) !important;
+}
+body .contact.section-shell .contact-wrap,
+body .rayadah-section .rayadah-calculator,
+body .rayadah-section .rayadah-faq-list {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+/* Responsive client strip: fit the card count to the available viewport. */
+@media (max-width: 1600px) {
+  .clients { --client-count: 5; --client-gap: 16px; --client-height: 160px; --client-font: 34px; }
+  body .clients .client-track { gap: var(--client-gap); }
+  body .clients .client-logo {
+    width: calc((100vw - (var(--client-count) - 1) * var(--client-gap)) / var(--client-count));
+    flex: 0 0 calc((100vw - (var(--client-count) - 1) * var(--client-gap)) / var(--client-count));
+    height: var(--client-height);
+    min-height: 0;
+    font-size: var(--client-font);
+    border-radius: 16px;
+  }
+  body .clients .client-logo.tracking { letter-spacing: 4px; }
+}
+@media (max-width: 1300px) {
+  .clients { --client-count: 4; --client-height: 145px; --client-font: 32px; }
+}
+@media (max-width: 1024px) {
+  .clients { --client-count: 3; --client-height: 130px; --client-font: 30px; }
+}
+@media (max-width: 768px) {
+  .clients { --client-count: 3; --client-gap: 12px; --client-height: 115px; --client-font: 26px; }
+}
+@media (max-width: 500px) {
+  .clients { --client-count: 2; --client-height: 100px; --client-font: 24px; }
+}
+@media (max-width: 400px) {
+  .clients { --client-gap: 10px; --client-height: 90px; --client-font: 22px; }
+  body .clients .client-logo.tracking { letter-spacing: 2px; }
 }

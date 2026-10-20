@@ -15489,3 +15489,12 @@ body .about-value-icon > img[src^="assets/icons/"] {
   border-radius: 4px;
   background: #f1f1f3;
 }
+
+/* Keep the homepage cloud CTA on a single line at every breakpoint. */
+body .cloud-platform .cloud-button {
+  width: max-content;
+  max-width: 100%;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+body .cloud-platform .cloud-button .arrow { flex-shrink: 0; }

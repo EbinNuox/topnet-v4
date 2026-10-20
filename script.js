@@ -67,7 +67,15 @@ const serviceRoutes = {
   'Secured Cage': 'secured-cage.html',
 };
 
+const fitServicesMenu = () => {
+  if (!servicesMenu) return;
+  const header = document.querySelector('.site-header');
+  const top = window.innerWidth > 1000 ? header.getBoundingClientRect().bottom : 96;
+  servicesMenu.style.setProperty('--services-menu-top', Math.max(0, top) + 'px');
+};
+window.addEventListener('resize', fitServicesMenu, { passive: true });
 const setServicesMenu = (open) => {
+  if (open) fitServicesMenu();
   servicesButton?.setAttribute('aria-expanded', String(open));
   servicesMenu?.setAttribute('aria-hidden', String(!open));
   servicesMenu?.classList.toggle('open', open);
