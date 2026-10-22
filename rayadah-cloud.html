@@ -18,6 +18,46 @@
     <link rel="stylesheet" href="responsive.css?rev=20261020-2" />
     <link rel="stylesheet" href="brand-colors.css?rev=20261020-1" />
     <link rel="stylesheet" href="button-effects.css?rev=3" />
+    <style>
+      .rayadah-page-body .rayadah-contact .contact-form label:focus-within {
+        color: #58c7ff;
+        text-shadow: 0 0 16px rgba(88, 199, 255, .2);
+      }
+
+      .rayadah-page-body .rayadah-contact .contact-form label:focus-within::after {
+        background: linear-gradient(90deg, rgba(88, 199, 255, .12), #58c7ff, rgba(88, 199, 255, .2));
+        box-shadow: 0 0 14px rgba(88, 199, 255, .36), 0 0 30px rgba(88, 199, 255, .16);
+      }
+
+      .rayadah-page-body .rayadah-contact .contact-form .contact-select-field::before,
+      .rayadah-page-body .rayadah-contact .contact-form .contact-select-field::after {
+        content: none;
+      }
+
+      .rayadah-page-body .rayadah-contact .contact-form .contact-select-trigger {
+        padding: 10px 36px 10px 12px;
+        border: 1px solid rgba(88, 199, 255, .55);
+        border-radius: 4px;
+        background: rgba(88, 199, 255, .12);
+        transition: border-color .2s ease, background-color .2s ease, box-shadow .2s ease;
+      }
+
+      .rayadah-page-body .rayadah-contact .contact-form .contact-select-field:focus-within .contact-select-trigger {
+        border-color: #58c7ff;
+        background: rgba(88, 199, 255, .18);
+        box-shadow: 0 0 0 2px rgba(88, 199, 255, .16);
+      }
+
+      .rayadah-page-body .rayadah-contact .contact-form .contact-select-trigger:focus-visible {
+        outline: 2px solid #58c7ff;
+        outline-offset: 2px;
+      }
+
+      .rayadah-page-body .rayadah-contact .contact-form .contact-select-arrow {
+        right: 12px;
+        border-color: #58c7ff;
+      }
+    </style>
   </head>
   <body class="rayadah-page-body">
     <div class="site-cursor" aria-hidden="true"><span></span><i></i></div>
