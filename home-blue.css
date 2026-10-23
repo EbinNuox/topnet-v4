@@ -54,3 +54,9 @@ body.home-page-body #why::before {
     linear-gradient(180deg, rgba(16, 21, 34, .16) 0%, rgba(21, 29, 42, .2) 58%, rgba(29, 40, 51, .04) 100%);
   filter: none;
 }
+
+/* Keep the client-section glow while allowing the shared canvas to show at
+   the edges, avoiding a rectangular full-width background band. */
+body.home-page-body .clients {
+  background: radial-gradient(ellipse 56% 84% at 54% 48%, rgba(91, 120, 105, .2) 0%, rgba(54, 82, 86, .1) 48%, transparent 80%);
+}
