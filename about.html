@@ -18,6 +18,54 @@
     <link rel="stylesheet" href="responsive.css?rev=20261020-2" />
     <link rel="stylesheet" href="brand-colors.css?rev=20261020-1" />
     <link rel="stylesheet" href="button-effects.css?rev=3" />
+    <style>
+      .about-page-body .about-team-card-meta {
+        min-height: 116px;
+        padding: 18px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 5px;
+      }
+
+      .about-page-body .about-team-card-name {
+        width: 100%;
+        flex: none;
+        font-size: 22px;
+        line-height: 1.2;
+      }
+
+      .about-page-body .about-team-card-role {
+        width: 100%;
+        max-width: 100%;
+        flex: none;
+        padding: 0;
+        border-radius: 0;
+        color: #d1d4dd;
+        background: transparent;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.4;
+        text-align: left;
+      }
+
+      @media (max-width: 800px) {
+        .about-page-body .about-team-card-meta {
+          min-height: 108px;
+          padding: 14px 16px;
+          gap: 4px;
+        }
+
+        .about-page-body .about-team-card-name {
+          font-size: 20px;
+        }
+
+        .about-page-body .about-team-card-role {
+          font-size: 14px;
+        }
+      }
+    </style>
   </head>
   <body class="about-page-body">
     <div class="site-cursor" aria-hidden="true"><span></span><i></i></div>
