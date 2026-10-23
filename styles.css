@@ -2183,9 +2183,10 @@ body:not(.about-page-body)::before {
 }
 
 .pill {
-  min-height: 31px;
+  min-height: 30px;
   padding-inline: 17px;
   font-size: 15px;
+  text-transform: uppercase;
 }
 
 .section-heading h2 {
