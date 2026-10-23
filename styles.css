@@ -13265,9 +13265,9 @@ body.services-page-body,
 }
 
 .internet-connectivity-page-body .internet-connectivity-page > .internet-service-facts {
-  width: calc(100% + (var(--page-gutter) * 2));
+  width: 100%;
   max-width: none;
-  margin: 0 calc(-1 * var(--page-gutter));
+  margin: 0;
   position: relative;
   top: 18px;
 }
