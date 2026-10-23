@@ -15499,3 +15499,36 @@ body .cloud-platform .cloud-button {
   flex-wrap: nowrap;
 }
 body .cloud-platform .cloud-button .arrow { flex-shrink: 0; }
+
+/* Keep every bordered section pill visually consistent across pages.
+   Exclude the text-only eyebrow labels, which intentionally have no border. */
+.pill:not(
+  .contact-page-copy > .pill,
+  .contact-section-heading > .pill,
+  .contact-enquiry-copy > .pill:not(.contact-eyebrow-pill),
+  .contact-presence-copy > .pill:not(.contact-eyebrow-pill),
+  .contact-final-cta-card .pill,
+  .about-page-body .about-page-copy > .pill,
+  .services-page-body .about-page-copy > .pill,
+  .rayadah-page-body .rayadah-about-copy > .pill,
+  .resources-page-body .resources-page-copy > .pill,
+  .resources-page-body .resources-section-heading > .pill
+) {
+  box-sizing: border-box;
+  min-height: 30px;
+  padding: 0 17px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(230, 232, 238, .15);
+  border-radius: 999px;
+  background: rgba(224, 226, 234, .07);
+  color: #c5c6ce;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
