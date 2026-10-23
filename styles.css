@@ -2449,24 +2449,14 @@ body {
   background: transparent;
 }
 
-/* Figma performance lighting: keep the left side navy while a broad, soft
-   green field washes through the center-right behind the banner transition. */
+/* Keep one continuous page backdrop behind the performance section. */
 .performance {
   position: relative;
   isolation: isolate;
 }
 
 .performance::before {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  inset: -18% -8% -16%;
-  pointer-events: none;
-  background:
-    radial-gradient(ellipse 48% 72% at 67% 30%, rgba(145, 163, 124, .22) 0%, rgba(93, 113, 98, .13) 38%, transparent 76%),
-    radial-gradient(ellipse 27% 50% at 44% 0%, rgba(113, 78, 170, .14) 0%, rgba(84, 73, 137, .06) 42%, transparent 78%),
-    linear-gradient(108deg, rgba(12, 18, 32, .18) 0%, rgba(24, 34, 45, .08) 48%, rgba(47, 61, 59, .18) 100%);
-  filter: blur(20px);
+  display: none;
 }
 
 .performance > * {
