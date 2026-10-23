@@ -40,3 +40,17 @@ body.home-page-body {
 body.home-page-body #home::before {
   background: none;
 }
+
+/* Carry the muted green-blue light through About and Why TopNet. */
+body.home-page-body #about::before {
+  background:
+    radial-gradient(ellipse 560px 500px at 62% 52%, rgba(111, 143, 109, .24) 0%, rgba(83, 116, 101, .15) 40%, rgba(86, 99, 91, .08) 68%, transparent 100%),
+    radial-gradient(ellipse 72% 70% at 100% 100%, rgba(105, 126, 105, .12) 0%, transparent 74%);
+}
+
+body.home-page-body #why::before {
+  background:
+    radial-gradient(ellipse 74% 74% at 69% 46%, rgba(126, 153, 119, .2) 0%, rgba(82, 111, 103, .12) 44%, transparent 80%),
+    linear-gradient(180deg, rgba(16, 21, 34, .16) 0%, rgba(21, 29, 42, .2) 58%, rgba(29, 40, 51, .04) 100%);
+  filter: none;
+}
