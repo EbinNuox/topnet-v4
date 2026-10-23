@@ -14124,6 +14124,10 @@ body.internet-connectivity-page-body .footer-backdrop {
 }
 
 @media (min-width: 1025px) and (max-width: 1600px) {
+  .internet-connectivity-page-body .internet-delivery-layout {
+    padding-right: clamp(24px, 3vw, 48px);
+  }
+
   .internet-connectivity-page-body .rayadah-journey-preview > .cloud-network {
     transform: translateX(calc(-50% + 4vw)) scale(.36) !important;
     transform-origin: top center;
