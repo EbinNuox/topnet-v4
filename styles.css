@@ -15608,8 +15608,25 @@ body .cloud-platform .cloud-button .arrow { flex-shrink: 0; }
   background: rgba(17, 22, 38, .14);
 }
 
-.contact-page-body .contact-enquiry-copy > .contact-page-form {
-  margin-top: 50px;
+.contact-page-body .contact-enquiry-grid {
+  grid-template-areas:
+    "intro ."
+    "form routes";
+  row-gap: 50px;
+}
+
+.contact-page-body .contact-enquiry-copy { grid-area: intro; }
+.contact-page-body .contact-page-form { grid-area: form; margin-top: 0; }
+.contact-page-body .contact-routes { grid-area: routes; }
+
+@media (max-width: 1000px) {
+  .contact-page-body .contact-enquiry-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "intro"
+      "form"
+      "routes";
+  }
 }
 
 /* Keep every bordered section pill visually consistent across pages.
