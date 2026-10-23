@@ -3812,7 +3812,7 @@ html:has(body:not(.about-page-body)) {
 /* Clear the diagram's right-side nodes without pushing the copy off the page. */
 @media (min-width: 1001px) {
   .internet-connectivity-page-body .rayadah-journey-editorial-content {
-    transform: translateX(clamp(32px, 3.5vw, 64px));
+    transform: translateX(clamp(40px, 6vw, 128px));
   }
 }
 
