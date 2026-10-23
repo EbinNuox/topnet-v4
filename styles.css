@@ -14130,6 +14130,13 @@ body.internet-connectivity-page-body .footer-backdrop {
   }
 }
 
+@media (min-width: 1001px) and (max-width: 1400px) {
+  .internet-connectivity-page-body .rayadah-journey-preview > .cloud-network {
+    transform: translateX(calc(-50% + 140px)) scale(.50) !important;
+    transform-origin: top center;
+  }
+}
+
 @media (max-width: 1000px) {
   .internet-connectivity-page-body .rayadah-journey-preview > .cloud-network {
     transform: translateX(calc(-50% + 140px)) scale(.70);
