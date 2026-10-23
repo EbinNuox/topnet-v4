@@ -3809,9 +3809,11 @@ html:has(body:not(.about-page-body)) {
   z-index: 1;
 }
 
-/* Keep the delivery copy within its grid track instead of pushing it past the page edge. */
-.internet-connectivity-page-body .rayadah-journey-editorial-content {
-  transform: none;
+/* Clear the diagram's right-side nodes without pushing the copy off the page. */
+@media (min-width: 1001px) {
+  .internet-connectivity-page-body .rayadah-journey-editorial-content {
+    transform: translateX(clamp(32px, 3.5vw, 64px));
+  }
 }
 
 .internet-connectivity-page-body .rayadah-journey-editorial-heading .pill {
