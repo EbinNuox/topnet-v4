@@ -25,3 +25,18 @@
 .performance .stat-card.stat-green { background-color: #132b3b; }
 .cloud-node img { filter: brightness(0) invert(1); }
 #cloud-line-glow stop { stop-color: var(--accent-color); }
+
+/* Homepage canvas: a broad green glow carries continuously behind the hero
+   artwork and the performance heading, with no section-sized color edge. */
+body.home-page-body {
+  background:
+    radial-gradient(ellipse 980px 720px at 54vw 760px, rgba(133, 158, 113, .2) 0%, rgba(105, 130, 103, .1) 43%, transparent 82%),
+    radial-gradient(ellipse 90% 480px at 50% 100%, rgba(111, 83, 191, .28) 0%, rgba(69, 58, 143, .17) 46%, transparent 84%),
+    linear-gradient(180deg, rgba(7, 10, 19, .18) 0%, transparent 12%, transparent 89%, rgba(7, 10, 19, .22) 100%),
+    linear-gradient(108deg, #151b2e 0%, #1d2535 48%, #34403f 100%);
+  background-color: #12192a;
+}
+
+body.home-page-body #home::before {
+  background: none;
+}
