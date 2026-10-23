@@ -14132,7 +14132,7 @@ body.internet-connectivity-page-body .footer-backdrop {
 
 @media (min-width: 1001px) and (max-width: 1400px) {
   .internet-connectivity-page-body .rayadah-journey-preview > .cloud-network {
-    transform: translateX(calc(-50% + 95px)) scale(.40) !important;
+    transform: translateX(calc(-50% - 30px)) scale(.40) !important;
     transform-origin: top center;
   }
 }
