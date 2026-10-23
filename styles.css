@@ -3809,9 +3809,9 @@ html:has(body:not(.about-page-body)) {
   z-index: 1;
 }
 
-/* Rayadah's right editorial column is intentionally offset from the visual column. */
+/* Keep the delivery copy within its grid track instead of pushing it past the page edge. */
 .internet-connectivity-page-body .rayadah-journey-editorial-content {
-  transform: translateX(200px);
+  transform: none;
 }
 
 .internet-connectivity-page-body .rayadah-journey-editorial-heading .pill {
