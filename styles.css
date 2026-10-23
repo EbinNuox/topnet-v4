@@ -15600,13 +15600,7 @@ body .cloud-platform .cloud-button .arrow { flex-shrink: 0; }
 }
 
 .contact-page-body .contact-enquiry-copy > .contact-page-form {
-  margin-top: 96px;
-}
-
-@media (max-width: 600px) {
-  .contact-page-body .contact-enquiry-copy > .contact-page-form {
-    margin-top: 42px;
-  }
+  margin-top: 50px;
 }
 
 /* Keep every bordered section pill visually consistent across pages.
