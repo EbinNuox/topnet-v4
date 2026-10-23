@@ -15599,6 +15599,16 @@ body .cloud-platform .cloud-button .arrow { flex-shrink: 0; }
   background: rgba(17, 22, 38, .14);
 }
 
+.contact-page-body .contact-enquiry-copy > .contact-page-form {
+  margin-top: 96px;
+}
+
+@media (max-width: 600px) {
+  .contact-page-body .contact-enquiry-copy > .contact-page-form {
+    margin-top: 42px;
+  }
+}
+
 /* Keep every bordered section pill visually consistent across pages.
    Exclude the text-only eyebrow labels, which intentionally have no border. */
 .pill:not(
