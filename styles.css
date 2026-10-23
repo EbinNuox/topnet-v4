@@ -1941,7 +1941,7 @@ body:not(.about-page-body)::before {
 
 .contact-enquiry-copy h2 { font-size: clamp(48px, 5.1vw, 78px); }
 .contact-enquiry-copy > p { max-width: 650px; }
-.contact-page-form { width: min(720px, 100%); margin: 54px 0 0; }
+.contact-page-form { width: min(720px, 100%); margin: 84px 0 0; }
 .contact-page-form label { margin-bottom: 24px; }
 .contact-page-form .button { margin: 36px 0 0; }
 .contact-form-note { margin: 20px 0 0; color: #858792; font-size: 15px; line-height: 1.6; }
