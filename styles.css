@@ -14125,8 +14125,26 @@ body.internet-connectivity-page-body .footer-backdrop {
 
 @media (min-width: 1025px) and (max-width: 1600px) {
   .internet-connectivity-page-body .rayadah-journey-preview > .cloud-network {
-    transform: translateX(calc(-50% - clamp(30px, 3vw, 45px))) scale(.40) !important;
+    transform: translateX(calc(-50% + 4vw)) scale(.36) !important;
     transform-origin: top center;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .internet-connectivity-page-body .rayadah-journey-preview > .cloud-network {
+    transform: translateX(calc(-50% + 4vw)) scale(.42) !important;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1600px) {
+  .internet-connectivity-page-body .rayadah-journey-preview > .cloud-network {
+    transform: translateX(calc(-50% + 4vw)) scale(.46) !important;
+  }
+}
+
+@media (min-width: 1500px) and (max-width: 1600px) {
+  .internet-connectivity-page-body .rayadah-journey-preview > .cloud-network {
+    transform: translateX(calc(-50% + 4vw)) scale(.50) !important;
   }
 }
 
