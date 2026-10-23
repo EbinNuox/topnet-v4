@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?rev=20261023-17" />
-    <link rel="stylesheet" href="rayadah-blue.css?rev=20261020-2" />
+    <link rel="stylesheet" href="styles.css?rev=20261023-18" />
+    <link rel="stylesheet" href="rayadah-blue.css?rev=20261023-4" />
     <link rel="stylesheet" href="scroll-flow.css?rev=5" />
     <link rel="stylesheet" href="assets/vendor/aos/aos.css" />
     <link rel="stylesheet" href="scroll-reveal.css?rev=4" />
@@ -20,70 +20,21 @@
     <link rel="stylesheet" href="button-effects.css?rev=3" />
     <style>
       .rayadah-page-body .rayadah-contact .contact-form label:focus-within {
-        color: #58c7ff;
-        text-shadow: 0 0 16px rgba(88, 199, 255, .2);
+        color: #4da3ff !important;
+        text-shadow: 0 0 18px rgba(77, 163, 255, .2) !important;
       }
-
-      .rayadah-page-body .rayadah-contact .contact-form label:focus-within::after {
-        background: linear-gradient(90deg, rgba(88, 199, 255, .12), #58c7ff, rgba(88, 199, 255, .2));
-        box-shadow: 0 0 14px rgba(88, 199, 255, .36), 0 0 30px rgba(88, 199, 255, .16);
+      .rayadah-page-body .rayadah-contact {
+        background: #151a2c !important;
       }
-
-      .rayadah-page-body .rayadah-contact .contact-form .contact-select-field::before,
-      .rayadah-page-body .rayadah-contact .contact-form .contact-select-field::after {
-        content: none;
+      .rayadah-page-body .rayadah-contact::before {
+        display: none !important;
+        background: transparent !important;
       }
-
-      .rayadah-page-body .rayadah-contact .contact-form .contact-select-trigger {
-        padding: 12px 42px 12px 14px;
-        border: 1px solid rgba(230, 232, 238, .24);
-        border-radius: 10px;
-        background: rgba(224, 226, 234, .035);
-        transition: border-color .2s ease, background-color .2s ease, box-shadow .2s ease;
-      }
-
-      .rayadah-page-body .rayadah-contact .contact-form .contact-select-field:focus-within .contact-select-trigger {
-        border-color: #58c7ff;
-        background: rgba(88, 199, 255, .18);
-        box-shadow: 0 0 0 2px rgba(88, 199, 255, .16);
-      }
-
-      .rayadah-page-body .rayadah-contact .contact-form .contact-select-trigger:focus-visible {
-        outline: 2px solid #58c7ff;
-        outline-offset: 2px;
-      }
-
-      .rayadah-page-body .rayadah-contact .contact-form .contact-select-arrow {
-        right: 12px;
-        border-color: #58c7ff;
-      }
-
-      .rayadah-page-body .site-footer .social-links > :is(a, span):is(:hover, :focus-visible) {
-        border-color: rgba(88, 199, 255, .72);
-        background: linear-gradient(180deg, rgba(50, 145, 196, .26), rgba(25, 31, 42, .24));
-        box-shadow: inset 0 0 24px rgba(88, 199, 255, .1), 0 0 22px rgba(88, 199, 255, .16);
-        transform: translateY(-1px);
-        outline: none;
-      }
-
-      .rayadah-page-body .site-footer .newsletter-form::before {
-        background: linear-gradient(90deg, rgba(88, 199, 255, .16), rgba(130, 112, 190, .08) 48%, rgba(221, 227, 232, .08));
-      }
-
-      .rayadah-page-body .site-footer .newsletter-form:hover input,
-      .rayadah-page-body .site-footer .newsletter-form:focus-within input {
-        border-color: rgba(88, 199, 255, .55);
-        background: rgba(30, 36, 51, .34);
-        box-shadow: inset 0 0 0 1px rgba(88, 199, 255, .12), 0 0 24px rgba(88, 199, 255, .12);
-      }
-
-      .rayadah-page-body .site-footer .newsletter-form:hover .footer-submit,
-      .rayadah-page-body .site-footer .newsletter-form:focus-within .footer-submit,
-      .rayadah-page-body .site-footer .footer-submit:is(:hover, :focus-visible) {
-        background: #58c7ff;
-        box-shadow: 0 0 24px rgba(88, 199, 255, .3);
-        transform: translateX(1px);
-        outline: none;
+      .rayadah-page-body .rayadah-contact::after {
+        display: block !important;
+        background: url("assets/rayadah-cloud-background.png") center / contain no-repeat !important;
+        filter: blur(30px) saturate(1.16) !important;
+        opacity: .72 !important;
       }
     </style>
   </head>
@@ -92,7 +43,7 @@
 
     <main class="rayadah-page">
       <section class="about-page-hero rayadah-hero" id="top" aria-labelledby="rayadah-hero-title">
-        <img class="about-banner-background rayadah-banner-background" src="assets/about-banner-mark.png" alt="" aria-hidden="true" />
+        <img class="about-banner-background rayadah-banner-background" src="assets/rayadah-cloud-background.png" alt="" aria-hidden="true" />
         <header class="site-header">
           <a class="brand" href="index.html" aria-label="TOPNET home">
             <img class="brand-logo" src="assets/rayadah/rayadah-cloud-logo.svg?rev=2" alt="Rayadah Cloud" />
@@ -365,7 +316,7 @@
           <h2 id="rayadah-faq-title">Plan your Rayadah Cloud<span class="rayadah-title-break" aria-hidden="true"><br /></span> evaluation</h2>
           <p>Clarify workload fit, resilience requirements and service responsibilities before defining the target platform.</p>
         </div>
-        <div class="rayadah-faq-list">
+        <div class="rayadah-faq-list" style="width:min(860px,100%);max-width:860px;margin-left:auto;margin-right:auto;">
           <article class="rayadah-faq is-open">
             <h3><button class="rayadah-faq-question" type="button" aria-expanded="true">Which workloads are suitable for Rayadah Cloud?<span aria-hidden="true">−</span></button></h3>
             <div class="rayadah-faq-answer"><p>Rayadah Cloud can support business applications, development environments, data platforms, continuity workloads and services that benefit from flexible Saudi-hosted capacity.</p></div>
