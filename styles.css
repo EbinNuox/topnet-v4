@@ -15629,8 +15629,8 @@ body .cloud-platform .cloud-button .arrow { flex-shrink: 0; }
 @media (min-width: 1001px) {
   .services-page-body .services-page-hero > .about-page-intro {
     min-height: 550px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 80px;
+    padding-bottom: 60px;
   }
 
   .connectivity-category-page-body .connectivity-capabilities {
@@ -15851,5 +15851,20 @@ body .site-footer {
     right: 16px;
     bottom: 18px;
     left: 16px;
+  }
+}
+
+/* Service pages place the footer directly after the preceding section. */
+body:is(.connectivity-category-page-body, .internet-connectivity-page-body) .site-footer {
+  margin-top: 0;
+}
+
+/* Keep service-detail footer rows aligned with the shared footer through 1600px. */
+@media (min-width: 1001px) and (max-width: 1600px) {
+  .internet-connectivity-page-body .site-footer {
+    height: 463px;
+    min-height: 463px;
+    padding: 63px 30px 0 27px;
+    grid-template-rows: 282px 118px;
   }
 }
