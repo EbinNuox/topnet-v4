@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?rev=20261023-17" />
+    <link rel="stylesheet" href="styles.css?rev=20261024-hide-category-overview-1" />
     <link rel="stylesheet" href="scroll-flow.css?rev=5" />
     <link rel="stylesheet" href="assets/vendor/aos/aos.css" />
     <link rel="stylesheet" href="scroll-reveal.css?rev=4" />
@@ -60,15 +60,15 @@
               <h2>Find the right capability</h2>
               <p>Browse TopNet’s connected service<br />categories and their specialist capabilities.</p>
             </div>
-            <div class="service-categories" role="tablist" aria-label="Service categories">
-              <button class="service-category active" type="button" role="tab" aria-selected="true" data-service="connectivity">Connectivity Services <span>→</span></button>
-              <button class="service-category" type="button" role="tab" aria-selected="false" data-service="clouding">Clouding Services <span>→</span></button>
-              <button class="service-category" type="button" role="tab" aria-selected="false" data-service="hosting">Hosting Services <span>→</span></button>
-              <button class="service-category" type="button" role="tab" aria-selected="false" data-service="colocation">Co-Location Services <span>→</span></button>
-              <button class="service-category" type="button" role="tab" aria-selected="false" data-service="cybersecurity">Cybersecurity Services <span>→</span></button>
-              <button class="service-category" type="button" role="tab" aria-selected="false" data-service="security">Security Services <span>→</span></button>
-              <button class="service-category" type="button" role="tab" aria-selected="false" data-service="professional">Professional Services <span>→</span></button>
-              <button class="service-category" type="button" role="tab" aria-selected="false" data-service="managed">Managed Services <span>→</span></button>
+            <div class="service-categories" role="navigation" aria-label="Service categories">
+              <a class="service-category active" href="connectivity-services.html" data-service="connectivity">Connectivity Services <span>→</span></a>
+              <a class="service-category" href="clouding-services.html" data-service="clouding">Clouding Services <span>→</span></a>
+              <a class="service-category" href="hosting-services.html" data-service="hosting">Hosting Services <span>→</span></a>
+              <a class="service-category" href="co-location-services.html" data-service="colocation">Co-Location Services <span>→</span></a>
+              <a class="service-category" href="cybersecurity-services.html" data-service="cybersecurity">Cybersecurity Services <span>→</span></a>
+              <a class="service-category" href="security-services.html" data-service="security">Security Services <span>→</span></a>
+              <a class="service-category" href="professional-services.html" data-service="professional">Professional Services <span>→</span></a>
+              <a class="service-category" href="managed-services.html" data-service="managed">Managed Services <span>→</span></a>
             </div>
             <div class="service-detail" aria-live="polite">
               <h2>Connectivity Services</h2>
@@ -77,8 +77,8 @@
                 <a href="data-connectivity.html">Data Connectivity <span>→</span></a>
                 <a href="#">SD-WAN Connectivity <span>→</span></a>
                 <a href="#">VPN Connectivity <span>→</span></a>
-              </div>
-            </div>
+              </div><a class="category-overview" href="connectivity-services.html">View category <span>→</span></a>
+            </div><a class="category-overview" href="connectivity-services.html">View category <span>→</span></a>
           </div>
         </header>
 
@@ -105,7 +105,7 @@
               <h3>Connectivity Services</h3>
               <p>Secure, dependable connections across sites, teams, platforms, and workloads.</p>
               <div class="services-card-subservices" aria-label="Connectivity Services capabilities"><a href="internet-connectivity.html">Internet Connectivity</a><a href="data-connectivity.html">Data Connectivity</a><span>SD-WAN Connectivity</span><span>VPN Connectivity</span></div>
-              <a class="button button-primary services-card-link" href="services.html#connectivity-services">View Connectivity Services category <span class="arrow" aria-hidden="true"></span></a>
+              <a class="button button-primary services-card-link" href="connectivity-services.html">View Connectivity Services category <span class="arrow" aria-hidden="true"></span></a>
             </div>
           </article>
           <article class="services-card services-card-clouding" id="clouding-services" role="listitem">
@@ -115,7 +115,7 @@
               <h3>Clouding Services</h3>
               <p>Rayadah Cloud and public-cloud platforms supported through design, migration, security, backup and management.</p>
               <div class="services-card-subservices" aria-label="Clouding Services capabilities"><a href="rayadah-cloud.html">Rayadah Cloud</a><a href="public-clouds.html">Public Clouds</a></div>
-              <a class="button button-primary services-card-link" href="services.html#clouding-services">View Clouding Services category <span class="arrow" aria-hidden="true"></span></a>
+              <a class="button button-primary services-card-link" href="clouding-services.html">View Clouding Services category <span class="arrow" aria-hidden="true"></span></a>
             </div>
           </article>
           <article class="services-card services-card-hosting" id="hosting-services" role="listitem">
@@ -125,7 +125,7 @@
               <h3>Hosting Services</h3>
               <p>Reliable Saudi-based hosting foundations for websites, email, DNS, and Saudi domains.</p>
               <div class="services-card-subservices" aria-label="Hosting Services capabilities"><a href="web-hosting.html">Web Hosting</a><a href="saudi-domain-registration.html">Saudi Domain Registration</a></div>
-              <a class="button button-primary services-card-link" href="services.html#hosting-services">View Hosting Services category <span class="arrow" aria-hidden="true"></span></a>
+              <a class="button button-primary services-card-link" href="hosting-services.html">View Hosting Services category <span class="arrow" aria-hidden="true"></span></a>
             </div>
           </article>
           <article class="services-card services-card-colocation" id="colocation-services" role="listitem">
@@ -135,7 +135,7 @@
               <h3>Co-Location Services</h3>
               <p>Secure data-center space, interconnection and managed operational support for critical infrastructure.</p>
               <div class="services-card-subservices" aria-label="Co-Location Services capabilities"><a href="secured-cage.html">Secured Cage</a><span>Dedicated Rack</span><span>Cross Connect</span><span>Managed Colocation</span></div>
-              <a class="button button-primary services-card-link" href="services.html#colocation-services">View Co-Location Services category <span class="arrow" aria-hidden="true"></span></a>
+              <a class="button button-primary services-card-link" href="co-location-services.html">View Co-Location Services category <span class="arrow" aria-hidden="true"></span></a>
             </div>
           </article>
           <article class="services-card services-card-cybersecurity" id="cybersecurity-services" role="listitem">
@@ -145,7 +145,7 @@
               <h3>Cybersecurity Services</h3>
               <p>Managed detection, monitoring, assessment, governance and security-awareness capabilities.</p>
               <div class="services-card-subservices" aria-label="Cybersecurity Services capabilities"><span>Managed Security</span><span>Security Consulting</span></div>
-              <a class="button button-primary services-card-link" href="services.html#cybersecurity-services">View Cybersecurity Services category <span class="arrow" aria-hidden="true"></span></a>
+              <a class="button button-primary services-card-link" href="cybersecurity-services.html">View Cybersecurity Services category <span class="arrow" aria-hidden="true"></span></a>
             </div>
           </article>
           <article class="services-card services-card-security" id="security-services" role="listitem">
@@ -155,7 +155,7 @@
               <h3>Security Services</h3>
               <p>Technology controls across networks, endpoints, identity, data, email and cloud environments.</p>
               <div class="services-card-subservices" aria-label="Security Services capabilities"><span>Network Security</span><span>Endpoint Security</span><span>Identity Security</span><span>Cloud Security</span></div>
-              <a class="button button-primary services-card-link" href="services.html#security-services">View Security Services category <span class="arrow" aria-hidden="true"></span></a>
+              <a class="button button-primary services-card-link" href="security-services.html">View Security Services category <span class="arrow" aria-hidden="true"></span></a>
             </div>
           </article>
           <article class="services-card services-card-professional" id="professional-services" role="listitem">
@@ -165,7 +165,7 @@
               <h3>Professional Services</h3>
               <p>Specialist expertise for planning, implementing and transforming enterprise technology environments.</p>
               <div class="services-card-subservices" aria-label="Professional Services capabilities"><span>Collaboration</span><span>IT Consulting</span><span>Cloud Projects</span><span>Security Projects</span></div>
-              <a class="button button-primary services-card-link" href="services.html#professional-services">View Professional Services category <span class="arrow" aria-hidden="true"></span></a>
+              <a class="button button-primary services-card-link" href="professional-services.html">View Professional Services category <span class="arrow" aria-hidden="true"></span></a>
             </div>
           </article>
           <article class="services-card services-card-managed" id="managed-services" role="listitem">
@@ -175,7 +175,7 @@
               <h3>Managed Services</h3>
               <p>Ongoing management and support across infrastructure, cybersecurity and the service desk.</p>
               <div class="services-card-subservices" aria-label="Managed Services capabilities"><span>Infrastructure</span><span>Cybersecurity</span><span>Service Desk</span></div>
-              <a class="button button-primary services-card-link" href="services.html#managed-services">View Managed Services category <span class="arrow" aria-hidden="true"></span></a>
+              <a class="button button-primary services-card-link" href="managed-services.html">View Managed Services category <span class="arrow" aria-hidden="true"></span></a>
             </div>
           </article>
         </div>
@@ -202,13 +202,7 @@
         <a href="index.html" aria-label="TOPNET home"><img class="footer-logo" src="assets/topnet-logo.png" alt="TOPNET" /></a>
         <p>One accountable digital infrastructure ecosystem<br />for Saudi enterprises and government<br />organizations. TopNet Digital Infrastructure<br />Services · Riyadh, Saudi Arabia</p>
       </div>
-      <nav class="footer-column footer-services" aria-label="Footer services">
-        <h3>Services</h3>
-        <a href="services.html#connectivity-services">Connectivity Services</a>
-        <a href="services.html#clouding-services">Clouding Services</a>
-        <a href="services.html#hosting-services">Hosting Services</a>
-        <a href="services.html#colocation-services">Co-Location Services</a>
-      </nav>
+      <nav class="footer-column footer-services" aria-label="Footer services"><h3>Services</h3><a href="connectivity-services.html">Connectivity Services</a><a href="clouding-services.html">Clouding Services</a><a href="hosting-services.html">Hosting Services</a><a href="co-location-services.html">Co-Location Services</a><a href="cybersecurity-services.html">Cybersecurity Services</a><a href="security-services.html">Security Services</a><a href="professional-services.html">Professional Services</a><a href="managed-services.html">Managed Services</a></nav>
       <nav class="footer-column footer-explore" aria-label="Footer navigation">
         <h3>Explore</h3>
         <a href="rayadah-cloud.html">Rayadah Cloud</a>
@@ -244,7 +238,7 @@
     <div class="footer-backdrop" aria-hidden="true"></div>
 
     <script src="assets/vendor/aos/aos.js"></script>
-    <script src="script.js?rev=20261020-2"></script>
+    <script src="script.js?rev=services-menu-20261024-2"></script>
     <script src="wheel-scroll.js?rev=3"></script>
   </body>
 </html>

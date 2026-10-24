@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?rev=20261023-17" />
+    <link rel="stylesheet" href="styles.css?rev=20261024-news-card-link-1" />
     <link rel="stylesheet" href="scroll-flow.css?rev=5" />
     <link rel="stylesheet" href="assets/vendor/aos/aos.css" />
     <link rel="stylesheet" href="scroll-reveal.css?rev=4" />
@@ -59,15 +59,15 @@
               <h2>Find the right capability</h2>
               <p>Browse TopNet’s connected service<br />categories and their specialist capabilities.</p>
             </div>
-            <div class="service-categories" role="tablist" aria-label="Service categories">
-              <button class="service-category active" type="button" role="tab" aria-selected="true" data-service="connectivity">Connectivity Services <span>→</span></button>
-              <button class="service-category" type="button" role="tab" aria-selected="false" data-service="clouding">Clouding Services <span>→</span></button>
-              <button class="service-category" type="button" role="tab" aria-selected="false" data-service="hosting">Hosting Services <span>→</span></button>
-              <button class="service-category" type="button" role="tab" aria-selected="false" data-service="colocation">Co-Location Services <span>→</span></button>
-              <button class="service-category" type="button" role="tab" aria-selected="false" data-service="cybersecurity">Cybersecurity Services <span>→</span></button>
-              <button class="service-category" type="button" role="tab" aria-selected="false" data-service="security">Security Services <span>→</span></button>
-              <button class="service-category" type="button" role="tab" aria-selected="false" data-service="professional">Professional Services <span>→</span></button>
-              <button class="service-category" type="button" role="tab" aria-selected="false" data-service="managed">Managed Services <span>→</span></button>
+            <div class="service-categories" role="navigation" aria-label="Service categories">
+              <a class="service-category active" href="connectivity-services.html" data-service="connectivity">Connectivity Services <span>→</span></a>
+              <a class="service-category" href="clouding-services.html" data-service="clouding">Clouding Services <span>→</span></a>
+              <a class="service-category" href="hosting-services.html" data-service="hosting">Hosting Services <span>→</span></a>
+              <a class="service-category" href="co-location-services.html" data-service="colocation">Co-Location Services <span>→</span></a>
+              <a class="service-category" href="cybersecurity-services.html" data-service="cybersecurity">Cybersecurity Services <span>→</span></a>
+              <a class="service-category" href="security-services.html" data-service="security">Security Services <span>→</span></a>
+              <a class="service-category" href="professional-services.html" data-service="professional">Professional Services <span>→</span></a>
+              <a class="service-category" href="managed-services.html" data-service="managed">Managed Services <span>→</span></a>
             </div>
             <div class="service-detail" aria-live="polite">
               <h2>Connectivity Services</h2>
@@ -76,8 +76,8 @@
                 <a href="data-connectivity.html">Data Connectivity <span>→</span></a>
                 <a href="#">SD-WAN Connectivity <span>→</span></a>
                 <a href="#">VPN Connectivity <span>→</span></a>
-              </div>
-            </div>
+              </div><a class="category-overview" href="connectivity-services.html">View category <span>→</span></a>
+            </div><a class="category-overview" href="connectivity-services.html">View category <span>→</span></a>
           </div>
         </header>
 
@@ -174,7 +174,7 @@
               <h3>Building a resilient connectivity foundation for a regulated enterprise</h3>
               <footer class="resource-card-footer">
                 <p><span class="insight-type">Connectivity</span></p>
-                <span class="resource-card-action is-unavailable" title="Resource detail page not available in this project">Open resource <span aria-hidden="true">→</span></span>
+                <a class="resource-card-action" href="news-detail.html">Open resource <span aria-hidden="true">→</span></a>
               </footer>
             </div>
           </article>
@@ -186,7 +186,7 @@
               <h3>A practical guide to cloud continuity in Saudi Arabia</h3>
               <footer class="resource-card-footer">
                 <p><span class="insight-type">Rayadah Cloud</span></p>
-                <span class="resource-card-action is-unavailable" title="Resource detail page not available in this project">Open resource <span aria-hidden="true">→</span></span>
+                <a class="resource-card-action" href="news-detail.html" aria-label="Open A practical guide to cloud continuity in Saudi Arabia">Open resource <span aria-hidden="true">→</span></a>
               </footer>
             </div>
           </article>
@@ -198,7 +198,7 @@
               <h3>What enterprise teams should expect from a measurable SLA</h3>
               <footer class="resource-card-footer">
                 <p><span class="insight-type">Managed Services</span></p>
-                <span class="resource-card-action is-unavailable" title="Resource detail page not available in this project">Open resource <span aria-hidden="true">→</span></span>
+                <a class="resource-card-action" href="news-detail.html">Open resource <span aria-hidden="true">→</span></a>
               </footer>
             </div>
           </article>
@@ -210,7 +210,7 @@
               <h3>TopNet expands its enterprise service experience</h3>
               <footer class="resource-card-footer">
                 <p><span class="insight-type">TopNet</span></p>
-                <span class="resource-card-action is-unavailable" title="Resource detail page not available in this project">Open resource <span aria-hidden="true">→</span></span>
+                <a class="resource-card-action" href="news-detail.html">Open resource <span aria-hidden="true">→</span></a>
               </footer>
             </div>
           </article>
@@ -222,7 +222,7 @@
               <h3>Structuring cybersecurity services around risk and governance</h3>
               <footer class="resource-card-footer">
                 <p><span class="insight-type">Cybersecurity</span></p>
-                <span class="resource-card-action is-unavailable" title="Resource detail page not available in this project">Open resource <span aria-hidden="true">→</span></span>
+                <a class="resource-card-action" href="news-detail.html">Open resource <span aria-hidden="true">→</span></a>
               </footer>
             </div>
           </article>
@@ -234,7 +234,7 @@
               <h3>Planning a low-risk co-location migration</h3>
               <footer class="resource-card-footer">
                 <p><span class="insight-type">Co-location</span></p>
-                <span class="resource-card-action is-unavailable" title="Resource detail page not available in this project">Open resource <span aria-hidden="true">→</span></span>
+                <a class="resource-card-action" href="news-detail.html">Open resource <span aria-hidden="true">→</span></a>
               </footer>
             </div>
           </article>
@@ -247,13 +247,7 @@
         <a href="index.html" aria-label="TOPNET home"><img class="footer-logo" src="assets/topnet-logo.png" alt="TOPNET" /></a>
         <p>One accountable digital infrastructure ecosystem<br />for Saudi enterprises and government<br />organizations. TopNet Digital Infrastructure<br />Services · Riyadh, Saudi Arabia</p>
       </div>
-      <nav class="footer-column footer-services" aria-label="Footer services">
-        <h3>Services</h3>
-        <a href="services.html#connectivity-services">Connectivity Services</a>
-        <a href="services.html#clouding-services">Clouding Services</a>
-        <a href="services.html#hosting-services">Hosting Services</a>
-        <a href="services.html#colocation-services">Co-Location Services</a>
-      </nav>
+      <nav class="footer-column footer-services" aria-label="Footer services"><h3>Services</h3><a href="connectivity-services.html">Connectivity Services</a><a href="clouding-services.html">Clouding Services</a><a href="hosting-services.html">Hosting Services</a><a href="co-location-services.html">Co-Location Services</a><a href="cybersecurity-services.html">Cybersecurity Services</a><a href="security-services.html">Security Services</a><a href="professional-services.html">Professional Services</a><a href="managed-services.html">Managed Services</a></nav>
       <nav class="footer-column footer-explore" aria-label="Footer navigation">
         <h3>Explore</h3>
         <a href="rayadah-cloud.html">Rayadah Cloud</a>
@@ -289,7 +283,7 @@
     <div class="footer-backdrop" aria-hidden="true"></div>
 
     <script src="assets/vendor/aos/aos.js"></script>
-    <script src="script.js?rev=20261020-2"></script>
+    <script src="script.js?rev=services-menu-20261024-2"></script>
     <script src="wheel-scroll.js?rev=3"></script>
   </body>
 </html>

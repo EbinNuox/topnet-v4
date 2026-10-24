@@ -85,7 +85,7 @@ img { max-width: 100%; }
 .services-intro h2 { margin:12px 0 14px; color:#f0f0f3; font-size:29px; line-height:1; font-weight:300; letter-spacing:-1.5px; }
 .services-intro p { margin:0; color:#9698a6; font-size:15px; line-height:1.7; }
 .service-categories { position:relative; z-index:2; display:flex; flex-direction:column; }
-.service-category { width:100%; min-height:53px; padding:0 16px; display:flex; align-items:center; justify-content:space-between; border:0; border-bottom:1px solid rgba(225,228,238,.15); color:#aaaebe; background:transparent; text-align:left; font:inherit; font-size:15px; cursor:pointer; transition:background .22s ease,color .22s ease,transform .22s ease; }
+.service-category { width:100%; min-height:53px; padding:0 16px; display:flex; align-items:center; justify-content:space-between; border:0; border-bottom:1px solid rgba(225,228,238,.15); color:#aaaebe; background:transparent; text-align:left; font:inherit; font-size:15px; text-decoration:none; cursor:pointer; transition:background .22s ease,color .22s ease,transform .22s ease; }
 .service-categories .service-category:last-child { border-bottom:0; }
 .service-category span,.service-capabilities span,.category-overview span { position:relative; width:18px; height:18px; display:block; flex:none; overflow: clip; color:currentColor; background:url("assets/frame-arrow.png") center / 16px 16px no-repeat; filter:invert(1); opacity:.7; font-size:0; }
 .service-category span::before,.service-capabilities span::before,.category-overview span::before,
@@ -97,8 +97,9 @@ img { max-width: 100%; }
 .service-capabilities { display:grid; grid-template-columns:1fr 1fr; column-gap:32px; }
 .service-capabilities a { min-height:61px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid rgba(225,228,238,.13); color:#a8aabd; text-decoration:none; font-size:15px; transition:color .22s ease,transform .22s ease; }
 .service-capabilities a:hover,.service-capabilities a:focus-visible { color:#f0f0f3; transform:translateX(3px); outline:none; }
-.category-overview { width:max-content; margin-top:34px; display:flex; align-items:center; gap:10px; color:#f1f1f3; text-decoration:none; font-size:13px; font-weight:800; transition:color .22s ease,transform .22s ease; }
+.category-overview { width:max-content; margin-top:34px; display:flex; align-items:center; gap:10px; color:#f1f1f3; text-decoration:none; font-size:16px; font-weight:400; transition:color .22s ease,transform .22s ease; }
 .category-overview:hover,.category-overview:focus-visible { color:#d8efaa; transform:translateX(3px); outline:none; }
+.services-menu .category-overview { display:none; }
 
 @media (min-width:1001px) {
   .site-header:has(.services-link:hover) .services-menu,
@@ -430,6 +431,7 @@ img { max-width: 100%; }
 .insight-card .insight-type { color: var(--accent-color); }
 .insight-card .insight-separator,
 .insight-card .insight-topic { color: #9b9ca4; }
+.insight-card-link { color: inherit; text-decoration: none; }
 
 .contact { min-height:1050px; padding-top:46px; overflow: clip; isolation:isolate; background:radial-gradient(circle at 50% 18%,rgba(142,95,255,.34),transparent 34%),radial-gradient(circle at 18% 72%,rgba(167,210,112,.22),transparent 30%),linear-gradient(135deg,#111525 0%,#1c2036 28%,#101422 52%,#243022 74%,#07070d 100%); background-size:150% 170%,140% 160%,260% 260%; animation:contact-gradient-flow 12s ease-in-out infinite; }
 .contact::before { content:""; position:absolute; z-index:0; inset:95px -8% -90px; pointer-events:none; background:radial-gradient(ellipse 25% 28% at 22% 25%,rgba(102,50,188,.38) 0%,rgba(90,44,164,.2) 38%,transparent 72%),radial-gradient(ellipse 23% 24% at 38% 38%,rgba(149,177,105,.43) 0%,rgba(105,130,78,.19) 42%,transparent 73%),radial-gradient(ellipse 25% 25% at 67% 43%,rgba(130,151,92,.30) 0%,rgba(99,116,73,.12) 42%,transparent 72%),radial-gradient(ellipse 24% 27% at 77% 25%,rgba(94,43,174,.44) 0%,rgba(77,34,146,.19) 43%,transparent 74%),radial-gradient(ellipse 28% 26% at 25% 68%,rgba(96,42,170,.23) 0%,transparent 72%),radial-gradient(ellipse 28% 25% at 58% 70%,rgba(113,137,82,.22) 0%,transparent 72%); filter:blur(35px); animation:contact-aurora 14s ease-in-out infinite; }
@@ -4945,6 +4947,7 @@ html:has(body:not(.about-page-body)) {
 }
 
 .about-page-body .about-home-clients { padding-top: 112px; }
+.about-page-body .about-home-clients .client-marquee { margin-top: 55px; }
 .about-page-body .about-home-partners { margin-top: 96px; }
 
 @media (max-width: 1000px) {
@@ -7872,11 +7875,11 @@ body.about-page-body .footer-backdrop {
 }
 
 .services-page-body .about-page-intro {
-  min-height: 618px;
+  min-height: 550px;
   grid-template-columns: minmax(0, 1fr);
   align-items: center;
-  padding-top: 90px;
-  padding-bottom: 92px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .services-page-body .about-page-copy {
@@ -9916,6 +9919,7 @@ body.services-page-body .footer-backdrop {
   margin: 0;
 }
 
+.resources-page-body a.resource-card-action { text-decoration: none; }
 .resources-page-body .resource-card-action {
   width: max-content;
   min-height: 48px;
@@ -15151,6 +15155,21 @@ body.internet-connectivity-page-body .footer-backdrop {
 .contact-form .contact-select-menu button,
 .contact-form .button { font-size: 16px; }
 
+/* Keep inner-page banners short enough to reveal the following section on the first screen.
+   The homepage hero is intentionally excluded. */
+@media (min-width: 1001px) {
+  .about-page-body .about-page-hero,
+  .careers-page-body .careers-page-hero,
+  .contact-page-body .contact-page-hero,
+  .resources-page-body .resources-hero,
+  .rayadah-page-body .rayadah-hero,
+  .services-page-body .services-page-hero,
+  .internet-connectivity-page-body .internet-connectivity-hero {
+    min-height: clamp(680px, 84vh, 790px);
+    min-height: clamp(650px, 62svh, 650px);
+  }
+}
+
 /* Laptop widths: keep desktop compositions inside their available columns. */
 @media (min-width: 1025px) and (max-width: 1199px) {
   .about-page-body .about-direction-grid {
@@ -15605,6 +15624,20 @@ body .cloud-platform .cloud-button .arrow { flex-shrink: 0; }
   row-gap: 50px;
 }
 
+/* Keep service category intro spacing compact so capability content appears
+   in the first viewport. */
+@media (min-width: 1001px) {
+  .services-page-body .services-page-hero > .about-page-intro {
+    min-height: 550px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .connectivity-category-page-body .connectivity-capabilities {
+    padding-top: 66px;
+  }
+}
+
 .contact-page-body .contact-enquiry-copy { grid-area: intro; }
 .contact-page-body .contact-page-form { grid-area: form; margin-top: 0; }
 .contact-page-body .contact-routes { grid-area: routes; }
@@ -15634,6 +15667,7 @@ body .cloud-platform .cloud-button .arrow { flex-shrink: 0; }
   .resources-page-body .resources-section-heading > .pill
 ) {
   box-sizing: border-box;
+  width: max-content;
   min-height: 30px;
   padding: 0 17px;
   display: inline-flex;
@@ -15650,4 +15684,54 @@ body .cloud-platform .cloud-button .arrow { flex-shrink: 0; }
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+/* Improve readability of capability summaries and actions on service pages. */
+.connectivity-category-page-body .connectivity-category-hero-content .connectivity-breadcrumb {
+  font-size: 14px;
+}
+
+.connectivity-category-page-body .connectivity-category-hero-copy > .about-page-lead {
+  font-size: 17px;
+}
+
+.connectivity-category-page-body .connectivity-section-heading > p,
+.connectivity-category-page-body .connectivity-capability-card > p {
+  font-size: 16px;
+}
+
+.connectivity-category-page-body .connectivity-capability-card > a {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* Keep breadcrumb and banner-summary sizing consistent across inner pages. */
+body:not(.home-page-body) .connectivity-breadcrumb,
+body:not(.home-page-body) .about-breadcrumb,
+body:not(.home-page-body) .internet-breadcrumb {
+  font-size: 14px;
+}
+
+body:not(.home-page-body) .about-page-hero .about-page-lead,
+.careers-page-body .careers-page-copy > p,
+.contact-page-body .contact-page-copy > p,
+.resources-page-body .resources-page-copy > p {
+  font-size: 16px;
+}
+
+.internet-connectivity-page-body .internet-connectivity-hero-copy > p {
+  font-size: 16px;
+}
+
+/* Let the About clients area blend into the page canvas instead of forming a
+   full-width color band between the history and partner sections. */
+.about-page-body .about-home-clients {
+  background:
+    radial-gradient(ellipse 92% 70% at 50% 50%, rgba(43, 63, 70, .34) 0%, rgba(32, 47, 59, .16) 58%, transparent 100%);
+}
+
+@media (min-width: 701px) {
+  .about-page-body .about-direction-grid {
+    margin-top: 80px;
+  }
 }

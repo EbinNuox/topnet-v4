@@ -57,6 +57,17 @@ const serviceContent = {
   managed: ['Managed Services', 'Infrastructure', 'Cybersecurity', 'Service Desk'],
 };
 
+const servicePageRoutes = {
+  connectivity: 'connectivity-services.html',
+  clouding: 'clouding-services.html',
+  hosting: 'hosting-services.html',
+  colocation: 'co-location-services.html',
+  cybersecurity: 'cybersecurity-services.html',
+  security: 'security-services.html',
+  professional: 'professional-services.html',
+  managed: 'managed-services.html',
+};
+
 const serviceRoutes = {
   'Internet Connectivity': 'internet-connectivity.html',
   'Data Connectivity': 'data-connectivity.html',
@@ -93,7 +104,7 @@ servicesButton?.addEventListener('click', (event) => {
   setServicesMenu(servicesButton.getAttribute('aria-expanded') !== 'true');
 });
 
-document.querySelector('.services-link')?.addEventListener('mouseenter', () => {
+document.querySelector('.services-nav')?.addEventListener('mouseenter', () => {
   if (window.innerWidth > 1000) setServicesMenu(true);
 });
 
@@ -128,10 +139,17 @@ document.querySelectorAll('.service-category').forEach((category) => {
     document.querySelectorAll('.service-category').forEach((item) => {
       const selected = item === category;
       item.classList.toggle('active', selected);
-      item.setAttribute('aria-selected', String(selected));
     });
     const detail = servicesMenu.querySelector('.service-detail');
     detail.querySelector('h2').textContent = content[0];
+    const categoryLink = detail.querySelector('.category-overview');
+    if (categoryLink) {
+      categoryLink.href = servicePageRoutes[category.dataset.service] || 'services.html';
+      categoryLink.textContent = 'View ' + content[0] + ' ';
+      const arrow = document.createElement('span');
+      arrow.textContent = '→';
+      categoryLink.appendChild(arrow);
+    }
     detail.querySelectorAll('.service-capabilities a').forEach((link, index) => {
       const capability = content[index + 1];
       link.style.display = capability ? '' : 'none';
@@ -141,8 +159,9 @@ document.querySelectorAll('.service-category').forEach((category) => {
       }
     });
   };
-  category.addEventListener('click', activateCategory);
   category.addEventListener('mouseenter', activateCategory);
+  category.addEventListener('focus', activateCategory);
+  if (category.classList.contains('active')) activateCategory();
 });
 
 document.querySelectorAll('.contact-select-field').forEach((field) => {
