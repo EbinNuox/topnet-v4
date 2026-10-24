@@ -15735,3 +15735,18 @@ body:not(.home-page-body) .about-page-hero .about-page-lead,
     margin-top: 80px;
   }
 }
+
+/* Careers open positions panel uses the same soft outline as the enquiry forms. */
+.careers-page-body .careers-positions-panel {
+  padding: 28px 20px 32px;
+  border: 1px solid rgba(230, 232, 239, .16);
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(35, 38, 61, .22), rgba(13, 18, 31, .16));
+}
+
+@media (max-width: 600px) {
+  .careers-page-body .careers-positions-panel {
+    padding: 22px 16px 24px;
+    border-radius: 18px;
+  }
+}
