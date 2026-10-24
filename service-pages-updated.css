@@ -939,7 +939,6 @@ body.connectivity-category-page-body {
 @media (min-width: 1001px) and (max-width: 1600px) {
   body.connectivity-category-page-body .site-header .nav {
     left: calc(50% - 22px);
-    gap: clamp(14px, 3.25vw, 20px);
   }
 
   body.connectivity-category-page-body .site-header .nav .services-link.active::before {

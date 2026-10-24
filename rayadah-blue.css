@@ -157,7 +157,7 @@ body.rayadah-page-body .site-footer {
 }
 
 .rayadah-page-body .rayadah-contact {
-  background: #151a2c !important;
+  overflow: visible;
   border-top: 0 !important;
   border-bottom: 0 !important;
   box-shadow: none !important;
@@ -166,6 +166,7 @@ body.rayadah-page-body .site-footer {
 .rayadah-page-body .rayadah-contact .contact-form {
   background: transparent !important;
 }
+
 
 .rayadah-page-body .contact-select-menu {
   background: #151a2c !important;

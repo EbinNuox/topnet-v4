@@ -2804,7 +2804,7 @@ html:has(body:not(.about-page-body)) {
 
   .site-footer {
     margin-top: 40px;
-    margin-bottom: 100px;
+    margin-bottom: 0;
   }
 }
 
@@ -13289,20 +13289,20 @@ body.services-page-body,
   background: rgba(19, 24, 39, .16);
 }
 
-/* Keep the standalone connectivity footer inside the viewport while the
-   shared desktop footer is still transitioning to its mobile layout. */
+/* Keep the Internet Connectivity footer aligned with the shared desktop
+   footer height and row spacing at laptop and responsive desktop widths. */
 @media (min-width: 1001px) and (max-width: 1800px) {
   .internet-connectivity-page-body .site-footer {
     width: calc(100% - 48px);
     height: auto;
-    min-height: 600px;
+    min-height: 463px;
     margin-right: auto;
     margin-left: auto;
-    padding: 52px 32px 0;
+    padding: 54px 28px 0;
     grid-template-columns: minmax(220px, 1.3fr) repeat(2, minmax(125px, .75fr)) minmax(210px, 1.1fr);
-    grid-template-rows: auto 100px;
+    grid-template-rows: minmax(282px, auto) 118px;
     column-gap: 28px;
-    row-gap: 48px;
+    row-gap: 0;
   }
 
   .internet-connectivity-page-body .site-footer .footer-bottom {
@@ -15748,5 +15748,68 @@ body:not(.home-page-body) .about-page-hero .about-page-lead,
   .careers-page-body .careers-positions-panel {
     padding: 22px 16px 24px;
     border-radius: 18px;
+  }
+}
+
+/* Keep the complete services flyout visible beyond the hero's background box. */
+.services-page-body .services-page-hero {
+  position: relative;
+  z-index: 30;
+  overflow: visible;
+}
+
+@media (min-width: 1001px) {
+  .services-page-body .services-menu {
+    height: auto;
+    min-height: 0;
+    max-height: calc(100vh - 150px);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+@media (min-width: 1200px) and (min-height: 700px) {
+  .services-page-body .services-menu {
+    max-height: none;
+    overflow: visible;
+    padding-bottom: 9px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .home-page-body .about-orbits {
+    scale: .65;
+  }
+
+  .home-page-body .about-molecule-single {
+    scale: .78;
+  }
+
+}
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .home-page-body .about-molecule-single {
+    right: 316px;
+  }
+
+  body .site-header .nav {
+    gap: 28px;
+  }
+}
+
+/* Keep the shared footer flush with the bottom of every page. */
+body .site-footer {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1000px) {
+  body .site-footer {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 1600px) {
+  body .footer-bottom {
+    padding-top: 24px;
   }
 }

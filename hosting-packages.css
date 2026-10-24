@@ -323,6 +323,7 @@
 
 /* Match the supplied package identity without changing the page theme. */
 .hosting-packages { --lime: #bdf2a1; width: 100%; max-width: none; }
+.web-hosting-page-body .hosting-packages { background: transparent; }
 .hosting-packages .hosting-plan-action .arrow { background-color: #bdf2a1; }
 .hosting-packages .hosting-plan-action:focus-visible { outline: 2px solid #bdf2a1; outline-offset: 4px; }
 

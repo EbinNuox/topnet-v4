@@ -417,6 +417,33 @@ body .site-header .services-menu {
   padding-bottom: 24px;
 }
 body .site-header .services-menu::after { display: none; }
+
+/* Let the desktop services flyout escape short hero containers on every page. */
+@media (min-width: 1001px) and (max-width: 1600px) {
+  body:has(.services-menu:is(.open, :hover, :focus-within)) :is(
+    .hero,
+    .about-page-hero,
+    .careers-page-hero,
+    .contact-page-hero,
+    .resources-hero,
+    .rayadah-hero,
+    .services-page-hero,
+    .internet-connectivity-hero
+  ) {
+    position: relative;
+    z-index: 40;
+    overflow: visible !important;
+  }
+
+  body:has(.services-menu:is(.open, :hover, :focus-within)) :is(
+    .contact-page,
+    .rayadah-page,
+    .services-page
+  ) {
+    overflow: visible !important;
+  }
+}
+
 /* Header-bearing hero sections start at the top, without content-section padding. */
 body section:has(> .site-header),
 body main.hero:has(> .site-header) {

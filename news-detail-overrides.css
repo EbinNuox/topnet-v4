@@ -42,6 +42,57 @@ body.news-detail-page-body {
   margin-top: 24px;
 }
 
+/* Keep the desktop header and responsive laptop navigation consistent site-wide. */
+@media (min-width: 1001px) and (max-width: 1919px) {
+  .news-detail-header .nav {
+    position: static;
+    left: auto;
+    right: auto;
+    flex: 1 1 auto;
+    justify-content: center;
+    gap: clamp(16px, 2vw, 32px);
+    transform: none;
+    white-space: nowrap;
+  }
+
+  .news-detail-header .header-tools {
+    display: flex;
+    flex: 0 0 auto;
+    gap: clamp(6px, .8vw, 10px);
+  }
+}
+
+@media (min-width: 1001px) {
+  .news-detail-header .brand-logo {
+    filter: brightness(0) saturate(100%) invert(91%) sepia(15%) saturate(620%) hue-rotate(45deg) brightness(103%) contrast(92%);
+  }
+}
+
+@media (min-width: 1200px) {
+  .news-detail-header .nav a,
+  .news-detail-header .nav button,
+  .news-detail-header .header-cta,
+  .news-detail-header .rayadah-nav-link,
+  .news-detail-header .language-button {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1001px) and (max-width: 1199px) {
+  .news-detail-header .nav a,
+  .news-detail-header .nav button,
+  .news-detail-header .header-cta,
+  .news-detail-header .rayadah-nav-link {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .news-detail-page-body .services-menu {
+    grid-template-columns: minmax(250px, 1fr) minmax(320px, 1.05fr) minmax(300px, 1fr);
+  }
+}
+
 @media (max-width: 1600px) {
   .news-detail-page-body {
     --page-gutter: 50px;
@@ -415,5 +466,65 @@ body.news-detail-page-body {
 @media (max-width: 600px) {
   .news-detail-page-body .news-detail-article {
     gap: 20px;
+  }
+}
+
+/* This page loads its own footer stylesheet after the shared styles. */
+body.news-detail-page-body .site-footer {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1000px) {
+  body.news-detail-page-body .site-footer {
+    padding-bottom: 40px;
+  }
+}
+
+.news-detail-page-body .news-detail-hero-inner {
+  min-height: 600px;
+  padding: 40px 0;
+}
+
+.news-detail-page-body .news-detail-enquiry .contact-wrap > h2 {
+  margin-bottom: 18px;
+  line-height: 1.02;
+}
+
+.news-detail-page-body .news-detail-enquiry .contact-select-arrow {
+  right: 14px;
+}
+
+/* Match the shared language dropdown chevron instead of the legacy text glyph. */
+.news-detail-header .language-button span {
+  width: 14px;
+  height: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin: 0;
+  font-size: 0;
+  line-height: 1;
+  transform: none;
+}
+
+.news-detail-header .language-button span::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform .2s ease;
+}
+
+.news-detail-header .language-button[aria-expanded="true"] span::before {
+  transform: translateY(1px) rotate(225deg);
+}
+
+@media (max-width: 1600px) {
+  .news-detail-page-body .news-detail-hero-inner {
+    min-height: 450px;
+    padding: 40px 0;
   }
 }
