@@ -2407,14 +2407,14 @@ body.connectivity-category-page-body .connectivity-capabilities::after { display
   font-size: 0;
   animation: service-pulse 4.8s cubic-bezier(.45, 0, .55, 1) infinite;
 }
-.professional-category-page .connectivity-capability-card:nth-child(1) .connectivity-capability-index { background-image: url("service-page-assets/icon-cloud.svg"); }
-.professional-category-page .connectivity-capability-card:nth-child(2) .connectivity-capability-index { background-image: url("service-page-assets/icon-database.svg"); }
-.professional-category-page .connectivity-capability-card:nth-child(3) .connectivity-capability-index { background-image: url("service-page-assets/icon-restore.svg"); }
-.professional-category-page .connectivity-capability-card:nth-child(4) .connectivity-capability-index { background-image: url("service-page-assets/icon-servers.svg"); }
-.professional-category-page .connectivity-capability-card:nth-child(5) .connectivity-capability-index { background-image: url("service-page-assets/icon-cloud.svg"); }
-.professional-category-page .connectivity-capability-card:nth-child(6) .connectivity-capability-index { background-image: url("service-page-assets/icon-shield.svg"); }
-.professional-category-page .connectivity-capability-card:nth-child(7) .connectivity-capability-index { background-image: url("service-page-assets/icon-restore.svg"); }
-.professional-category-page .connectivity-capability-card:nth-child(8) .connectivity-capability-index { background-image: url("service-page-assets/icon-storage.svg"); }
+.professional-category-page .connectivity-capability-card:nth-child(1) .connectivity-capability-index { background-image: url("assets/icons/managed-connections.svg"); }
+.professional-category-page .connectivity-capability-card:nth-child(2) .connectivity-capability-index { background-image: url("assets/icons/database-sync.svg"); }
+.professional-category-page .connectivity-capability-card:nth-child(3) .connectivity-capability-index { background-image: url("assets/icons/strategic.svg"); }
+.professional-category-page .connectivity-capability-card:nth-child(4) .connectivity-capability-index { background-image: url("assets/icons/servers.svg"); }
+.professional-category-page .connectivity-capability-card:nth-child(5) .connectivity-capability-index { background-image: url("assets/icons/cloud-operations.svg"); }
+.professional-category-page .connectivity-capability-card:nth-child(6) .connectivity-capability-index { background-image: url("assets/icons/secure.svg"); }
+.professional-category-page .connectivity-capability-card:nth-child(7) .connectivity-capability-index { background-image: url("assets/icons/reliable.svg"); }
+.professional-category-page .connectivity-capability-card:nth-child(8) .connectivity-capability-index { background-image: url("assets/icons/storage.svg"); }
 .professional-category-page .connectivity-capability-button {
   gap: 10px;
 }
