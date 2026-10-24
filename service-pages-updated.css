@@ -821,7 +821,10 @@ body.connectivity-category-page-body {
 .connectivity-category-page-body .cybersecurity-model-orbits i:nth-child(2) { inset: 13%; }
 .connectivity-category-page-body .cybersecurity-model-orbits i:nth-child(3) { inset: 26%; }
 .connectivity-category-page-body .cybersecurity-model-orbits .dot-one { left: 52%; top: -1%; }
-.connectivity-category-page-body .cybersecurity-model-orbits .dot-two { left: 3%; top: 68%; }
+.connectivity-category-page-body .cybersecurity-model-orbits .dot-two {
+  top: calc(50% - 5px);
+  left: -5px;
+}
 .connectivity-category-page-body .cybersecurity-model-orbits .dot-three { left: 91%; top: 88%; }
 
 .connectivity-category-page-body .cybersecurity-model-molecule {
@@ -930,5 +933,33 @@ body.connectivity-category-page-body {
 @media (prefers-reduced-motion: reduce) {
   .connectivity-category-page-body .cybersecurity-model-orbits {
     animation: none;
+  }
+}
+
+@media (min-width: 1001px) and (max-width: 1600px) {
+  body.connectivity-category-page-body .site-header .nav {
+    left: calc(50% - 22px);
+    gap: clamp(14px, 3.25vw, 20px);
+  }
+
+  body.connectivity-category-page-body .site-header .nav .services-link.active::before {
+    left: -10px;
+  }
+
+  body.connectivity-category-page-body .site-header .nav a,
+  body.connectivity-category-page-body .site-header .nav button,
+  body.connectivity-category-page-body .site-header .header-cta,
+  body.connectivity-category-page-body .site-header .rayadah-nav-link,
+  body.connectivity-category-page-body .site-header .language-button {
+    font-size: 14px;
+  }
+
+  body.connectivity-category-page-body .site-header .header-tools {
+    gap: 7px;
+  }
+
+  body.connectivity-category-page-body .site-header .header-cta {
+    gap: 10px;
+    padding-left: 17px;
   }
 }
