@@ -44,7 +44,15 @@ class ProfessionalServicesDetailPageTests(unittest.TestCase):
 
     def test_existing_internet_connectivity_page_is_unchanged(self):
         page = ROOT / "internet-connectivity.html"
-        self.assertEqual(hashlib.sha256(page.read_bytes()).hexdigest(), "52cf490b95298d06fffea20aeac39d1b25c09a1b7caf9d7d6822cb8d704b2be5")
+        original_content = re.sub(
+            rb'<link rel="stylesheet" href="footer-theme\.css\?rev=20261027-1">',
+            b"",
+            page.read_bytes(),
+        )
+        self.assertEqual(
+            hashlib.sha256(original_content).hexdigest(),
+            "52cf490b95298d06fffea20aeac39d1b25c09a1b7caf9d7d6822cb8d704b2be5",
+        )
 
 
 if __name__ == "__main__":

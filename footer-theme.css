@@ -1,0 +1,72 @@
+/* Shared footer palette for TopNet pages; Rayadah keeps its separate identity. */
+:root {
+  --topnet-footer-panel:
+    linear-gradient(180deg, rgba(5, 8, 20, .16), rgba(5, 8, 20, .48)),
+    radial-gradient(ellipse 52% 112% at 108% 46%, rgba(111, 96, 159, .58) 0%, rgba(65, 59, 111, .28) 40%, transparent 72%),
+    radial-gradient(ellipse 54% 108% at 90% 122%, rgba(157, 174, 119, .72) 0%, rgba(96, 109, 82, .4) 34%, rgba(43, 55, 57, .18) 54%, transparent 74%),
+    linear-gradient(112deg, #070c19 0%, #050914 54%, #101329 80%, #211e3d 100%);
+  --topnet-footer-canvas:
+    linear-gradient(180deg, rgba(5, 2, 10, 0) 0%, rgba(5, 1, 10, 0) 30%, rgba(5, 1, 10, .34) 54%, rgba(6, 1, 11, .82) 82%, #08020c 100%);
+}
+
+body:not(.rayadah-page-body) {
+  position: relative;
+}
+
+body:not(.rayadah-page-body)::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: calc(100% - 650px) 0 0;
+  display: block;
+  pointer-events: none;
+  background: var(--topnet-footer-canvas) !important;
+}
+
+body:not(.rayadah-page-body) .site-footer {
+  z-index: 1;
+  background: var(--topnet-footer-panel) !important;
+  background-blend-mode: normal;
+}
+
+body:not(.rayadah-page-body) .footer-brand .footer-logo {
+  filter: brightness(0) saturate(100%) invert(91%) sepia(15%) saturate(620%) hue-rotate(45deg) brightness(103%) contrast(92%) !important;
+}
+
+body:not(.rayadah-page-body) .site-footer .footer-brand p {
+  color: #c4c4ca !important;
+}
+
+body:not(.rayadah-page-body) .site-footer h3 {
+  color: #eeeef1 !important;
+}
+
+body:not(.rayadah-page-body) .site-footer .footer-column a {
+  color: #92939d !important;
+}
+
+body:not(.rayadah-page-body) .site-footer .footer-column a:hover,
+body:not(.rayadah-page-body) .site-footer .footer-legal a:hover {
+  color: #e7e7ea !important;
+}
+
+body:not(.rayadah-page-body) .site-footer .footer-connect strong {
+  color: #f0f0f2 !important;
+}
+
+body:not(.rayadah-page-body) .site-footer .footer-bottom {
+  border-top-color: rgba(230, 232, 238, .13) !important;
+}
+
+body:not(.rayadah-page-body) .site-footer .footer-bottom p {
+  color: #b7b7bd !important;
+}
+
+body:not(.rayadah-page-body) .site-footer .footer-legal a,
+body:not(.rayadah-page-body) .site-footer .footer-legal span {
+  color: #b3b3b8 !important;
+}
+
+body:not(.rayadah-page-body) .footer-backdrop {
+  background: var(--topnet-footer-canvas) !important;
+}
