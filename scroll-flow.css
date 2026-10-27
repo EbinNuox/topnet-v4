@@ -1,0 +1,89 @@
+/* Content should move with the wheel rather than hold a pinned scene. */
+body.about-page-body .about-history-section,
+body.about-page-body .about-history-section.has-scroll-history {
+  min-height: 0;
+  height: auto;
+  padding-block: 72px;
+}
+body.about-page-body .about-history-section > .about-history-sticky {
+  position: relative;
+  top: auto;
+  height: auto;
+  min-height: 0;
+}
+body.about-page-body .about-history-section.has-scroll-history .about-history-item {
+  opacity: 1 !important;
+  transform: none !important;
+}
+body.about-page-body .about-direction-section {
+  min-height: 0;
+  height: auto;
+  padding-block: 72px;
+}
+body.about-page-body .about-direction-section .about-section-heading {
+  position: relative;
+  inset: auto;
+  margin-bottom: 32px;
+}
+body.about-page-body .about-direction-grid {
+  position: relative;
+  top: auto;
+  height: auto;
+  min-height: 0;
+  width: min(1400px, 100%);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, .9fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 32px;
+}
+body.about-page-body .about-direction-grid .about-direction-card {
+  position: relative;
+  inset: auto;
+  height: auto;
+  min-height: 300px;
+  padding: 32px 36px;
+  justify-content: flex-start;
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none;
+  will-change: auto;
+}
+body.about-page-body .about-direction-card > span {
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
+body.about-page-body .about-direction-card .about-direction-statement {
+  margin: 16px 0 0;
+  font-size: clamp(20px, 1.5vw, 24px) !important;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+body.about-page-body .about-direction-card .about-direction-support {
+  margin: 16px 0 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+@media (max-width: 1100px) {
+  body.about-page-body .about-direction-grid { grid-template-columns: minmax(0, 1fr); }
+  body.about-page-body .about-direction-grid .about-direction-card {
+    width: min(560px, 100%);
+    justify-self: center;
+    min-height: 240px;
+    padding: 28px;
+  }
+  body.about-page-body .about-direction-card--vision { order: 1; }
+  body.about-page-body .about-direction-center { order: 2; width: min(400px, 100%); justify-self: center; }
+  body.about-page-body .about-direction-card--mission { order: 3; }
+}
+
+/* Reveal transitions must not compete with wheel animation and repaint
+   large image layers while a section enters the viewport. */
+.reveal-item,
+.reveal-item:not(.reveal-fade),
+.reveal-item.is-revealed {
+  opacity: 1 !important;
+  transition: none;
+  will-change: auto;
+}
+.reveal-item:not(.reveal-fade) { transform: none !important; }

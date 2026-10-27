@@ -1,0 +1,30 @@
+/* Content remains usable when AOS cannot initialize. */
+[data-aos]:not(.aos-init) {
+  opacity: 1 !important;
+  transform: none !important;
+}
+/* Subtle zoom keeps the existing card layout stable. */
+[data-aos="zoom-in"].aos-init { transform: scale(.9); }
+[data-aos="zoom-in"].aos-animate { transform: scale(1); }
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Enter the hidden starting state immediately; animate only the reveal. */
+[data-aos].aos-init:not(.aos-animate) {
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+}
+
+/* Fade groups must preserve the containing block used by sticky descendants. */
+[data-aos="fade-in"] { transform: none !important; }
+
+
+/* Partner copy uses a layout transform that fade-in must preserve. */
+.partners .partner-copy[data-aos="fade-in"] {
+  transform: translateX(-50%) !important;
+}

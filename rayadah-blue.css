@@ -1,0 +1,244 @@
+/* Rayadah Cloud only: supplied brand blue replaces the green accents. */
+@media (min-width: 1001px) {
+  .rayadah-page-body .rayadah-journey {
+    padding-inline: clamp(48px, 4.6vw, 100px);
+  }
+  .rayadah-page-body .rayadah-journey-editorial {
+    grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+    gap: clamp(60px, 7vw, 132px);
+  }
+}
+.rayadah-page-body .rayadah-journey-editorial-heading { min-width: 0; }
+.rayadah-page-body .rayadah-journey-preview {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1286 / 470;
+  margin: 32px 0 0;
+  overflow: clip;
+}
+.rayadah-page-body .rayadah-journey-preview .rayadah-journey-network {
+  left: 50%;
+  top: 0;
+  width: 1286px;
+  height: 470px;
+  margin: 0;
+  transform: translateX(-50%) scale(var(--journey-preview-scale, .4)) !important;
+  transform-origin: top center;
+}
+.rayadah-page-body .rayadah-journey-editorial-content {
+  min-width: 0;
+  transform: none;
+}
+.rayadah-page-body .rayadah-capability-card .rayadah-capability-tags {
+  margin-bottom: 20px;
+}
+.rayadah-page-body .rayadah-calculator-form select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%2355d3ff' stroke-width='1.5'/%3E%3C/svg%3E");
+}
+.rayadah-page-body {
+  --lime: #55d3ff;
+  background: #151a2c;
+}
+.rayadah-page-body .rayadah-page {
+  background: #151a2c;
+}
+.rayadah-page-body .rayadah-capability-card > .rayadah-capability-icon,
+.rayadah-page-body .rayadah-journey-network .cloud-node,
+.rayadah-page-body .rayadah-capability-card > .rayadah-capability-icon:hover,
+.rayadah-page-body .rayadah-journey-network .cloud-node:hover {
+  background: #55d3ff;
+  border-color: #55d3ff;
+  box-shadow: inset 0 1px 0 #ffffff40, 0 0 18px #55d3ff70, 0 0 42px #55d3ff30;
+}
+.rayadah-page-body .rayadah-capability-card:nth-child(3n) {
+  background: radial-gradient(88% 68% at 100% 0, #55d3ff2e, transparent 72%), linear-gradient(145deg, #1f272fb8, #0c121ce0);
+}
+.rayadah-page-body .header-cta,
+.rayadah-page-body .button-primary,
+.rayadah-page-body .language-option.active {
+  background: linear-gradient(90deg, #55d3ff30, #55d3ff0a);
+  border-color: #55d3ff66;
+}
+.rayadah-page-body .header-cta:hover,
+.rayadah-page-body .button-primary:hover { background: linear-gradient(90deg, #55d3ff50, #55d3ff18); }
+.rayadah-page-body .arrow,
+.rayadah-page-body .header-cta span,
+.rayadah-page-body .mini-cta span,
+.rayadah-page-body .footer-submit { color: #10283a; }
+.rayadah-page-body .brand-logo,
+.rayadah-page-body .footer-brand .footer-logo {
+  width: 150px;
+  height: 47px;
+  filter: none;
+}
+.rayadah-page-body .rayadah-capability-icon img,
+.rayadah-page-body .cloud-node img { filter: brightness(0) saturate(100%); opacity: .8; }
+.rayadah-page-body .cloud-connector-flow { filter: drop-shadow(0 0 1.5px #55d3ff9e); }
+.rayadah-page-body .site-cursor span { background: #55d3ff9e; box-shadow: 0 0 7px #55d3ff70; }
+.rayadah-page-body .language-menu { box-shadow: 0 18px 44px #00000057, 0 0 22px #55d3ff0f; }
+body.rayadah-page-body footer.site-footer {
+  background: #151a2c;
+}
+
+body.rayadah-page-body::before {
+  display: none !important;
+  background: transparent;
+}
+
+body.rayadah-page-body {
+  background: #151a2c;
+}
+
+body.rayadah-page-body .footer-backdrop {
+  background: #151a2c !important;
+}
+
+body.rayadah-page-body .site-footer {
+  background: linear-gradient(180deg, #151a2c00 0%, #151a2c 24%, #151a2c 100%) !important;
+  box-shadow: 0 -54px 110px #151a2c00, 0 72px 150px #151a2c00, 0 24px 58px #00000024;
+}
+.rayadah-page-body .rayadah-trust-item > img {
+  width: 64px;
+  height: 56px;
+  object-fit: contain;
+  filter: none;
+}
+.rayadah-page-body .rayadah-trust-item:nth-child(1),
+.rayadah-page-body .rayadah-trust-item:nth-child(3) {
+  background: linear-gradient(135deg, #152536, #22516a99);
+}
+
+.rayadah-page-body .rayadah-trust-item,
+.rayadah-page-body .rayadah-trust-item:nth-child(2),
+.rayadah-page-body .rayadah-trust-item:nth-child(4) {
+  background: linear-gradient(135deg, #152536, #22516a99) !important;
+}
+
+.rayadah-page-body .rayadah-model-visual {
+  background: #151a2c;
+}
+
+.rayadah-page-body .rayadah-model-visual::after {
+  background: linear-gradient(135deg, #55d3ff18, transparent 32%, #55d3ff16 78%, transparent);
+}
+
+.rayadah-page-body .rayadah-model-visual img {
+  filter: hue-rotate(-72deg) saturate(.9) brightness(.96);
+}
+
+.rayadah-page-body .rayadah-capability-card,
+.rayadah-page-body .rayadah-capability-card:nth-child(2n),
+.rayadah-page-body .rayadah-capability-card:nth-child(3n) {
+  background: #151a2c;
+}
+
+.rayadah-page-body .rayadah-capability-card:hover {
+  box-shadow: 0 18px 48px #06051340, 0 0 26px #55d3ff24;
+}
+
+.rayadah-page-body .rayadah-capabilities::before {
+  background: radial-gradient(circle, #55d3ff2e, transparent 69%);
+}
+
+.rayadah-page-body .rayadah-capabilities::after {
+  background: radial-gradient(ellipse, #55d3ff4d, transparent 70%);
+}
+
+.rayadah-page-body .rayadah-contact::after {
+  display: block;
+  top: 53%;
+  background-size: contain;
+  filter: blur(30px) saturate(1.16);
+  opacity: .72;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 78%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 78%, transparent 100%);
+}
+
+.rayadah-page-body .rayadah-contact {
+  overflow: visible;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+.rayadah-page-body .rayadah-contact .contact-form {
+  background: transparent !important;
+}
+
+
+.rayadah-page-body .contact-select-menu {
+  background: #151a2c !important;
+  border-color: #55d3ff52;
+  box-shadow: 0 24px 70px #05081480, 0 0 28px #55d3ff1f;
+}
+.rayadah-page-body .contact-select-menu button:hover,
+.rayadah-page-body .contact-select-menu button:focus-visible,
+.rayadah-page-body .contact-select-menu button.active {
+  background: #55d3ff1c;
+}
+
+.rayadah-page-body .rayadah-faq-list {
+  width: min(1100px, 70vw) !important;
+  max-width: 1100px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.rayadah-page-body .rayadah-contact::before {
+  display: none !important;
+  background: transparent !important;
+}
+
+.rayadah-page-body .rayadah-model::before,
+.rayadah-page-body .rayadah-journey::before {
+  background: transparent;
+}
+
+/* Match the home-page blue cloud treatment in the journey center. */
+.rayadah-page-body .rayadah-journey .cloud-visual {
+  box-shadow: 0 0 105px #55d3ff61;
+  animation: none;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+.rayadah-page-body .rayadah-journey .cloud-visual::before {
+  background: repeating-conic-gradient(from 0deg, #55d3ff75 0deg 2.2deg, transparent 2.2deg 4.8deg);
+  animation: rayadah-orbit-clockwise 24s linear infinite, rayadah-ring-breathe 16s cubic-bezier(.45,0,.55,1) infinite;
+}
+.rayadah-page-body .rayadah-journey .cloud-visual::after {
+  border-color: #55d3ff38;
+  border-top-color: #bcefffcc;
+  border-bottom-color: #55d3ff99;
+}
+.rayadah-page-body .rayadah-journey .cloud-visual > img {
+  filter: hue-rotate(-64deg) saturate(1.16) brightness(1.04);
+  -webkit-mask-image: radial-gradient(ellipse 76% 76% at 50% 50%, #000 34%, #000 58%, transparent 96%);
+  mask-image: radial-gradient(ellipse 76% 76% at 50% 50%, #000 34%, #000 58%, transparent 96%);
+  animation: none;
+}
+
+/* Equal artwork widths; SVG viewBoxes exclude the original uneven padding. */
+.rayadah-page-body .rayadah-trust-item > img {
+  width: 56px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Equal media height keeps all three model-card headings aligned. */
+.rayadah-page-body .rayadah-model-card .rayadah-model-visual {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 1.28 / 0.8;
+  flex: none;
+}
+.rayadah-page-body .rayadah-model-card .rayadah-model-visual > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
