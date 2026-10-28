@@ -20,7 +20,7 @@ if (compactServicesNav && !compactServicesNav.querySelector('.services-menu-togg
   menu.className = 'services-menu';
   menu.id = 'services-menu';
   menu.setAttribute('aria-hidden', 'true');
-  menu.innerHTML = '<div class="services-intro"><span>Integrated ecosystem</span><h2>Find the right capability</h2><p>Browse TopNet’s connected service<br>categories and their specialist capabilities.</p></div><div class="service-categories" role="navigation" aria-label="Service categories"><a class="service-category active" href="professional-services.html" data-service="professional">Professional Services <span>→</span></a></div><div class="service-detail" aria-live="polite"><h2>Professional Services</h2><div class="service-capabilities"><a href="Collaboration.html">Collaboration <span>→</span></a><a href="Low Current.html">Low Current <span>→</span></a><a href="IT Consulting.html">IT Consulting <span>→</span></a><a href="Infrastructure Projects.html">Infrastructure Projects <span>→</span></a><a href="Cloud Projects.html">Cloud Projects <span>→</span></a><a href="Security Projects.html">Security Projects <span>→</span></a><a href="Business Continuity.html">Business Continuity <span>→</span></a><a href="Datacenter Services.html">Datacenter Services <span>→</span></a></div><a class="category-overview" href="professional-services.html">View category <span>→</span></a></div>';
+  menu.innerHTML = '<div class="services-intro"><span>Integrated ecosystem</span><h2>Find the right capability</h2><p>Browse TopNet’s connected service<br>categories and their specialist capabilities.</p></div><div class="service-categories" role="navigation" aria-label="Service categories"><a class="service-category active" href="professional-services.html" data-service="professional">Professional Services <span>→</span></a></div><div class="service-detail" aria-live="polite"><h2>Professional Services</h2><div class="service-capabilities"><a href="collaboration.html">Collaboration <span>→</span></a><a href="low-current.html">Low Current <span>→</span></a><a href="it-consulting.html">IT Consulting <span>→</span></a><a href="infrastructure-projects.html">Infrastructure Projects <span>→</span></a><a href="cloud-projects.html">Cloud Projects <span>→</span></a><a href="security-projects.html">Security Projects <span>→</span></a><a href="business-continuity.html">Business Continuity <span>→</span></a><a href="datacenter-services.html">Datacenter Services <span>→</span></a></div><a class="category-overview" href="professional-services.html">View category <span>→</span></a></div>';
   header?.appendChild(menu);
 }
 
@@ -62,7 +62,7 @@ if (professionalDetailPage) {
     if (!cta.closest('.header-tools')) cta.remove();
   });
   if (header && !header.querySelector('.services-menu')) {
-    header.insertAdjacentHTML('beforeend', '<div class="services-menu" id="services-menu" aria-hidden="true"><div class="services-intro"><span>Integrated ecosystem</span><h2>Find the right capability</h2><p>Browse TopNet’s connected service<br>categories and their specialist capabilities.</p></div><div class="service-categories" role="navigation" aria-label="Service categories"><a class="service-category active" href="professional-services.html" data-service="professional">Professional Services <span>→</span></a></div><div class="service-detail" aria-live="polite"><h2>Professional Services</h2><div class="service-capabilities"><a href="Collaboration.html">Collaboration <span>→</span></a><a href="Low Current.html">Low Current <span>→</span></a><a href="IT Consulting.html">IT Consulting <span>→</span></a><a href="Infrastructure Projects.html">Infrastructure Projects <span>→</span></a><a href="Cloud Projects.html">Cloud Projects <span>→</span></a><a href="Security Projects.html">Security Projects <span>→</span></a><a href="Business Continuity.html">Business Continuity <span>→</span></a><a href="Datacenter Services.html">Datacenter Services <span>→</span></a></div><a class="category-overview" href="professional-services.html">View category <span>→</span></a></div></div>');
+    header.insertAdjacentHTML('beforeend', '<div class="services-menu" id="services-menu" aria-hidden="true"><div class="services-intro"><span>Integrated ecosystem</span><h2>Find the right capability</h2><p>Browse TopNet’s connected service<br>categories and their specialist capabilities.</p></div><div class="service-categories" role="navigation" aria-label="Service categories"><a class="service-category active" href="professional-services.html" data-service="professional">Professional Services <span>→</span></a></div><div class="service-detail" aria-live="polite"><h2>Professional Services</h2><div class="service-capabilities"><a href="collaboration.html">Collaboration <span>→</span></a><a href="low-current.html">Low Current <span>→</span></a><a href="it-consulting.html">IT Consulting <span>→</span></a><a href="infrastructure-projects.html">Infrastructure Projects <span>→</span></a><a href="cloud-projects.html">Cloud Projects <span>→</span></a><a href="security-projects.html">Security Projects <span>→</span></a><a href="business-continuity.html">Business Continuity <span>→</span></a><a href="datacenter-services.html">Datacenter Services <span>→</span></a></div><a class="category-overview" href="professional-services.html">View category <span>→</span></a></div></div>');
   }
   const serviceCategories = header?.querySelector('.services-menu .service-categories');
   if (serviceCategories && serviceCategories.children.length === 1) {
@@ -244,7 +244,7 @@ if (professionalDetailPage) {
       const media = document.createElement('span');
       media.className = 'internet-related-card-media';
       const relatedImageByRoute = {
-        'Cloud Projects.html': 'assets/service-clouding-approved.png',
+        'cloud-projects.html': 'assets/service-clouding-approved.png',
       };
       const image = relatedImageByRoute[card.getAttribute('href')] || ['assets/card-rayadah-cloud.png', 'assets/operating-model-resilience.png', 'assets/operating-model-platform.png', 'assets/card-infrastructure.png'][index % 4];
       media.innerHTML = `<img src="${image}" alt="">`;
@@ -259,10 +259,10 @@ if (professionalDetailPage) {
     }
     const existingAction = content.querySelector('.internet-related-action, .button-secondary');
     if (existingAction) existingAction.classList.add('internet-related-action');
-    if (card.getAttribute('href') === 'Security Consulting.html' || card.getAttribute('href') === 'Managed Security.html') {
+    if (card.getAttribute('href') === 'security-consulting.html' || card.getAttribute('href') === 'managed-security.html') {
       const image = card.querySelector('.internet-related-card-media img');
       if (image) {
-        const isManagedSecurity = card.getAttribute('href') === 'Managed Security.html';
+        const isManagedSecurity = card.getAttribute('href') === 'managed-security.html';
         image.src = isManagedSecurity ? 'assets/service-cybersecurity-approved.png' : 'assets/service-security-approved-v2.png';
         image.alt = isManagedSecurity ? 'Managed cybersecurity infrastructure protection' : 'Security Consulting infrastructure protection';
       }
@@ -275,7 +275,7 @@ if (professionalDetailPage) {
     }
   });
 
-  document.querySelectorAll('.internet-related-grid:has(.internet-related-card[href="Cloud Projects.html"]), .internet-related-grid:has(.internet-related-card[href="Infrastructure Projects.html"]), .internet-related-grid:has(.internet-related-card[href="Datacenter Services.html"]), .internet-related-grid:has(.internet-related-card[href="Email Security.html"]), .internet-related-grid:has(.internet-related-card[href="Data Security.html"])').forEach((grid) => {
+  document.querySelectorAll('.internet-related-grid:has(.internet-related-card[href="cloud-projects.html"]), .internet-related-grid:has(.internet-related-card[href="infrastructure-projects.html"]), .internet-related-grid:has(.internet-related-card[href="datacenter-services.html"]), .internet-related-grid:has(.internet-related-card[href="email-security.html"]), .internet-related-grid:has(.internet-related-card[href="data-security.html"])').forEach((grid) => {
     if (grid.nextElementSibling?.classList.contains('internet-related-controls')) return;
     const controls = document.createElement('div');
     controls.className = 'internet-related-controls';
@@ -399,27 +399,27 @@ const serviceRoutes = {
   'Dedicated Rack': 'dedicated-rack.html',
   'Shared Rack': 'shared-rack.html',
   'Bare Metal Servers': 'bare-metal-servers.html',
-  'Network Security': 'Network Security.html',
-  'Endpoint Security': 'Endpoint Security.html',
-  'Identity Security': 'Identity Security.html',
-  'Data Security': 'Data Security.html',
-  'Email Security': 'Email Security.html',
-  'Cloud Security': 'Cloud Security.html',
-  'Managed Security': 'Managed Security.html',
-  'Security Consulting': 'Security Consulting.html',
+  'Network Security': 'network-security.html',
+  'Endpoint Security': 'endpoint-security.html',
+  'Identity Security': 'identity-security.html',
+  'Data Security': 'data-security.html',
+  'Email Security': 'email-security.html',
+  'Cloud Security': 'cloud-security.html',
+  'Managed Security': 'managed-security.html',
+  'Security Consulting': 'security-consulting.html',
   'SD-WAN Connectivity': 'sd-wan-connectivity.html',
   'VPN Connectivity': 'vpn-connectivity.html',
-  'Collaboration': 'Collaboration.html',
-  'Low Current': 'Low Current.html',
-  'IT Consulting': 'IT Consulting.html',
-  'Infrastructure Projects': 'Infrastructure Projects.html',
-  'Cloud Projects': 'Cloud Projects.html',
-  'Security Projects': 'Security Projects.html',
-  'Business Continuity': 'Business Continuity.html',
-  'Datacenter Services': 'Datacenter Services.html',
-  'Infrastructure': 'Infrastructure.html',
-  'Cybersecurity': 'Cybersecurity.html',
-  'Service Desk': 'Service Desk.html',
+  'Collaboration': 'collaboration.html',
+  'Low Current': 'low-current.html',
+  'IT Consulting': 'it-consulting.html',
+  'Infrastructure Projects': 'infrastructure-projects.html',
+  'Cloud Projects': 'cloud-projects.html',
+  'Security Projects': 'security-projects.html',
+  'Business Continuity': 'business-continuity.html',
+  'Datacenter Services': 'datacenter-services.html',
+  'Infrastructure': 'infrastructure.html',
+  'Cybersecurity': 'cybersecurity.html',
+  'Service Desk': 'service-desk.html',
 };
 
 // The cybersecurity category cards should open their detail pages directly.
@@ -1320,28 +1320,22 @@ document.querySelectorAll('[data-career-select]').forEach((field) => {
 })();
 
 const securityBannerPages = [
-  'Managed Security.html',
-  'Security Consulting.html',
-  'Network Security.html',
-  'Endpoint Security.html',
-  'Identity Security.html',
-  'Data Security.html',
-  'Email Security.html',
-  'Cloud Security.html'
+  'managed-security.html',
+  'security-consulting.html'
 ];
 if (securityBannerPages.includes(decodeURIComponent(window.location.pathname).split('/').pop())) {
   document.body.classList.add('managed-security-page-body');
   // Security Consulting uses the same banner implementation as Managed Security.
   // Remove its legacy page class so the old constrained hero rules cannot clip
   // the shared banner image.
-  if (decodeURIComponent(window.location.pathname).split('/').pop() === 'Security Consulting.html') {
+  if (decodeURIComponent(window.location.pathname).split('/').pop() === 'security-consulting.html') {
     document.body.classList.remove('security-consulting-page-body');
   }
   const managedBannerStyles = document.createElement('link');
   managedBannerStyles.rel = 'stylesheet';
-  managedBannerStyles.href = 'security-consulting-hero.css?rev=20261028-20';
+  managedBannerStyles.href = 'security-consulting-hero.css?rev=20261028-23';
   document.head.appendChild(managedBannerStyles);
-  if (['Managed Security.html', 'Security Consulting.html'].includes(decodeURIComponent(window.location.pathname).split('/').pop())) {
+  if (['managed-security.html', 'security-consulting.html'].includes(decodeURIComponent(window.location.pathname).split('/').pop())) {
     const managedModel = document.querySelector('.internet-service-model');
     if (managedModel && !managedModel.querySelector('.managed-security-banner-image')) {
       const image = document.createElement('img');

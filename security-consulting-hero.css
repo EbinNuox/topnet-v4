@@ -169,6 +169,24 @@
   overflow: visible !important;
   clip-path: none !important;
 }
+
+/* At laptop/1440px widths, keep the artwork inside its grid column so it
+   cannot overlap the left copy while remaining prominent. */
+@media (min-width: 1201px) and (max-width: 1600px) {
+  .managed-security-page-body .internet-connectivity-hero-grid,
+  .security-consulting-page-body .internet-connectivity-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(440px, 540px);
+    gap: 32px;
+  }
+
+  .managed-security-page-body .managed-security-banner-image,
+  .security-consulting-page-body .managed-security-banner-image {
+    left: 50%;
+    width: 135%;
+    height: 135%;
+    transform: translate(-50%, -50%) scale(1.12);
+  }
+}
 @media (max-width: 1024px) {
   .security-consulting-page-body .internet-connectivity-hero-inner { padding-inline: 32px; }
   .security-consulting-page-body .internet-connectivity-hero-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; }

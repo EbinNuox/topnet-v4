@@ -47,10 +47,10 @@ Expected: FAIL because the four requested pages do not yet exist.
 ### Task 2: Create the four standalone service pages
 
 **Files:**
-- Create: `Network Security.html`
-- Create: `Endpoint Security.html`
-- Create: `Identity Security.html`
-- Create: `Data Security.html`
+- Create: `network-security.html`
+- Create: `endpoint-security.html`
+- Create: `identity-security.html`
+- Create: `data-security.html`
 
 **Interfaces:**
 - Consumes: existing `internet-connectivity.html`, current shared CSS/JS, and the approved wireframe copy.

@@ -81,13 +81,13 @@ const serviceRoutes = {
   'Dedicated Rack': 'dedicated-rack.html',
   'Shared Rack': 'shared-rack.html',
   'Bare Metal Servers': 'bare-metal-servers.html',
-  'Collaboration': 'Collaboration.html',
-  'Low Current': 'Low Current.html',
-  'IT Consulting': 'IT Consulting.html',
-  'Infrastructure Projects': 'Infrastructure Projects.html',
-  'Cloud Projects': 'Cloud Projects.html',
-  'Business Continuity': 'Business Continuity.html',
-  'Datacenter Services': 'Datacenter Services.html',
+  'Collaboration': 'collaboration.html',
+  'Low Current': 'low-current.html',
+  'IT Consulting': 'it-consulting.html',
+  'Infrastructure Projects': 'infrastructure-projects.html',
+  'Cloud Projects': 'cloud-projects.html',
+  'Business Continuity': 'business-continuity.html',
+  'Datacenter Services': 'datacenter-services.html',
 };
 
 const fitServicesMenu = () => {

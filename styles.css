@@ -15696,12 +15696,12 @@ body .about-value-icon > img[src^="assets/icons/"] {
   mask-image: linear-gradient(180deg, #000 0%, #000 42%, rgba(0, 0, 0, .82) 58%, rgba(0, 0, 0, .4) 72%, rgba(0, 0, 0, .08) 88%, transparent 100%);
 }
 
-.internet-related-card[href="Cloud Projects.html"] .internet-related-card-media img {
+.internet-related-card[href="cloud-projects.html"] .internet-related-card-media img {
   transform: translateY(9%) scale(.74);
 }
 
 /* Keep the four Professional Services cards in one row and reveal the last card by horizontal scroll. */
-.internet-related-grid:has(.internet-related-card[href="Cloud Projects.html"]) {
+.internet-related-grid:has(.internet-related-card[href="cloud-projects.html"]) {
   display: flex;
   overflow-x: auto;
   gap: 24px;
@@ -15710,16 +15710,16 @@ body .about-value-icon > img[src^="assets/icons/"] {
   scrollbar-width: none;
 }
 
-.internet-related-grid:has(.internet-related-card[href="Cloud Projects.html"])::-webkit-scrollbar {
+.internet-related-grid:has(.internet-related-card[href="cloud-projects.html"])::-webkit-scrollbar {
   display: none;
 }
 
-.internet-related-grid:has(.internet-related-card[href="Cloud Projects.html"]) .internet-related-card {
+.internet-related-grid:has(.internet-related-card[href="cloud-projects.html"]) .internet-related-card {
   flex: 0 0 calc((100% - 48px) / 3);
   scroll-snap-align: start;
 }
 
-.internet-related-grid:has(.internet-related-card[href="Infrastructure Projects.html"]) {
+.internet-related-grid:has(.internet-related-card[href="infrastructure-projects.html"]) {
   display: flex;
   overflow-x: auto;
   gap: 24px;
@@ -15728,16 +15728,16 @@ body .about-value-icon > img[src^="assets/icons/"] {
   scrollbar-width: none;
 }
 
-.internet-related-grid:has(.internet-related-card[href="Infrastructure Projects.html"])::-webkit-scrollbar {
+.internet-related-grid:has(.internet-related-card[href="infrastructure-projects.html"])::-webkit-scrollbar {
   display: none;
 }
 
-.internet-related-grid:has(.internet-related-card[href="Infrastructure Projects.html"]) .internet-related-card {
+.internet-related-grid:has(.internet-related-card[href="infrastructure-projects.html"]) .internet-related-card {
   flex: 0 0 calc((100% - 48px) / 3);
   scroll-snap-align: start;
 }
 
-.internet-related-grid:has(.internet-related-card[href="Datacenter Services.html"]) {
+.internet-related-grid:has(.internet-related-card[href="datacenter-services.html"]) {
   display: flex;
   overflow-x: auto;
   gap: 24px;
@@ -15746,16 +15746,16 @@ body .about-value-icon > img[src^="assets/icons/"] {
   scrollbar-width: none;
 }
 
-.internet-related-grid:has(.internet-related-card[href="Datacenter Services.html"])::-webkit-scrollbar {
+.internet-related-grid:has(.internet-related-card[href="datacenter-services.html"])::-webkit-scrollbar {
   display: none;
 }
 
-.internet-related-grid:has(.internet-related-card[href="Datacenter Services.html"]) .internet-related-card {
+.internet-related-grid:has(.internet-related-card[href="datacenter-services.html"]) .internet-related-card {
   flex: 0 0 calc((100% - 48px) / 3);
   scroll-snap-align: start;
 }
 
-.internet-related-grid:has(.internet-related-card[href="Email Security.html"]) {
+.internet-related-grid:has(.internet-related-card[href="email-security.html"]) {
   display: flex;
   overflow-x: auto;
   gap: 24px;
@@ -15764,16 +15764,16 @@ body .about-value-icon > img[src^="assets/icons/"] {
   scrollbar-width: none;
 }
 
-.internet-related-grid:has(.internet-related-card[href="Email Security.html"])::-webkit-scrollbar {
+.internet-related-grid:has(.internet-related-card[href="email-security.html"])::-webkit-scrollbar {
   display: none;
 }
 
-.internet-related-grid:has(.internet-related-card[href="Email Security.html"]) .internet-related-card {
+.internet-related-grid:has(.internet-related-card[href="email-security.html"]) .internet-related-card {
   flex: 0 0 calc((100% - 48px) / 3);
   scroll-snap-align: start;
 }
 
-.internet-related-grid:has(.internet-related-card[href="Data Security.html"]) {
+.internet-related-grid:has(.internet-related-card[href="data-security.html"]) {
   display: flex;
   overflow-x: auto;
   gap: 24px;
@@ -15782,11 +15782,11 @@ body .about-value-icon > img[src^="assets/icons/"] {
   scrollbar-width: none;
 }
 
-.internet-related-grid:has(.internet-related-card[href="Data Security.html"])::-webkit-scrollbar {
+.internet-related-grid:has(.internet-related-card[href="data-security.html"])::-webkit-scrollbar {
   display: none;
 }
 
-.internet-related-grid:has(.internet-related-card[href="Data Security.html"]) .internet-related-card {
+.internet-related-grid:has(.internet-related-card[href="data-security.html"]) .internet-related-card {
   flex: 0 0 calc((100% - 48px) / 3);
   scroll-snap-align: start;
 }
@@ -15798,51 +15798,51 @@ body .about-value-icon > img[src^="assets/icons/"] {
   margin-top: 0;
 }
 
-.internet-related:has(.internet-related-card[href="Cloud Projects.html"]) {
+.internet-related:has(.internet-related-card[href="cloud-projects.html"]) {
   position: relative;
 }
 
-.internet-related:has(.internet-related-card[href="Cloud Projects.html"]) .internet-related-controls {
+.internet-related:has(.internet-related-card[href="cloud-projects.html"]) .internet-related-controls {
   position: absolute;
   top: 122px;
   right: 100px;
 }
 
-.internet-related:has(.internet-related-card[href="Infrastructure Projects.html"]) {
+.internet-related:has(.internet-related-card[href="infrastructure-projects.html"]) {
   position: relative;
 }
 
-.internet-related:has(.internet-related-card[href="Infrastructure Projects.html"]) .internet-related-controls {
+.internet-related:has(.internet-related-card[href="infrastructure-projects.html"]) .internet-related-controls {
   position: absolute;
   top: 122px;
   right: 100px;
 }
 
-.internet-related:has(.internet-related-card[href="Datacenter Services.html"]) {
+.internet-related:has(.internet-related-card[href="datacenter-services.html"]) {
   position: relative;
 }
 
-.internet-related:has(.internet-related-card[href="Datacenter Services.html"]) .internet-related-controls {
+.internet-related:has(.internet-related-card[href="datacenter-services.html"]) .internet-related-controls {
   position: absolute;
   top: 122px;
   right: 100px;
 }
 
-.internet-related:has(.internet-related-card[href="Email Security.html"]) {
+.internet-related:has(.internet-related-card[href="email-security.html"]) {
   position: relative;
 }
 
-.internet-related:has(.internet-related-card[href="Email Security.html"]) .internet-related-controls {
+.internet-related:has(.internet-related-card[href="email-security.html"]) .internet-related-controls {
   position: absolute;
   top: 122px;
   right: 100px;
 }
 
-.internet-related:has(.internet-related-card[href="Data Security.html"]) {
+.internet-related:has(.internet-related-card[href="data-security.html"]) {
   position: relative;
 }
 
-.internet-related:has(.internet-related-card[href="Data Security.html"]) .internet-related-controls {
+.internet-related:has(.internet-related-card[href="data-security.html"]) .internet-related-controls {
   position: absolute;
   top: 122px;
   right: 100px;
