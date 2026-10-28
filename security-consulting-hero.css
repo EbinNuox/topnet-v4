@@ -18,7 +18,7 @@
 .managed-security-page-body .internet-connectivity-hero-copy > p { max-width: 620px; }
 .managed-security-page-body .internet-connectivity-actions { justify-content: flex-start; }
 .managed-security-page-body .internet-breadcrumb { right: auto; bottom: 72px; left: 100px; justify-content: flex-start; }
-.managed-security-page-body .internet-connectivity-page > .internet-service-facts { width: calc(100% - 200px); max-width: none; margin: 0 auto; }
+.managed-security-page-body .internet-connectivity-page > .internet-service-facts { width: 100%; max-width: none; margin: 0; }
 .managed-security-page-body .internet-service-model { display: block; width: min(100%, 500px); height: 500px !important; min-height: 500px !important; justify-self: end; background: none; animation: security-cloud-float 6s ease-in-out infinite; }
 .managed-security-page-body .internet-service-model::before { content: ""; position: absolute; z-index: 0; top: 50%; left: 50%; width: 125%; height: 100%; border-radius: 50%; background: radial-gradient(ellipse at center, rgba(127,61,255,.38) 0%, rgba(112,61,228,.3) 32%, rgba(88,55,171,.2) 58%, rgba(24,28,55,.12) 72%, transparent 86%); filter: blur(24px); transform: translate(-50%, -50%); pointer-events: none; }
 .managed-security-page-body .managed-security-banner-image,
