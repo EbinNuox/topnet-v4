@@ -36,13 +36,13 @@
 ### Task 2: Add the seven standalone pages
 
 **Files:**
-- Create: `Collaboration.html`
-- Create: `Low Current.html`
-- Create: `IT Consulting.html`
-- Create: `Infrastructure Projects.html`
-- Create: `Cloud Projects.html`
-- Create: `Business Continuity.html`
-- Create: `Datacenter Services.html`
+- Create: `collaboration.html`
+- Create: `low-current.html`
+- Create: `it-consulting.html`
+- Create: `infrastructure-projects.html`
+- Create: `cloud-projects.html`
+- Create: `business-continuity.html`
+- Create: `datacenter-services.html`
 
 - [ ] Use the existing detail-page class system and local assets.
 - [ ] Apply only the wireframe-approved page-specific titles and capability names.

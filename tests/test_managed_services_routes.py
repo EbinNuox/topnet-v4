@@ -10,10 +10,10 @@ class ManagedServicesRouteTests(unittest.TestCase):
         script = (ROOT / "script.js").read_text()
         page = (ROOT / "managed-services.html").read_text()
 
-        self.assertIn("'Infrastructure': 'Infrastructure.html'", script)
-        self.assertIn("'Cybersecurity': 'Cybersecurity.html'", script)
-        self.assertIn("'Service Desk': 'Service Desk.html'", script)
-        self.assertIn('href="Cybersecurity.html">Explore Cybersecurity', page)
+        self.assertIn("'Infrastructure': 'infrastructure.html'", script)
+        self.assertIn("'Cybersecurity': 'cybersecurity.html'", script)
+        self.assertIn("'Service Desk': 'service-desk.html'", script)
+        self.assertIn('href="cybersecurity.html">Explore Cybersecurity', page)
 
     def test_all_dropdown_capabilities_have_routes_and_files(self):
         script = (ROOT / "script.js").read_text()
@@ -30,25 +30,25 @@ class ManagedServicesRouteTests(unittest.TestCase):
             "Dedicated Rack": "dedicated-rack.html",
             "Shared Rack": "shared-rack.html",
             "Bare Metal Servers": "bare-metal-servers.html",
-            "Managed Security": "Managed Security.html",
-            "Security Consulting": "Security Consulting.html",
-            "Network Security": "Network Security.html",
-            "Endpoint Security": "Endpoint Security.html",
-            "Identity Security": "Identity Security.html",
-            "Data Security": "Data Security.html",
-            "Email Security": "Email Security.html",
-            "Cloud Security": "Cloud Security.html",
-            "Collaboration": "Collaboration.html",
-            "Low Current": "Low Current.html",
-            "IT Consulting": "IT Consulting.html",
-            "Infrastructure Projects": "Infrastructure Projects.html",
-            "Cloud Projects": "Cloud Projects.html",
-            "Security Projects": "Security Projects.html",
-            "Business Continuity": "Business Continuity.html",
-            "Datacenter Services": "Datacenter Services.html",
-            "Infrastructure": "Infrastructure.html",
-            "Cybersecurity": "Cybersecurity.html",
-            "Service Desk": "Service Desk.html",
+            "Managed Security": "managed-security.html",
+            "Security Consulting": "security-consulting.html",
+            "Network Security": "network-security.html",
+            "Endpoint Security": "endpoint-security.html",
+            "Identity Security": "identity-security.html",
+            "Data Security": "data-security.html",
+            "Email Security": "email-security.html",
+            "Cloud Security": "cloud-security.html",
+            "Collaboration": "collaboration.html",
+            "Low Current": "low-current.html",
+            "IT Consulting": "it-consulting.html",
+            "Infrastructure Projects": "infrastructure-projects.html",
+            "Cloud Projects": "cloud-projects.html",
+            "Security Projects": "security-projects.html",
+            "Business Continuity": "business-continuity.html",
+            "Datacenter Services": "datacenter-services.html",
+            "Infrastructure": "infrastructure.html",
+            "Cybersecurity": "cybersecurity.html",
+            "Service Desk": "service-desk.html",
         }
         for label, filename in expected_routes.items():
             self.assertIn(f"'{label}': '{filename}'", script)
