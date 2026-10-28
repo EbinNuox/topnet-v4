@@ -1,0 +1,32 @@
+/* Shared interaction feedback inherits green or Rayadah blue from its section. */
+body :is(button, .button, .mini-cta, .header-cta, .rayadah-nav-link, .careers-role-button, .hosting-addons summary) {
+  transition: background-color .22s ease, border-color .22s ease, box-shadow .25s ease, color .22s ease;
+}
+body :is(button, .button, .mini-cta, .header-cta, .rayadah-nav-link, .careers-role-button, .hosting-addons summary):not(:disabled):not([aria-disabled="true"]):focus-visible {
+  border-color: rgba(var(--accent-rgb), .9) !important;
+  background: linear-gradient(100deg, rgba(var(--accent-rgb), .32), rgba(var(--accent-rgb), .12)) !important;
+  box-shadow: inset 0 0 14px rgba(var(--accent-rgb), .04), 0 0 30px rgba(var(--accent-rgb), .25) !important;
+  outline: 2px solid rgba(var(--accent-rgb), .75);
+  outline-offset: 3px;
+}
+@media (any-hover: hover) {
+  body :is(button, .button, .mini-cta, .header-cta, .rayadah-nav-link, .careers-role-button, .hosting-addons summary):not(:disabled):not([aria-disabled="true"]):hover {
+    border-color: rgba(var(--accent-rgb), .9) !important;
+    background: linear-gradient(100deg, rgba(var(--accent-rgb), .32), rgba(var(--accent-rgb), .12)) !important;
+    box-shadow: inset 0 0 14px rgba(var(--accent-rgb), .04), 0 0 30px rgba(var(--accent-rgb), .25) !important;
+  }
+  body :is(.button, .mini-cta, .header-cta):hover > :is(.arrow, span:only-child) {
+    box-shadow: 0 0 18px rgba(var(--accent-rgb), .35);
+  }
+}
+body :is(.button, .mini-cta, .header-cta):focus-visible > :is(.arrow, span:only-child) {
+  box-shadow: 0 0 18px rgba(var(--accent-rgb), .35);
+}
+/* FAQ rows remain transparent; keyboard focus retains its outline. */
+body button:is(.rayadah-faq-question, .internet-faq-question):not(:disabled):not([aria-disabled="true"]):is(:hover, :focus-visible) {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  body :is(button, .button, .mini-cta, .header-cta, .rayadah-nav-link, .careers-role-button) { transition: none; }
+}

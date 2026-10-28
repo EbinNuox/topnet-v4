@@ -1,0 +1,191 @@
+/* Focused banner treatment for Security Consulting only. */
+.security-consulting-page-body .internet-connectivity-hero-inner { min-height: 618px; }
+.security-consulting-page-body .internet-connectivity-hero {
+  width: 100%;
+  max-width: 100%;
+  overflow: clip;
+  height: 743px !important;
+  min-height: 743px !important;
+}
+
+/* Managed Security uses the same focused banner treatment. */
+.managed-security-page-body .internet-connectivity-hero { height: 743px !important; min-height: 743px !important; overflow: visible; }
+.managed-security-page-body .internet-connectivity-hero-art { height: calc(100% + 120px); max-height: none; -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 72%, rgba(0,0,0,.6) 88%, transparent 100%); mask-image: linear-gradient(180deg, #000 0%, #000 72%, rgba(0,0,0,.6) 88%, transparent 100%); }
+.managed-security-page-body .internet-connectivity-hero-inner { width: 100%; max-width: none; margin-inline: 0; padding-inline: 100px; height: 618px !important; min-height: 618px !important; }
+.managed-security-page-body .internet-connectivity-hero-grid { height: 560px !important; min-height: 560px !important; display: grid; grid-template-columns: minmax(0, 1fr) minmax(420px, .82fr); align-items: center; gap: clamp(52px, 7vw, 126px); transform: translateY(-48px); }
+.managed-security-page-body .internet-connectivity-hero-copy { max-width: 720px; margin-left: 0; text-align: left; }
+.managed-security-page-body .internet-connectivity-hero-copy h1, .managed-security-page-body .internet-connectivity-hero-copy > p { margin-left: 0; text-align: left; }
+.managed-security-page-body .internet-connectivity-hero-copy > p { max-width: 620px; }
+.managed-security-page-body .internet-connectivity-actions { justify-content: flex-start; }
+.managed-security-page-body .internet-breadcrumb { right: auto; bottom: 72px; left: 100px; justify-content: flex-start; }
+.managed-security-page-body .internet-connectivity-page > .internet-service-facts { width: calc(100% - 200px); max-width: none; margin: 0 auto; }
+.managed-security-page-body .internet-service-model { display: block; width: min(100%, 500px); height: 500px !important; min-height: 500px !important; justify-self: end; background: none; animation: security-cloud-float 6s ease-in-out infinite; }
+.managed-security-page-body .internet-service-model::before { content: ""; position: absolute; z-index: 0; top: 50%; left: 50%; width: 125%; height: 100%; border-radius: 50%; background: radial-gradient(ellipse at center, rgba(127,61,255,.38) 0%, rgba(112,61,228,.3) 32%, rgba(88,55,171,.2) 58%, rgba(24,28,55,.12) 72%, transparent 86%); filter: blur(24px); transform: translate(-50%, -50%); pointer-events: none; }
+.managed-security-page-body .managed-security-banner-image,
+.security-consulting-page-body .managed-security-banner-image { position: absolute; z-index: 1; top: 50%; left: calc(50% - 150px); right: auto; bottom: auto; width: 300%; height: 200%; overflow: visible !important; clip-path: none; object-fit: contain; object-position: center; transform: translate(-50%, -50%) scale(1.8); mix-blend-mode: lighten; opacity: .97; filter: saturate(1.08) contrast(1.04) drop-shadow(0 0 26px rgba(63,116,255,.22)); -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 15%, #000 62%, rgba(0,0,0,.72) 78%, transparent 100%); mask-image: linear-gradient(180deg, transparent 0%, #000 15%, #000 62%, rgba(0,0,0,.72) 78%, transparent 100%); }
+.managed-security-page-body .internet-service-model::after { display: none; }
+.managed-security-page-body .internet-service-model .internet-model-axis, .managed-security-page-body .internet-service-model .internet-model-tag, .managed-security-page-body .internet-service-model .internet-model-caption, .managed-security-page-body .internet-service-model .internet-model-center { visibility: hidden; }
+.managed-security-page-body .internet-model-ring { display: none; }
+.managed-security-page-body .internet-model-ring-outer { width: min(92%, 500px); height: auto; aspect-ratio: 1; border-color: rgba(223,225,236,.1); transform: translate(-50%, -50%) scale(1.08) rotate(28deg); }
+.managed-security-page-body .internet-model-ring-inner { width: min(68%, 360px); height: auto; aspect-ratio: 1; transform: translate(-50%, -50%) rotate(-28deg); }
+.security-consulting-page-body .internet-connectivity-hero-inner {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: 100px;
+  height: 618px !important;
+  min-height: 618px !important;
+}
+.security-consulting-page-body .internet-connectivity-hero-grid {
+  height: 560px !important;
+  min-height: 560px !important;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, .82fr);
+  align-items: center;
+  gap: clamp(52px, 7vw, 126px);
+}
+.security-consulting-page-body .internet-breadcrumb {
+  right: 100px;
+  bottom: 24px;
+  left: 100px;
+  justify-content: center;
+}
+.security-consulting-page-body .internet-connectivity-hero-copy {
+  max-width: 720px;
+  margin-left: 0;
+  text-align: left;
+}
+.security-consulting-page-body .internet-connectivity-hero-copy h1 { margin-left: 0; text-align: left; }
+.security-consulting-page-body .internet-connectivity-hero-copy > p { max-width: 620px; margin-left: 0; text-align: left; }
+.security-consulting-page-body .internet-connectivity-actions { justify-content: flex-start; }
+
+.security-consulting-page-body .internet-service-model {
+  display: block;
+  width: min(100%, 500px);
+  height: 500px !important;
+  min-height: 500px !important;
+  justify-self: end;
+  color: #c9edae;
+  filter: brightness(.82) saturate(1.12) contrast(1.08) drop-shadow(0 0 18px rgba(127,61,255,.25));
+  /* Keep the complete transparent artwork inside the hero instead of letting
+     the large pedestal fall below the fixed banner viewport. */
+  background: url("assets/security-consulting-shield-lock.png") center 42% / min(62%, 320px) auto no-repeat;
+  background-blend-mode: normal;
+  mix-blend-mode: screen;
+  opacity: .9;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 50%, rgba(0,0,0,.68) 72%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 0%, #000 50%, rgba(0,0,0,.68) 72%, transparent 100%);
+  animation: security-cloud-float 6s ease-in-out infinite;
+}
+.security-consulting-page-body .internet-service-model::before {
+  content: "";
+  position: absolute;
+  width: min(76%, 420px);
+  aspect-ratio: 1;
+  inset: auto;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(114,75,226,.28), rgba(84,70,144,.12) 42%, transparent 72%);
+  filter: blur(8px);
+  transform: translate(-50%, -50%);
+}
+.security-consulting-page-body .internet-service-model::after { display: none; }
+.security-consulting-page-body .internet-service-model .internet-model-axis,
+.security-consulting-page-body .internet-service-model .internet-model-tag,
+.security-consulting-page-body .internet-service-model .internet-model-caption,
+.security-consulting-page-body .internet-service-model .internet-model-center { visibility: hidden; }
+.security-consulting-page-body .internet-model-ring {
+  border-color: rgba(223,225,236,.16);
+  box-shadow: none;
+}
+.security-consulting-page-body .internet-model-ring-outer {
+  width: min(92%, 500px);
+  height: auto;
+  aspect-ratio: 1;
+  border-color: rgba(223,225,236,.1);
+  transform: translate(-50%, -50%) scale(1.08) rotate(28deg);
+}
+.security-consulting-page-body .internet-model-ring-inner {
+  width: min(92%, 500px);
+  height: auto;
+  aspect-ratio: 1;
+  border-color: rgba(223,225,236,.16);
+  box-shadow: none;
+  transform: translate(-50%, -50%) scale(.76);
+}
+.security-consulting-page-body .internet-model-axis { background: linear-gradient(90deg, transparent, rgba(201,237,174,.55), transparent); transform: translate(-50%, -50%) rotate(-28deg); }
+.security-consulting-page-body .internet-model-axis-vertical { display: none; }
+.security-consulting-page-body .internet-model-center {
+  width: 152px; height: 178px; border-radius: 0; padding: 28px 20px 34px;
+  clip-path: polygon(50% 0, 90% 15%, 84% 63%, 50% 100%, 16% 63%, 10% 15%);
+  color: #c9edae; background: linear-gradient(145deg, #ecffd9 0%, #bce49e 43%, #7050b4 100%);
+  box-shadow: 0 0 30px rgba(201,237,174,.24); font-size: 15px; transform: translate(-50%, -50%) rotate(4deg);
+}
+.security-consulting-page-body .internet-model-center::before { content: "✓"; position: absolute; inset: 5px; display: grid; place-items: center; clip-path: inherit; color: #c9edae; background: linear-gradient(155deg, #202739, #111625 68%); font-size: 46px; font-weight: 300; padding-bottom: 18px; }
+.security-consulting-page-body .internet-model-center { text-indent: -999px; }
+.security-consulting-page-body .internet-model-caption-top { top: 6%; }
+.security-consulting-page-body .internet-model-caption-bottom { bottom: 7%; color: #c9edae; }
+.security-consulting-page-body .internet-model-tag { border-color: rgba(201,237,174,.4); border-radius: 50%; min-width: 50px; min-height: 50px; padding: 18px 8px; color: #c9edae; background: rgba(17,22,38,.82); box-shadow: 0 0 20px rgba(201,237,174,.1); }
+.security-consulting-page-body .internet-model-tag-design { top: 14%; left: 18%; }
+.security-consulting-page-body .internet-model-tag-activate { top: 26%; right: 8%; }
+.security-consulting-page-body .internet-model-tag-operate { bottom: 13%; left: 25%; }
+
+@keyframes security-cloud-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@media (prefers-reduced-motion: reduce) { .security-consulting-page-body .internet-service-model { animation: none; } }
+
+/* Shared managed/security banner artwork replaces the legacy shield model. */
+.managed-security-page-body .internet-service-model { background: none !important; mix-blend-mode: normal; }
+.managed-security-page-body .internet-service-model::before,
+.managed-security-page-body .internet-service-model::after,
+.managed-security-page-body .internet-model-ring { display: none !important; }
+.security-consulting-page-body .internet-breadcrumb { right: auto; bottom: 72px; left: 100px; justify-content: flex-start; }
+.security-consulting-page-body .internet-service-model { overflow: visible; }
+/* Security Consulting reuses the exact Managed Security banner treatment. */
+
+/* The enlarged transparent artwork must be allowed to extend beyond the
+   model column; clipping here creates the visible vertical cut edge. */
+.managed-security-page-body .internet-connectivity-hero,
+.security-consulting-page-body .internet-connectivity-hero,
+.managed-security-page-body .internet-connectivity-hero-inner,
+.security-consulting-page-body .internet-connectivity-hero-inner,
+.managed-security-page-body .internet-connectivity-page,
+.security-consulting-page-body .internet-connectivity-page,
+.managed-security-page-body .internet-connectivity-hero-grid,
+.security-consulting-page-body .internet-connectivity-hero-grid,
+.managed-security-page-body .internet-service-model,
+.security-consulting-page-body .internet-service-model,
+.managed-security-page-body .managed-security-banner-image,
+.security-consulting-page-body .managed-security-banner-image {
+  overflow: visible !important;
+  clip-path: none !important;
+  contain: none !important;
+}
+
+/* Match Managed Security's overflow behavior at the grid item boundary too. */
+.security-consulting-page-body .internet-connectivity-hero-grid > *,
+.security-consulting-page-body .internet-connectivity-hero-grid > *::before,
+.security-consulting-page-body .internet-connectivity-hero-grid > *::after {
+  overflow: visible !important;
+  clip-path: none !important;
+}
+@media (max-width: 1024px) {
+  .security-consulting-page-body .internet-connectivity-hero-inner { padding-inline: 32px; }
+  .security-consulting-page-body .internet-connectivity-hero-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .security-consulting-page-body .internet-connectivity-hero-copy { margin-left: 0; }
+  .security-consulting-page-body .internet-service-model { justify-self: center; width: min(100%, 480px); min-height: 380px; }
+}
+@media (max-width: 600px) {
+  .security-consulting-page-body .internet-connectivity-hero-inner { padding-inline: 20px; }
+  .security-consulting-page-body .internet-connectivity-hero-copy,
+  .security-consulting-page-body .internet-connectivity-hero-copy h1,
+  .security-consulting-page-body .internet-connectivity-hero-copy > p { text-align: left; }
+  .security-consulting-page-body .internet-service-model {
+    width: min(100%, 390px);
+    min-height: 320px;
+    margin-top: 6px;
+    background-size: min(68%, 270px);
+    background-position: center 40%;
+  }
+  .security-consulting-page-body .internet-model-center { width: 118px; height: 140px; }
+}
