@@ -422,6 +422,16 @@ const serviceRoutes = {
   'Service Desk': 'Service Desk.html',
 };
 
+// The cybersecurity category cards should open their detail pages directly.
+document.querySelectorAll('.connectivity-capability-card').forEach((card) => {
+  const title = card.querySelector('h3')?.textContent.trim();
+  const route = serviceRoutes[title];
+  if (route) {
+    const link = card.querySelector('.connectivity-capability-button');
+    if (link) link.href = encodeURI(route);
+  }
+});
+
 // Detail-page visuals for the two cybersecurity pages use the same icon/card
 // treatment as the existing Internet Connectivity page.
 const cybersecurityDetailPage = document.body?.querySelector('.internet-connectivity-page') &&
@@ -525,13 +535,23 @@ document.querySelectorAll('.service-category').forEach((category) => {
     if (capabilities) {
       capabilities.innerHTML = content.slice(1).map((capability) => {
         const href = serviceRoutes[capability] || '#';
-        return `<a href="${href}">${capability} <span aria-hidden="true">→</span></a>`;
+        const safeHref = href === '#' ? href : encodeURI(href);
+        return `<a href="${safeHref}">${capability} <span aria-hidden="true">→</span></a>`;
       }).join('');
     }
   };
   category.addEventListener('mouseenter', activateCategory);
   category.addEventListener('focus', activateCategory);
   if (category.classList.contains('active')) activateCategory();
+});
+
+// Keep dynamically rendered capability links reliable on local file URLs,
+// including filenames that contain spaces.
+document.addEventListener('click', (event) => {
+  const link = event.target.closest('.service-capabilities a, .category-overview');
+  if (!link || !link.href || link.getAttribute('href') === '#') return;
+  event.preventDefault();
+  window.location.assign(link.href);
 });
 
 document.querySelectorAll('.contact-select-field').forEach((field) => {
@@ -1298,3 +1318,37 @@ document.querySelectorAll('[data-career-select]').forEach((field) => {
   }, { passive: true });
   // Resume after an idle gap; frame-driven scrolling may emit scrollend per frame.
 })();
+
+const securityBannerPages = [
+  'Managed Security.html',
+  'Security Consulting.html',
+  'Network Security.html',
+  'Endpoint Security.html',
+  'Identity Security.html',
+  'Data Security.html',
+  'Email Security.html',
+  'Cloud Security.html'
+];
+if (securityBannerPages.includes(decodeURIComponent(window.location.pathname).split('/').pop())) {
+  document.body.classList.add('managed-security-page-body');
+  // Security Consulting uses the same banner implementation as Managed Security.
+  // Remove its legacy page class so the old constrained hero rules cannot clip
+  // the shared banner image.
+  if (decodeURIComponent(window.location.pathname).split('/').pop() === 'Security Consulting.html') {
+    document.body.classList.remove('security-consulting-page-body');
+  }
+  const managedBannerStyles = document.createElement('link');
+  managedBannerStyles.rel = 'stylesheet';
+  managedBannerStyles.href = 'security-consulting-hero.css?rev=20261028-20';
+  document.head.appendChild(managedBannerStyles);
+  if (['Managed Security.html', 'Security Consulting.html'].includes(decodeURIComponent(window.location.pathname).split('/').pop())) {
+    const managedModel = document.querySelector('.internet-service-model');
+    if (managedModel && !managedModel.querySelector('.managed-security-banner-image')) {
+      const image = document.createElement('img');
+      image.className = 'managed-security-banner-image';
+      image.src = 'assets/managed-security-banner-purple-network-v2.png';
+      image.alt = 'Layered security shield';
+      managedModel.appendChild(image);
+    }
+  }
+}

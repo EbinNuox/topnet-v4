@@ -9811,6 +9811,18 @@ body.services-page-body .footer-backdrop {
   text-align: center;
 }
 
+/* Keep the Resources banner tight beneath its introductory copy. */
+@media (min-width: 1001px) {
+  .resources-page-body .resources-hero {
+    min-height: 560px;
+  }
+
+  .resources-page-body .resources-page-intro {
+    min-height: 430px;
+    padding-bottom: 30px;
+  }
+}
+
 .resources-page-body .resources-library,
 .resources-page-body .resources-story,
 .resources-page-body .resources-presence,
@@ -9915,18 +9927,28 @@ body.services-page-body .footer-backdrop {
   margin-top: 30px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 16px;
   color: #dddde2;
   font-size: 13px;
 }
 
 .resources-page-body .resources-browse-row > strong {
+  margin-left: auto;
+  color: #e7e8ed;
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -.15px;
+  line-height: 1.2;
+  text-align: right;
+  text-transform: uppercase;
+  transform: translateY(-4px);
   white-space: nowrap;
 }
 
 .resources-page-body .resources-browse-controls {
-  margin-left: auto;
+  margin-left: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -15321,6 +15343,11 @@ body.internet-connectivity-page-body .footer-backdrop {
   }
 }
 
+.resources-page-body .resources-hero::after {
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 58%, rgba(0, 0, 0, .68) 82%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 58%, rgba(0, 0, 0, .68) 82%, transparent 100%);
+}
+
 /* Keep enquiry form text readable across every page. */
 .contact-form { font-size: 18px; }
 .contact-form .contact-select-menu button,
@@ -15640,11 +15667,33 @@ body .about-value-icon > img[src^="assets/icons/"] {
 }
 
 .cybersecurity-page-body .internet-related-card:nth-child(1) .internet-related-card-media img {
-  transform: translateY(3%) scale(1.12);
+  transform: translateY(9%) scale(.74);
 }
 
 .service-desk-page-body .internet-related-card:nth-child(1) .internet-related-card-media img {
   transform: translateY(9%) scale(.74);
+}
+
+.security-consulting-page-body .internet-related-card .internet-related-card-media img {
+  transform: translateY(9%) scale(.74);
+}
+
+/* Reuse the service-card artwork treatment so related-card stands blend into
+   the shared backdrop instead of ending as a hard rectangular image. */
+.internet-connectivity-page-body .internet-related-card .internet-related-card-media {
+  background: url("assets/ellipse-14.png") center / 100% 100% no-repeat;
+  isolation: isolate;
+}
+
+.internet-connectivity-page-body .internet-related-card .internet-related-card-media > img {
+  width: 76%;
+  height: 76%;
+  inset: auto 12% 0;
+  object-position: center bottom;
+  mix-blend-mode: normal;
+  filter: none;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 42%, rgba(0, 0, 0, .82) 58%, rgba(0, 0, 0, .4) 72%, rgba(0, 0, 0, .08) 88%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 0%, #000 42%, rgba(0, 0, 0, .82) 58%, rgba(0, 0, 0, .4) 72%, rgba(0, 0, 0, .08) 88%, transparent 100%);
 }
 
 .internet-related-card[href="Cloud Projects.html"] .internet-related-card-media img {
